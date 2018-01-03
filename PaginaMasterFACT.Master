@@ -1,0 +1,85 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PaginaMasterFacT.Master.vb" Inherits="WebProspectos.PaginaMasterFacT" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Menu Principal</title>
+    <style type="text/css">
+        .Menu_IE
+        {
+        z-index:50;	
+        }
+    </style>
+</head>
+<body bgcolor="#ffffff" background="IMG/fondoconteblanco.png">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <td style="height: 95px; background-color: #ff6600; width: 100%;">
+            <asp:Label ID="LbDias" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="White"
+                        Text="Label" Width="100%"></asp:Label></td>
+                    <td style="height: 100%; background-color: #ff6600; text-align: right; width:auto;">
+                    
+                    <img src="IMG/LOGOpeque2.JPG" /></td>
+            </tr>
+            <tr>
+            <td style="width: 100%; height: 100%" colspan="2">
+            <asp:Menu ID="Menu1" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#FF6600" StaticSubMenuIndent="10px" Height="1px" Width="348px" Font-Bold="True" Orientation="Horizontal" Visible="True" MaximumDynamicDisplayLevels="10" >
+                        <StaticSelectedStyle BackColor="#507CD1" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuStyle CssClass="Menu_IE" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" ForeColor="#FF6600" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Factoraje Clientes" Value="Factoraje Clientes" Selectable="False">
+                                <asp:MenuItem NavigateUrl="~/LotesFactFin.aspx"
+                                    Text="Descargar lotes Pendientes" Value="Inicio"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/LotesFactFinPROC.aspx"
+                                    Text="Lotes Descargados" Value="Lotes Descargados"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/LotesFactFinAnti.aspx"
+                                    Text="Cargar Anticipos" Value="Nuevo Prospecto"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/LotesFactFinAntiCarga.aspx"
+                                    Text="Anticipos Cargados" Value="Anticipos Cargados"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/LotesFactFinRecib.aspx"
+                                    Text="Lotes Recibidos" Value="Lotes Recibidos"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BajaPagos.aspx" Text="Descargar Pagos"
+                                    Value="Descargar Pagos"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FacturasVenc.aspx" Text="Facturas Vencidas" Value="Facturas Vencidas"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Fondeo" Value="Fondeo" Selectable="False">
+                                <asp:MenuItem NavigateUrl="~/SubirFondeo.aspx"
+                                    Text="Subir Fondeo" Value="Subir Fondeo"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/FondeosPendiente.aspx"
+                                    Text="Fondeos Pendientes" Value="Fondeos Pendientes"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SubirPagFondeo.aspx"
+                                    Text="Subir Pago Fondeo" Value="Subir Pago Fondeo"></asp:MenuItem>
+                                <asp:MenuItem Text="Saldo Fondeo" Value="Saldo Fondeo" NavigateUrl="~/SaldosFondeo.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CargarPagos.aspx" Text="Cargar Pagos" Value="Cargar Pagos"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CargaComplementos.aspx" SeparatorImageUrl="~/IMG/sep.JPG" Text="Genera Complementos" Value="Genera Complementos"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/LoginX.aspx" Text="Salir" Value="Salir" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    </td>
+            </tr>
+            </table>
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+            <table style="width: 100%; position: static;">
+            <tr>
+            <td style="height: 50px; background-color: #ff6600">
+            </td>                
+            </tr>
+            </table>
+            
+       
+    </div>
+    </form>
+</body>
+</html>

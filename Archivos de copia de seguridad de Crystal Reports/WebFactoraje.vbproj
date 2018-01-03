@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46A9EBA2-AF34-4DCD-A8A5-F1CCAC31754D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebProspectos</RootNamespace>
+    <AssemblyName>WebProspectos</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebProspectos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebProspectos.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="RoderoLib, Version=1.0.1777.2921, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="IMG\LOGO FINAGIL.JPG" />
+    <Content Include="LoginX.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaanDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaanDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClaseHash.vb" />
+    <Compile Include="Bancos.aspx.designer.vb">
+      <DependentUpon>Bancos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos.aspx.vb">
+      <DependentUpon>Bancos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BajaAntiProc.aspx.designer.vb">
+      <DependentUpon>BajaAntiProc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaAntiProc.aspx.vb">
+      <DependentUpon>BajaAntiProc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BajaPagos.aspx.designer.vb">
+      <DependentUpon>BajaPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaPagos.aspx.vb">
+      <DependentUpon>BajaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ConfFondeo.aspx.designer.vb">
+      <DependentUpon>ConfFondeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfFondeo.aspx.vb">
+      <DependentUpon>ConfFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SaldosFondeo.aspx.designer.vb">
+      <DependentUpon>SaldosFondeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaldosFondeo.aspx.vb">
+      <DependentUpon>SaldosFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SubirPagFondeo.aspx.designer.vb">
+      <DependentUpon>SubirPagFondeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirPagFondeo.aspx.vb">
+      <DependentUpon>SubirPagFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saldos.aspx.designer.vb">
+      <DependentUpon>Saldos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Saldos.aspx.vb">
+      <DependentUpon>Saldos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFondeoPALM.aspx.designer.vb">
+      <DependentUpon>DetalleFondeoPALM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFondeoPALM.aspx.vb">
+      <DependentUpon>DetalleFondeoPALM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMasterPALMT.Master.designer.vb">
+      <DependentUpon>PaginaMasterPALMT.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterPALMT.Master.vb">
+      <DependentUpon>PaginaMasterPALMT.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFondeo.aspx.designer.vb">
+      <DependentUpon>DetalleFondeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFondeo.aspx.vb">
+      <DependentUpon>DetalleFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FondeosPendiente.aspx.designer.vb">
+      <DependentUpon>FondeosPendiente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FondeosPendiente.aspx.vb">
+      <DependentUpon>FondeosPendiente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SubirFondeo.aspx.designer.vb">
+      <DependentUpon>SubirFondeo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirFondeo.aspx.vb">
+      <DependentUpon>SubirFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LotesFactFinRecib.aspx.designer.vb">
+      <DependentUpon>LotesFactFinRecib.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinRecib.aspx.vb">
+      <DependentUpon>LotesFactFinRecib.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesFactFinAntiCarga.aspx.designer.vb">
+      <DependentUpon>LotesFactFinAntiCarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinAntiCarga.aspx.vb">
+      <DependentUpon>LotesFactFinAntiCarga.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesFactFinAnti.aspx.designer.vb">
+      <DependentUpon>LotesFactFinAnti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinAnti.aspx.vb">
+      <DependentUpon>LotesFactFinAnti.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SubirAnti.aspx.designer.vb">
+      <DependentUpon>SubirAnti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirAnti.aspx.vb">
+      <DependentUpon>SubirAnti.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesFactFinPROC.aspx.designer.vb">
+      <DependentUpon>LotesFactFinPROC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinPROC.aspx.vb">
+      <DependentUpon>LotesFactFinPROC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFACT.aspx.designer.vb">
+      <DependentUpon>DetalleFACT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFACT.aspx.vb">
+      <DependentUpon>DetalleFACT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesFactFin.aspx.designer.vb">
+      <DependentUpon>LotesFactFin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFin.aspx.vb">
+      <DependentUpon>LotesFactFin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMasterFacT.Master.designer.vb">
+      <DependentUpon>PaginaMasterFACT.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterFacT.Master.vb">
+      <DependentUpon>PaginaMasterFACT.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Factor100DS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Factor100DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Globales.vb" />
+    <Compile Include="LoginX.aspx.designer.vb">
+      <DependentUpon>LoginX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginX.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>LoginX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterPALM.Master.designer.vb">
+      <DependentUpon>PaginaMasterPALM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterPALM.Master.vb">
+      <DependentUpon>PaginaMasterPALM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeguridadDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeguridadDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SubirFacts.aspx.designer.vb">
+      <DependentUpon>SubirFacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirFacts.aspx.vb">
+      <DependentUpon>SubirFacts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Clientes.aspx.designer.vb">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.aspx.vb">
+      <DependentUpon>Clientes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BajaAnti.aspx.designer.vb">
+      <DependentUpon>BajaAnti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BajaAnti.aspx.vb">
+      <DependentUpon>BajaAnti.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LotesFact.aspx.designer.vb">
+      <DependentUpon>LotesFact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFact.aspx.vb">
+      <DependentUpon>LotesFact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Detalle.aspx.designer.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle.aspx.vb">
+      <DependentUpon>Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bancos.aspx" />
+    <Content Include="BajaAntiProc.aspx" />
+    <Content Include="BajaPagos.aspx" />
+    <Content Include="ConfFondeo.aspx" />
+    <Content Include="SaldosFondeo.aspx" />
+    <Content Include="SubirPagFondeo.aspx" />
+    <Content Include="Saldos.aspx" />
+    <Content Include="DetalleFondeoPALM.aspx" />
+    <Content Include="DetalleFondeo.aspx" />
+    <Content Include="FondeosPendiente.aspx" />
+    <Content Include="SubirFondeo.aspx" />
+    <Content Include="LotesFactFinRecib.aspx" />
+    <Content Include="LotesFactFinAntiCarga.aspx" />
+    <Content Include="LotesFactFinAnti.aspx" />
+    <Content Include="SubirAnti.aspx" />
+    <Content Include="LotesFactFinPROC.aspx" />
+    <Content Include="DetalleFACT.aspx" />
+    <Content Include="LotesFactFin.aspx" />
+    <Content Include="IMG\sep.JPG" />
+    <Content Include="IMG\check1.JPG" />
+    <Content Include="IMG\fondoconteblanco.png" />
+    <Content Include="IMG\LOGOpeque.JPG" />
+    <Content Include="IMG\LOGOpeque2.JPG" />
+    <Content Include="PaginaMasterPALM.Master" />
+    <Content Include="PaginaMasterFACT.Master" />
+    <Content Include="SubirFacts.aspx" />
+    <Content Include="Clientes.aspx" />
+    <Content Include="BajaAnti.aspx" />
+    <Content Include="LotesFact.aspx" />
+    <Content Include="Detalle.aspx" />
+    <None Include="BaanDS.xsc">
+      <DependentUpon>BaanDS.xsd</DependentUpon>
+    </None>
+    <None Include="BaanDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaanDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BaanDS.xss">
+      <DependentUpon>BaanDS.xsd</DependentUpon>
+    </None>
+    <Content Include="PaginaMasterPALMT.Master" />
+    <None Include="Factor100DS.xsc">
+      <DependentUpon>Factor100DS.xsd</DependentUpon>
+    </None>
+    <None Include="Factor100DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Factor100DS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Factor100DS.xss">
+      <DependentUpon>Factor100DS.xsd</DependentUpon>
+    </None>
+    <None Include="SeguridadDS.xsc">
+      <DependentUpon>SeguridadDS.xsd</DependentUpon>
+    </None>
+    <None Include="SeguridadDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SeguridadDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SeguridadDS.xss">
+      <DependentUpon>SeguridadDS.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3652</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
