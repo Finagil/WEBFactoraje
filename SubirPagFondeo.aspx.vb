@@ -123,6 +123,7 @@ Partial Public Class SubirPagFondeo
         If Plazo < 0 Then Plazo = 0
         If FechaPago >= CDate("01/01/2016") Then TasaRete = 0.005
         If FechaPago >= CDate("01/01/2017") Then TasaRete = 0.0058
+        If FechaPago >= CDate("01/01/2018") Then TasaRete = 0.0046
         Dim TasaFondeo As Decimal = r.Tasa - 5
         Dim Comision As Decimal = 0.12
         Dim Interes As Decimal = (r.PrecioOperacion * TasaFondeo / 36000 * Plazo)
