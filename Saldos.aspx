@@ -4,17 +4,6 @@
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>
   
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     
-<script src="ScrollableGridViewPlugin_ASP.NetAJAXmin.js" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#<%=GridView1.ClientID %>').Scrollable({
-            ScrollHeight: 300,
-            IsInUpdatePanel: true
-        });
-    });
-</script>
-
     <table width="100%">
         <tr>
             <td align="center">

@@ -35,7 +35,7 @@ Partial Public Class Saldos
             PagoNeto += DataBinder.Eval(e.Row.DataItem, "PagoNeto")
             Saldo += DataBinder.Eval(e.Row.DataItem, "Fondeo") - DataBinder.Eval(e.Row.DataItem, "Pago")
             e.Row.Cells(6).Text = Saldo.ToString("n2")
-            If Fecha >= CDate("01/01/2018") And Pag > 0 Then
+            If Fecha >= CDate("01/12/2017") And Pag > 0 Then
                 Dim Cont As Integer = 0
                 Aux = ""
                 Factor = (Rete / Pag)
@@ -122,7 +122,7 @@ Partial Public Class Saldos
                     Incre = 0.000001
                 Case > 0.01
                     Incre = 0.0000001
-                Case <= 0.01
+                Case <= 0.0
                     Exit For
             End Select
 
@@ -132,7 +132,7 @@ Partial Public Class Saldos
                 Pago += Math.Round(Pago * Incre, 6)
             End If
         Next
-        Return Math.Round(Pago, 2)
+        Return Math.Round(Pago, 6)
     End Function
 
     Function EncuentraBaseFOR1(Pago As Decimal, Tasa As Decimal, Rete As Decimal) As Decimal
