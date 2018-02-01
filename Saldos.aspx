@@ -2,7 +2,19 @@
     title="Saldo Fondeo Finagil" %>
 
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>
+  
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     
+<script src="ScrollableGridViewPlugin_ASP.NetAJAXmin.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#<%=GridView1.ClientID %>').Scrollable({
+            ScrollHeight: 300,
+            IsInUpdatePanel: true
+        });
+    });
+</script>
+
     <table width="100%">
         <tr>
             <td align="center">
@@ -13,8 +25,11 @@
                 <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
                     Text="totalFAC"></asp:Label><br />
                 <br />
+                <div style ="height:400px; width:80%; overflow:auto;">
+                
+
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="Detalle_DS" Font-Names="Verdana" Font-Size="Smaller"
-                    ForeColor="#333333" GridLines="None" ShowFooter="True">
+                    ForeColor="#333333" GridLines="None" ShowFooter="True" EnableModelValidation="True">
                     <RowStyle BackColor="#FFE0C0" />
                     <Columns>
                         <asp:BoundField DataField="Fecha" DataFormatString="{0:d}" HeaderText="Fecha" HtmlEncode="False"
@@ -30,6 +45,8 @@
                         <asp:BoundField DataField="PagoNeto" DataFormatString="{0:n2}" HeaderText="PagoNeto"
                             HtmlEncode="False" ReadOnly="True" SortExpression="PagoNeto" />
                         <asp:BoundField DataFormatString="{0:n2}" HeaderText="Saldo" HtmlEncode="False" SortExpression="Saldo" />
+                        <asp:BoundField DataFormatString="{0:n2}" HeaderText="Base" HtmlEncode="False" />
+                        <asp:BoundField DataFormatString="{0:n2}" HeaderText="Tasa" HtmlEncode="False" />
                     </Columns>
                     <FooterStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
@@ -43,6 +60,7 @@
                     <EditRowStyle BackColor="#2461BF" />
                     <AlternatingRowStyle BackColor="White" />
                 </asp:GridView>
+                            </div>
                 <asp:ObjectDataSource ID="Detalle_DS" runat="server"
                     OldValuesParameterFormatString="original_{0}" SelectMethod="GetData" TypeName="WebProspectos.Factor100DSTableAdapters.SaldosFondeoTableAdapter">
                 </asp:ObjectDataSource>
