@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="SubirPagFondeo.aspx.vb" Inherits="WebProspectos.SubirPagFondeo" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="SubirPagFondeo.aspx.vb" Inherits="WebProspectos.SubirPagFondeo" 
     title="Subir Pagos de Fondeo" %>
 
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>

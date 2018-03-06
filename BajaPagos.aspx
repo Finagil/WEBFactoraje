@@ -1,5 +1,5 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="BajaPagos.aspx.vb" Inherits="WebProspectos.BajaPagos" 
-    title="Bajar Pagos de Facturas" %>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="BajaPagos.aspx.vb" Inherits="WebProspectos.BajaPagos" 
+    title="Bajar Pagos de Facturas" MasterPageFile="~/PaginaMasterDefault.Master" %>
 
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -7,8 +7,8 @@ Public Partial Class WebForm1
         Bandera = False
     End Sub
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
     End Sub
 
     Protected Sub Submit1_ServerClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Submit1.ServerClick

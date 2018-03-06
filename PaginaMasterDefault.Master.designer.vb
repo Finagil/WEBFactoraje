@@ -11,41 +11,41 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebFormCOMP
+Partial Public Class PaginaMasterDefault
 
     '''<summary>
-    '''Control Label1.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''Control File1.
+    '''Control LbDias.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents File1 As Global.System.Web.UI.HtmlControls.HtmlInputFile
+    Protected WithEvents LbDias As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control Submit1.
+    '''Control Menu1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Submit1 As Global.System.Web.UI.HtmlControls.HtmlInputSubmit
+    Protected WithEvents Menu1 As Global.System.Web.UI.WebControls.Menu
 
     '''<summary>
-    '''Control Lberror.
+    '''Control ContentPlaceHolder1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Lberror As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

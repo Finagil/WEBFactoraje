@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterPALMT.Master" CodeBehind="Saldos.aspx.vb" Inherits="WebProspectos.Saldos" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="Saldos.aspx.vb" Inherits="WebProspectos.Saldos" 
     title="Saldo Fondeo Finagil" %>
 
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>

@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="DetalleComp.aspx.vb" Inherits="WebProspectos.WebFormDetalleComp" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="DetalleComp.aspx.vb" Inherits="WebProspectos.WebFormDetalleComp" 
     title="Detalle de Lote" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table width="100%">

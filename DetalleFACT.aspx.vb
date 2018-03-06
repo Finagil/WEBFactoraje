@@ -3,6 +3,10 @@ Partial Public Class DetalleFACT
     Dim total1 As Decimal
     Dim total2 As Decimal
 
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
+    End Sub
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Label1.Text = "Detalle del Lote: " & Request("ID") & " Cesión: " & Request("Cesion")
         total1 = 0

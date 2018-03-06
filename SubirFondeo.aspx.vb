@@ -6,6 +6,10 @@ Partial Public Class SubirFondeo
     Dim Importe As Decimal = 0
     Dim Bandera As Boolean
 
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
+    End Sub
+
     Private Sub SubirAnti_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
         Bandera = False
     End Sub

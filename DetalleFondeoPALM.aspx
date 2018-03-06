@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterPALMT.Master" CodeBehind="DetalleFondeoPALM.aspx.vb" Inherits="WebProspectos.DetalleFondeoPALM" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="DetalleFondeoPALM.aspx.vb" Inherits="WebProspectos.DetalleFondeoPALM" 
     title="Detalle de Lote" %>
 
 <%@ Register Assembly="RoderoLib" Namespace="RoderoLib" TagPrefix="cc1" %>

@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterPALMT.Master" CodeBehind="ConfFondeo.aspx.vb" Inherits="WebProspectos.ConfFondeo" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="ConfFondeo.aspx.vb" Inherits="WebProspectos.ConfFondeo" 
     title="Fondeos Pendientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table width=100%>

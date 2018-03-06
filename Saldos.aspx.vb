@@ -10,7 +10,9 @@ Partial Public Class Saldos
     Dim cFactor, Aux As String
     Dim Fecha As Date
     'Dim ID_lot As Integer = 0
-
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
+    End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Fondeo = 0
@@ -129,7 +131,7 @@ Partial Public Class Saldos
             If Diff > 0 Then
                 Pago -= Math.Round(Pago * Incre, 6)
             Else
-                Pago += Math.Round(Pago * Incre, 6)
+                Pago -= Math.Round(Pago * Incre, 6)
             End If
         Next
         Return Math.Round(Pago, 6)

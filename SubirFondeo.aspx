@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="SubirFondeo.aspx.vb" Inherits="WebProspectos.SubirFondeo" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="SubirFondeo.aspx.vb" Inherits="WebProspectos.SubirFondeo" 
     title="Subir Fondeo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table width=100%>

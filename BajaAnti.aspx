@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterPALM.Master" CodeBehind="BajaAnti.aspx.vb" Inherits="WebProspectos.WebForm12" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="BajaAnti.aspx.vb" Inherits="WebProspectos.WebForm12" 
     title="Bajar anticipos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table width=100%>

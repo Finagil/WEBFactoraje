@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterPALM.Master" CodeBehind="SubirFacts.aspx.vb" Inherits="WebProspectos.WebForm1" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="SubirFacts.aspx.vb" Inherits="WebProspectos.WebForm1" 
     title="Subir Facturas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table width=100%>

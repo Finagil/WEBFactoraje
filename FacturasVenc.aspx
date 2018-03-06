@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Facturas Vencidas" Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="FacturasVenc.aspx.vb" Inherits="WebProspectos.FacturasVenc" %>
+﻿<%@ Page Title="Facturas Vencidas" Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="FacturasVenc.aspx.vb" Inherits="WebProspectos.FacturasVenc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table width="100%">
         <tr>

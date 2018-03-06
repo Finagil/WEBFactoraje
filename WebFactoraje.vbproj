@@ -23,6 +23,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,7 +83,6 @@
     <Content Include="IMG\LOGO FINAGIL.JPG" />
     <Content Include="LoginX.aspx" />
     <Content Include="CargarPagos.aspx" />
-    <Content Include="CargaComplementos.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +139,20 @@
       <DependentUpon>FacturasVenc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="PaginaMasterDefault.Master.designer.vb">
+      <DependentUpon>PaginaMasterDefault.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterDefault.Master.vb">
+      <DependentUpon>PaginaMasterDefault.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMasterFACT_PROV.Master.designer.vb">
+      <DependentUpon>PaginaMasterFACT_PROV.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterFACT_PROV.Master.vb">
+      <DependentUpon>PaginaMasterFACT_PROV.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="SaldosFondeo.aspx.designer.vb">
       <DependentUpon>SaldosFondeo.aspx</DependentUpon>
     </Compile>
@@ -160,13 +174,6 @@
     <Compile Include="CargarPagos.aspx.vb">
       <DependentUpon>CargarPagos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CargaComplementos.aspx.designer.vb">
-      <DependentUpon>CargaComplementos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CargaComplementos.aspx.vb">
-      <DependentUpon>CargaComplementos.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SubirPagFondeo.aspx.designer.vb">
       <DependentUpon>SubirPagFondeo.aspx</DependentUpon>
@@ -424,6 +431,7 @@
     <None Include="Factor100DS.xss">
       <DependentUpon>Factor100DS.xsd</DependentUpon>
     </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="My Project\PublishProfiles\WEB_Factoraje.pubxml" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -437,6 +445,8 @@
     <Content Include="SeguridadDS.xsc">
       <DependentUpon>SeguridadDS.xsd</DependentUpon>
     </Content>
+    <Content Include="PaginaMasterFACT_PROV.Master" />
+    <Content Include="PaginaMasterDefault.Master" />
     <None Include="SeguridadDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SeguridadDS1.Designer.vb</LastGenOutput>

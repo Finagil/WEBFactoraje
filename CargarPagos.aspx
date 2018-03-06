@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="CargarPagos.aspx.vb" Inherits="WebProspectos.CargarPagos" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="CargarPagos.aspx.vb" Inherits="WebProspectos.CargarPagos" 
     title="Subir Fondeo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <table width=100%>

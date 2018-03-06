@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterFACT.Master" CodeBehind="FondeosPendiente.aspx.vb" Inherits="WebProspectos.FondeosPendiente" 
+<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="FondeosPendiente.aspx.vb" Inherits="WebProspectos.FondeosPendiente" 
     title="Fondeos Pendientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <table width=100%>

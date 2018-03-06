@@ -11,32 +11,41 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm12
-    
+Partial Public Class PaginaMasterFACT_PROV
+
     '''<summary>
-    '''Control Label1.
+    '''Control form1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
-    
+    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+
     '''<summary>
-    '''Control GridView1.
+    '''Control LbDias.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
-    
+    Protected WithEvents LbDias As Global.System.Web.UI.WebControls.Label
+
     '''<summary>
-    '''Control Lotes_DS.
+    '''Control Menu2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Lotes_DS As Global.System.Web.UI.WebControls.ObjectDataSource
+    Protected WithEvents Menu2 As Global.System.Web.UI.WebControls.Menu
+
+    '''<summary>
+    '''Control ContentPlaceHolder1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

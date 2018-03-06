@@ -7,7 +7,9 @@ Partial Public Class SaldosFondeo
     Dim PagoNeto As Decimal
     Dim Saldo As Decimal
     'Dim ID_lot As Integer = 0
-
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
+    End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Fondeo = 0

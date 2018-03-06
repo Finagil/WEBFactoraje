@@ -6,12 +6,8 @@ Public Partial Class WebForm12
         Bandera = False
     End Sub
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-    End Sub
-
     Protected Sub GridView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GridView1.SelectedIndexChanged
-        
+
         Dim ID As Integer = GridView1.SelectedDataKey(0)
         Dim taL As New Factor100DSTableAdapters.VW_LotesTableAdapter
         Dim TL As New Factor100DS.VW_LotesDataTable
@@ -37,13 +33,15 @@ Public Partial Class WebForm12
                 EnviaCorreo(Session("Correo"), "ecacerest@finagil.com.mx", Msg, Asunto)
                 Bandera = True
             End If
-
-
             Response.Redirect("~\Temp\Lote" & ID & ".csv", False)
             taL.LoteRecibido(ID)
         Else
             Response.Write("Lote sin Facturas")
         End If
 
+    End Sub
+
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
     End Sub
 End Class

@@ -3,6 +3,9 @@ Partial Public Class BajaPagos
     Dim Cliente As String
     Dim Fecha As Date
 
+    Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
+        Me.MasterPageFile = Session.Item("MasterPage")
+    End Sub
     Protected Sub BotonEnviar1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim taL As New Factor100DSTableAdapters.WEB_PagosTableAdapter
@@ -64,5 +67,6 @@ Partial Public Class BajaPagos
         LbTotal.Text = "Total : 0.00"
     End Sub
 
-    
+
+
 End Class
