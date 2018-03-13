@@ -2646,6 +2646,10 @@ Partial Public Class Factor100DS
         
         Private columnCL_NOMBRE As Global.System.Data.DataColumn
         
+        Private columnFilial As Global.System.Data.DataColumn
+        
+        Private columnNoCliente As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -2802,6 +2806,22 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property FilialColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFilial
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NoClienteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNoCliente
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2838,9 +2858,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddVW_LotesRow(ByVal TipoDocumento As String, ByVal Factura As String, ByVal FechaFactura As Date, ByVal FechaVencimiento As Date, ByVal ImporteAnticipo As Decimal, ByVal Cuenta As String, ByVal Planta As String, ByVal Micelaneo As String, ByVal ImporteFactura As Decimal, ByVal Cesion As Decimal, ByVal Nombre As String, ByVal CL_NUM As String, ByVal CL_NOMBRE As String) As VW_LotesRow
+        Public Overloads Function AddVW_LotesRow(ByVal TipoDocumento As String, ByVal Factura As String, ByVal FechaFactura As Date, ByVal FechaVencimiento As Date, ByVal ImporteAnticipo As Decimal, ByVal Cuenta As String, ByVal Planta As String, ByVal Micelaneo As String, ByVal ImporteFactura As Decimal, ByVal Cesion As Decimal, ByVal Nombre As String, ByVal CL_NUM As String, ByVal CL_NOMBRE As String, ByVal Filial As String, ByVal NoCliente As String) As VW_LotesRow
             Dim rowVW_LotesRow As VW_LotesRow = CType(Me.NewRow,VW_LotesRow)
-            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, Nothing, CL_NUM, CL_NOMBRE}
+            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, Nothing, CL_NUM, CL_NOMBRE, Filial, NoCliente}
             rowVW_LotesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVW_LotesRow)
             Return rowVW_LotesRow
@@ -2890,6 +2910,8 @@ Partial Public Class Factor100DS
             Me.columnid_Cliente = MyBase.Columns("id_Cliente")
             Me.columnCL_NUM = MyBase.Columns("CL_NUM")
             Me.columnCL_NOMBRE = MyBase.Columns("CL_NOMBRE")
+            Me.columnFilial = MyBase.Columns("Filial")
+            Me.columnNoCliente = MyBase.Columns("NoCliente")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2925,6 +2947,10 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnCL_NUM)
             Me.columnCL_NOMBRE = New Global.System.Data.DataColumn("CL_NOMBRE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCL_NOMBRE)
+            Me.columnFilial = New Global.System.Data.DataColumn("Filial", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFilial)
+            Me.columnNoCliente = New Global.System.Data.DataColumn("NoCliente", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNoCliente)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_factura}, true))
             Me.columnTipoDocumento.MaxLength = 5
             Me.columnFactura.MaxLength = 20
@@ -2942,6 +2968,8 @@ Partial Public Class Factor100DS
             Me.columnCL_NUM.AllowDBNull = false
             Me.columnCL_NUM.MaxLength = 11
             Me.columnCL_NOMBRE.MaxLength = 80
+            Me.columnFilial.MaxLength = 13
+            Me.columnNoCliente.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8036,6 +8064,36 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Filial() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVW_Lotes.FilialColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'Filial' de la tabla 'VW_Lotes' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVW_Lotes.FilialColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property NoCliente() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableVW_Lotes.NoClienteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NoCliente' de la tabla 'VW_Lotes' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableVW_Lotes.NoClienteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTipoDocumentoNull() As Boolean
             Return Me.IsNull(Me.tableVW_Lotes.TipoDocumentoColumn)
         End Function
@@ -8176,6 +8234,30 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetCL_NOMBRENull()
             Me(Me.tableVW_Lotes.CL_NOMBREColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFilialNull() As Boolean
+            Return Me.IsNull(Me.tableVW_Lotes.FilialColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFilialNull()
+            Me(Me.tableVW_Lotes.FilialColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNoClienteNull() As Boolean
+            Return Me.IsNull(Me.tableVW_Lotes.NoClienteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNoClienteNull()
+            Me(Me.tableVW_Lotes.NoClienteColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -13167,6 +13249,8 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("id_Cliente", "id_Cliente")
             tableMapping.ColumnMappings.Add("CL_NUM", "CL_NUM")
             tableMapping.ColumnMappings.Add("CL_NOMBRE", "CL_NOMBRE")
+            tableMapping.ColumnMappings.Add("Filial", "Filial")
+            tableMapping.ColumnMappings.Add("NoCliente", "NoCliente")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -13183,16 +13267,17 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     WEB_Lotes.TipoDocumento, WEB_Facturas.Factura, WEB_Facturas.FechaFactu"& _ 
-                "ra, WEB_Facturas.FechaVencimiento, WEB_Facturas.ImporteAnticipo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "         WEB_Clientes.Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, WEB_F"& _ 
-                "acturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "           WEB_Clientes.Nombre, WEB_Clientes.id_Cliente, Factor100.dbo.CO_CLIEN."& _ 
-                "CL_NUM, Factor100.dbo.CO_CLIEN.CL_NOMBRE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         WEB_Facturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "                      WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote INNE"& _ 
-                "R JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RF"& _ 
-                "C INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      Factor100.dbo.CO_CLIEN ON WEB_Clientes.RFC ="& _ 
-                " Factor100.dbo.CO_CLIEN.CL_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (WEB_Lotes.Id_Lote = @Lote)"
+            Me._commandCollection(0).CommandText = "SELECT        WEB_Lotes.TipoDocumento, WEB_Facturas.Factura, WEB_Facturas.FechaFa"& _ 
+                "ctura, WEB_Facturas.FechaVencimiento, WEB_Facturas.ImporteAnticipo, WEB_Clientes"& _ 
+                ".Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
+                " WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Cli"& _ 
+                "entes.Nombre, WEB_Clientes.id_Cliente, Factor100.dbo.CO_CLIEN.CL_NUM, Factor100."& _ 
+                "dbo.CO_CLIEN.CL_NOMBRE, WEB_Clientes.Filial, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clie"& _ 
+                "ntes.NoCliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Facturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       "& _ 
+                "  WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "             WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"   "& _ 
+                "                      Factor100.dbo.CO_CLIEN ON WEB_Clientes.RFC = Factor100.dbo"& _ 
+                ".CO_CLIEN.CL_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
@@ -13202,12 +13287,13 @@ Namespace Factor100DSTableAdapters
                 ".Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
                 " WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Cli"& _ 
                 "entes.Nombre, WEB_Clientes.id_Cliente, Factor100.dbo.CO_TITCO.TC_NUM AS CL_NUM, "& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Factor100.dbo.CO_TITCO.TC_NOMBRE AS CL_NOMBRE"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
-                "          WEB_Facturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Fac"& _ 
-                "turas.Id_Lote = WEB_Lotes.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clien"& _ 
-                "tes ON WEB_Facturas.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
-                "Factor100.dbo.CO_TITCO ON WEB_Clientes.RFC = Factor100.dbo.CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHER"& _ 
-                "E        (WEB_Lotes.Id_Lote = @Lote)"
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Factor100.dbo.CO_TITCO.TC_NOMBRE AS CL_NOMBRE, WEB_Cl"& _ 
+                "ientes.Filial, WEB_Clientes.NoCliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Facturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "                         WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote I"& _ 
+                "NNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clien"& _ 
+                "tes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Factor100.dbo.CO_TITCO ON WEB_Clien"& _ 
+                "tes.RFC = Factor100.dbo.CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote"& _ 
+                ")"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
