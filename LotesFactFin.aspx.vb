@@ -19,6 +19,9 @@ Partial Public Class LotesFactFin
             Dim TL As New Factor100DS.VW_LotesDataTable
             Dim r As Factor100DS.VW_LotesRow
             taL.Fill(TL, ID)
+            If TL.Rows.Count <= 0 Then
+                taL.Fill_PROV(TL, ID)
+            End If
             If TL.Rows.Count > 0 Then
                 Dim f As New System.IO.StreamWriter(Server.MapPath("Temp") & "\Lote" & ID & ".csv", False)
                 f.WriteLine("CESION,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto")
@@ -32,9 +35,11 @@ Partial Public Class LotesFactFin
                 Response.Write("<script language='JavaScript'>window.open('\Temp\\Lote" & ID & ".csv','_blank','width=50,height=36,left=200,top=250')</script>")
                 Page.DataBind()
             Else
-                Response.Write("Lote sin Facturas")
+                LbError.Text = "Error Lote sin Facturas"
+                LbError.Visible = True
             End If
         Else
+            LbError.Text = "Num. Cesión No valida."
             LbError.Visible = True
         End If
     End Sub

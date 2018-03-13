@@ -1,4 +1,4 @@
-<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PaginaMasterFACT_PROV.Master.vb" Inherits="WebProspectos.PaginaMasterFACT_PROV" %>
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PaginaMasterPROV.Master.vb" Inherits="WebProspectos.PaginaMasterPROV" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -20,7 +20,7 @@
             </tr>
             <tr>
             <td style="width: 100%; height: 100%" colspan="2">
-            <asp:Menu ID="Menu2" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#FF6600" StaticSubMenuIndent="10px" Height="1px" Width="348px" Font-Bold="True" Orientation="Horizontal">
+            <asp:Menu ID="Menu2" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#FF6600" StaticSubMenuIndent="10px" Height="16px" Width="187px" Font-Bold="True" Orientation="Horizontal">
                         <StaticSelectedStyle BackColor="#507CD1" />
                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                         <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
@@ -29,10 +29,9 @@
                         <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                         <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
                         <Items>
-                            <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Subir Facturas" Value="Subir Facturas" NavigateUrl="~/SubirFacts.aspx">
+                            <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Descontar Facturas" Value="Descontar Facturas" NavigateUrl="~/Proveedores/DescontarLote.aspx">
                             </asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/LotesFact.aspx" SeparatorImageUrl="~/IMG/sep.JPG"
-                                Text="Lotes Pendientes" Value="Inicio"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Proveedores/ConsultaLote.aspx" SeparatorImageUrl="~/IMG/sep.JPG" Text="Lotes Descontados" Value="Lotes Descontados"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/LoginX.aspx" Text="Salir" Value="Salir" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
                         </Items>
                     </asp:Menu>

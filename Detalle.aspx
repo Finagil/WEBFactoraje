@@ -16,7 +16,7 @@
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                     DataKeyNames="Id_factura" DataSourceID="Detalle_DS" Font-Names="Verdana" Font-Size="Smaller"
-                    ForeColor="#333333" GridLines="None" ShowFooter="True">
+                    ForeColor="#333333" GridLines="None" ShowFooter="True" EnableModelValidation="True">
                     <RowStyle BackColor="#FFE0C0" />
                     <Columns>
                         <asp:BoundField DataField="Id_factura" HeaderText="Id_factura" InsertVisible="False"
@@ -26,9 +26,13 @@
                         <asp:BoundField DataField="Factura" HeaderText="Factura" SortExpression="Factura" />
                         <asp:BoundField DataField="RFC" HeaderText="RFC" SortExpression="RFC" />
                         <asp:BoundField DataField="ImporteFactura" DataFormatString="{0:c}" HeaderText="Importe Factura"
-                            HtmlEncode="False" SortExpression="ImporteFactura" />
+                            HtmlEncode="False" SortExpression="ImporteFactura" >
+                        <ItemStyle HorizontalAlign="Right" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="ImporteAnticipo" DataFormatString="{0:c}" HeaderText="Importe Anticipo"
-                            HtmlEncode="False" SortExpression="ImporteAnticipo" />
+                            HtmlEncode="False" SortExpression="ImporteAnticipo" >
+                        <ItemStyle HorizontalAlign="Right" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="FechaFactura" DataFormatString="{0:d}" HeaderText="Fecha Factura"
                             HtmlEncode="False" SortExpression="FechaFactura" />
                         <asp:BoundField DataField="FechaVencimiento" DataFormatString="{0:d}" HeaderText="Fecha Vencimiento"

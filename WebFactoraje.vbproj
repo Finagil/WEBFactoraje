@@ -78,12 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Proveedores\ConsultaLote.aspx" />
+    <Content Include="Proveedores\DescontarLote.aspx" />
     <Content Include="DetalleComp.aspx" />
     <Content Include="FacturasVenc.aspx" />
     <Content Include="IMG\LOGO FINAGIL.JPG" />
     <Content Include="LoginX.aspx" />
     <Content Include="CargarPagos.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaanDS.Designer.vb">
@@ -125,6 +129,20 @@
       <DependentUpon>ConfFondeo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Proveedores\ConsultaLote.aspx.designer.vb">
+      <DependentUpon>ConsultaLote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores\ConsultaLote.aspx.vb">
+      <DependentUpon>ConsultaLote.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Proveedores\DescontarLote.aspx.designer.vb">
+      <DependentUpon>DescontarLote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores\DescontarLote.aspx.vb">
+      <DependentUpon>DescontarLote.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="DetalleComp.aspx.designer.vb">
       <DependentUpon>DetalleComp.aspx</DependentUpon>
     </Compile>
@@ -144,6 +162,13 @@
     </Compile>
     <Compile Include="PaginaMasterDefault.Master.vb">
       <DependentUpon>PaginaMasterDefault.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMasterPROV.Master.designer.vb">
+      <DependentUpon>PaginaMasterPROV.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterPROV.Master.vb">
+      <DependentUpon>PaginaMasterPROV.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PaginaMasterFACT_PROV.Master.designer.vb">
@@ -447,6 +472,7 @@
     </Content>
     <Content Include="PaginaMasterFACT_PROV.Master" />
     <Content Include="PaginaMasterDefault.Master" />
+    <Content Include="PaginaMasterPROV.Master" />
     <None Include="SeguridadDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SeguridadDS1.Designer.vb</LastGenOutput>

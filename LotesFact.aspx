@@ -10,7 +10,7 @@
     <br />
     <asp:GridView ID="GridView1" runat="server"
             AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id_Lote" DataSourceID="Lotes_DS"
-            Font-Names="Verdana" Font-Size="Smaller" ForeColor="#333333" GridLines="None">
+            Font-Names="Verdana" Font-Size="Smaller" ForeColor="#333333" GridLines="None" EnableModelValidation="True">
             <RowStyle BackColor="#FFE0C0" />
             <Columns>
                 <asp:HyperLinkField DataNavigateUrlFields="Id_Lote" DataNavigateUrlFormatString="Detalle.aspx?ID={0}"
@@ -41,23 +41,25 @@
         <DeleteParameters>
             <asp:Parameter Name="Original_Id_Lote" Type="Decimal" />
         </DeleteParameters>
-        <UpdateParameters>
-            <asp:Parameter Name="Fecha" Type="DateTime" />
-            <asp:Parameter Name="Usuario" Type="String" />
-            <asp:Parameter Name="Estatus" Type="String" />
-            <asp:Parameter Name="TipoDocumento" Type="String" />
-            <asp:Parameter Name="Original_Id_Lote" Type="Decimal" />
-        </UpdateParameters>
-        <SelectParameters>
-            <asp:SessionParameter Name="Usuario" SessionField="User" Type="String" />
-            <asp:Parameter DefaultValue="Pendiente" Name="Estatus" Type="String" />
-        </SelectParameters>
         <InsertParameters>
             <asp:Parameter Name="Fecha" Type="DateTime" />
             <asp:Parameter Name="Usuario" Type="String" />
             <asp:Parameter Name="Estatus" Type="String" />
             <asp:Parameter Name="TipoDocumento" Type="String" />
+            <asp:Parameter Name="Cesion" Type="Decimal" />
         </InsertParameters>
+        <SelectParameters>
+            <asp:SessionParameter Name="Usuario" SessionField="User" Type="String" />
+            <asp:SessionParameter DefaultValue="Pendiente" Name="Estatus" SessionField="Estatus" Type="String" />
+        </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="Fecha" Type="DateTime" />
+            <asp:Parameter Name="Usuario" Type="String" />
+            <asp:Parameter Name="Estatus" Type="String" />
+            <asp:Parameter Name="TipoDocumento" Type="String" />
+            <asp:Parameter Name="Cesion" Type="Decimal" />
+            <asp:Parameter Name="Original_Id_Lote" Type="Decimal" />
+        </UpdateParameters>
     </asp:ObjectDataSource>
     <br />
     <br />

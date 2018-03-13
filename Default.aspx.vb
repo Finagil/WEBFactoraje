@@ -12,9 +12,12 @@ Partial Public Class _Default
             Case "TES"
                 Session("MasterPage") = "~/PaginaMasterPALMT.Master"
                 Response.Redirect("~/ConfFondeo.aspx", True)
-            Case "FACT_PROV"
+            Case "FPR"
                 Session("MasterPage") = "~/PaginaMasterFACT_PROV.Master"
                 Response.Redirect("~/SubirFacts.aspx", True)
+            Case "PRV"
+                Session("MasterPage") = "~/PaginaMasterPROV.Master"
+                Response.Redirect("~/Proveedores/DescontarLote.aspx", True)
             Case Else
                 Response.Redirect("~/LoginX.aspx", True)
         End Select

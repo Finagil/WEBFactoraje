@@ -13,6 +13,7 @@ Public Partial Class WebForm1
 
     Protected Sub Submit1_ServerClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Submit1.ServerClick
         Lberror.Visible = False
+        Lberror.Text = ""
         Dim Total As Decimal = 0
         Dim Cli As String = ""
         If Not File1.PostedFile Is Nothing And File1.PostedFile.ContentLength > 0 Then
@@ -69,13 +70,19 @@ Public Partial Class WebForm1
         Dim tb As New Factor100DSTableAdapters.WEB_ClientesTableAdapter
         'Dim tc As New Factor100DSTableAdapters.ClientesTableAdapter
         Dim L() As String
-        Dim LINEA As String
         Dim Lim As Integer = 5
         'Dim RFC As String
         Dim NunLine As Integer = 0
         While Not F.EndOfStream
-            LINEA = F.ReadLine
-            L = LINEA.Split(",")
+            L = F.ReadLine.Split(",")
+            If L(0) = "RFC" Then 'se salta la linea de encabezado
+                L = F.ReadLine.Split(",")
+            End If
+
+            If Session.Item("TipoCadena") = "FPR" Then
+                Lim = 5
+            End If
+
             If L(0) = "TIENDAS SORIANA" And L.Length = 6 Then
                 Lim = 6
                 L(0) = L(0) & "," & L(1)
@@ -88,9 +95,9 @@ Public Partial Class WebForm1
                 L(0) = "TIENDAS SORIANA, SA DE CV"
             End If
 
-            If L.Length <> Lim Then
-                L = LINEA.Split("|")
-            End If
+            'If L.Length <> Lim Then
+            '    L = LINEA.Split("|")
+            'End If
 
             If L.Length <> Lim Then
                 Lberror.Visible = True
@@ -113,6 +120,7 @@ Public Partial Class WebForm1
             'Lberror.Visible = True
             'Lberror.Text = Lberror.Text & "<BR> Cliente no Existe en Factor100 " & L(0) & " Linea: " & NunLine
             'End If
+
             If InStr(L(1).Trim, " ") > 0 Then
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
@@ -129,6 +137,12 @@ Public Partial Class WebForm1
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> Fecha vencimiento no valida " & L(3) & " Linea: " & NunLine
             End If
+            If Session.Item("TipoCadena") = "FPR" Then
+                If Not IsNumeric(L(4)) Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Importe no valido " & L(3) & " Linea: " & NunLine
+                End If
+            End If
         End While
         F.Close()
 
@@ -138,32 +152,53 @@ Public Partial Class WebForm1
             Dim RFC As String = ""
             Dim Banco As String = tb.SacaBanco(L(0))
             Dim FecVecn As Date = Date.Now
-            LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", Banco, 0)
+            If Session.Item("TipoCadena") = "FPR" Then
+                LOT.Insert(Date.Now, Session.Item("User"), "Por Descontar", Banco, 0)
+            Else
+                LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", Banco, 0)
+            End If
+
             Lote = LOT.UltimoID()
             F = New System.IO.StreamReader(Archivo, True)
             Dim NuloFec As Nullable(Of Date)
             While Not F.EndOfStream
                 L = F.ReadLine.Split(",")
-                If L(0) = "TIENDAS SORIANA" Then
-                    Lim = 6
-                    L(0) = L(0) & "," & L(1)
-                    L(1) = L(2)
-                    L(2) = L(3)
-                    L(3) = L(4)
-                    L(4) = L(5)
+                If L(0) = "RFC" Then 'se salta la linea de encabezado
+                    L = F.ReadLine.Split(",")
                 End If
-                If L(0).Trim = "TIENDAS SORIANA SA DE CV" Then
-                    L(0) = "TIENDAS SORIANA, SA DE CV"
-                End If
-                CLI = L(0)
-                RFC = tb.SacaRFC(L(0))
-                total += CDec(L(4))
-                FecVecn = CDate(L(3))
-                CalculaFecVecnt(FecVecn, RFC)
-                If ta.ExisteFactura(L(1)) <= 0 Then
-                    ta.Insert(Lote, L(1), RFC, L(4), 0, L(2), FecVecn, False, "", NuloFec)
+                If Session.Item("TipoCadena") = "FPR" Then
+                    If RFC = "" Then
+                        RFC = L(0)
+                    End If
+                    total += CDec(L(4))
+                    FecVecn = CDate(L(3))
+                    CalculaFecVecnt(FecVecn, L(0))
+                    If ta.ExisteFactura(L(1)) <= 0 And RFC = L(0) Then
+                        ta.Insert(Lote, L(1), L(0), L(4), 0, L(2), FecVecn, False, "", NuloFec)
+                    End If
+                Else
+                    If L(0) = "TIENDAS SORIANA" Then
+                        Lim = 6
+                        L(0) = L(0) & "," & L(1)
+                        L(1) = L(2)
+                        L(2) = L(3)
+                        L(3) = L(4)
+                        L(4) = L(5)
+                    End If
+                    If L(0).Trim = "TIENDAS SORIANA SA DE CV" Then
+                        L(0) = "TIENDAS SORIANA, SA DE CV"
+                    End If
+                    CLI = L(0)
+                    RFC = tb.SacaRFC(L(0))
+                    total += CDec(L(4))
+                    FecVecn = CDate(L(3))
+                    CalculaFecVecnt(FecVecn, RFC)
+                    If ta.ExisteFactura(L(1)) <= 0 Then
+                        ta.Insert(Lote, L(1), RFC, L(4), 0, L(2), FecVecn, False, "", NuloFec)
+                    End If
                 End If
             End While
+            GeneraCorreoPROV(Lote)
             F.Close()
         End If
 
@@ -225,5 +260,27 @@ Public Partial Class WebForm1
         End If
         Festivos.Dispose()
     End Sub
+
+    Sub GeneraCorreoPROV(lote As Decimal)
+        Dim ta As New Factor100DSTableAdapters.LotesPorDescontarTableAdapter
+        Dim t As New Factor100DS.LotesPorDescontarDataTable
+        ta.FillBylote(t, lote, "Por Descontar")
+        Dim Mensaje As String = ""
+        For Each r As Factor100DS.LotesPorDescontarRow In t.Rows
+            Mensaje = "<FONT FACE=""arial"">Estimado " & r.Nombre_Persona & "<br><br>Le informamos que la Compañía " & r.NombreCliente & " ha publicado " & r.Facturas
+            Mensaje += " facturas a favor de  " & r.Proveedor & " por un monto total de $" & r.ImporteFactura.ToString("n2")
+            Mensaje += " mismas que usted podrá solicitar su pago anticipado a través de la cesión de derechos de crédito que realice a FINAGIL, S.A. DE C.V. SOFOM E.N.R. en la siguiente liga:"
+            Mensaje += "<br><br><A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje Finagil</A><br><br>"
+            Mensaje += "Al aceptar la trasmisión de los derechos de crédito a FINAGIL, S.A. DE C.V. SOFOM E.N.R. usted estará recibiendo el pago el mismo día que realice su autorización, considerando un horario de operación de 9:00 AM a 12:30 PM.<br><br>"
+            Mensaje += "En caso de tener cualquier duda o comentario al respecto favor a contactarnos<BR><br>"
+            Mensaje += "Leonardo Ayala <layala@finagil.com.mx><BR>"
+            Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1200<br><br>"
+            Mensaje += "Leticia Mondragon <lmondragon@finagil.com.mx><BR>"
+            Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1207<br><br></p></FONT>"
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", r.Correo, Mensaje, "Finagil - Facturas para descuento")
+            'EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+        Next
+    End Sub
+
 
 End Class

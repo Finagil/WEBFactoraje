@@ -11,7 +11,34 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm2
+Partial Public Class ConsultaLote
+    
+    '''<summary>
+    '''Control Label5.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control GridView2.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents GridView2 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control Lotes_DS.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Lotes_DS As Global.System.Web.UI.WebControls.ObjectDataSource
     
     '''<summary>
     '''Control Label1.
@@ -32,11 +59,11 @@ Partial Public Class WebForm2
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Control Lotes_DS.
+    '''Control Detalle_DS.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Lotes_DS As Global.System.Web.UI.WebControls.ObjectDataSource
+    Protected WithEvents Detalle_DS As Global.System.Web.UI.WebControls.ObjectDataSource
 End Class
