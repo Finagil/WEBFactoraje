@@ -125,7 +125,7 @@ Public Partial Class WebForm1
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
             End If
-            If ta.ExisteFactura(L(1)) > 0 Then
+            If ta.ExisteFactura(L(1), L(0)) > 0 Then
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> La factura ya fue cargada " & L(1) & " Linea: " & NunLine
             End If
@@ -153,7 +153,7 @@ Public Partial Class WebForm1
             Dim Banco As String = tb.SacaBanco(L(0))
             Dim FecVecn As Date = Date.Now
             If Session.Item("TipoCadena") = "FPR" Then
-                LOT.Insert(Date.Now, Session.Item("User"), "Por Descontar", Banco, 0)
+                LOT.Insert(Date.Now, Session.Item("User"), "Por Descontar", Session.Item("TipoCadena"), 0)
             Else
                 LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", Banco, 0)
             End If
@@ -173,7 +173,7 @@ Public Partial Class WebForm1
                     total += CDec(L(4))
                     FecVecn = CDate(L(3))
                     CalculaFecVecnt(FecVecn, L(0))
-                    If ta.ExisteFactura(L(1)) <= 0 And RFC = L(0) Then
+                    If ta.ExisteFactura(L(1), L(0)) <= 0 And RFC = L(0) Then
                         ta.Insert(Lote, L(1), L(0), L(4), 0, L(2), FecVecn, False, "", NuloFec)
                     End If
                 Else
@@ -193,7 +193,7 @@ Public Partial Class WebForm1
                     total += CDec(L(4))
                     FecVecn = CDate(L(3))
                     CalculaFecVecnt(FecVecn, RFC)
-                    If ta.ExisteFactura(L(1)) <= 0 Then
+                    If ta.ExisteFactura(L(1), RFC) <= 0 Then
                         ta.Insert(Lote, L(1), RFC, L(4), 0, L(2), FecVecn, False, "", NuloFec)
                     End If
                 End If
@@ -278,7 +278,8 @@ Public Partial Class WebForm1
             Mensaje += "Leticia Mondragon <lmondragon@finagil.com.mx><BR>"
             Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1207<br><br></p></FONT>"
             EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", r.Correo, Mensaje, "Finagil - Facturas para descuento")
-            'EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "layala@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
         Next
     End Sub
 

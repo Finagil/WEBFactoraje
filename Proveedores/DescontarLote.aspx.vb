@@ -55,7 +55,8 @@ Partial Public Class DescontarLote
             Mensaje += "Leticia Mondragon <lmondragon@finagil.com.mx><BR>"
             Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1207<br><br></p></FONT>"
             EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", r.Correo, Mensaje, "Finagil - Facturas para descuento")
-            'EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "layala@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
         Next
     End Sub
 End Class

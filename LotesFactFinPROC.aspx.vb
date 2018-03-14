@@ -15,7 +15,11 @@ Partial Public Class LotesFactFinPROC
             Dim f As New System.IO.StreamWriter(Server.MapPath("Temp") & "\Lote" & ID & ".csv", False)
             f.WriteLine("CESION,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto")
             For Each r In TL.Rows
-                f.WriteLine(r.Cesion & "," & r.NoCliente & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.Filial & ",FS")
+                If r.Planta = "FPR" Then
+                    f.WriteLine(r.Cesion & "," & r.Cuenta & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.RFC_Cliente & ",FS")
+                Else
+                    f.WriteLine(r.Cesion & "," & r.NoCliente & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.RFC_Filial & ",FS")
+                End If
             Next
             f.Close()
             Response.Write("Lote sin Facturas")

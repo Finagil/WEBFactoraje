@@ -38,7 +38,7 @@ Partial Public Class SubirFondeo
                 Lberror.Text = "Formato de archivo Incorrecto"
                 Exit While
             End If
-            If ta2.ExisteFactura(L(0)) <= 0 Then
+            If ta2.ExisteFacturaUnica(L(0)) <= 0 Then
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> La factura no existe en el Factoraje de Clientes. Linea: " & NunLine
             End If
