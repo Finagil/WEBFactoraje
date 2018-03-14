@@ -20,7 +20,7 @@
             </tr>
             <tr>
             <td style="width: 100%; height: 100%" colspan="2">
-            <asp:Menu ID="Menu2" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#FF6600" StaticSubMenuIndent="10px" Height="16px" Width="187px" Font-Bold="True" Orientation="Horizontal">
+            <asp:Menu ID="Menu2" runat="server" BackColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#FF6600" StaticSubMenuIndent="10px" Height="16px" Width="438px" Font-Bold="True" Orientation="Horizontal">
                         <StaticSelectedStyle BackColor="#507CD1" />
                         <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                         <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
