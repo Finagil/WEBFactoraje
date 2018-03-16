@@ -4,6 +4,7 @@ Partial Public Class SubirAnti
     Dim UserX As String = ""
     Dim Cesion As String = ""
     Dim Bandera As Boolean
+    Dim TipoLote As String = ""
 
     Private Sub WebForm_PreInit(sender As Object, e As EventArgs) Handles Me.PreInit
         Me.MasterPageFile = Session.Item("MasterPage")
@@ -39,18 +40,20 @@ Partial Public Class SubirAnti
                 File1.PostedFile.SaveAs(SaveLocation)
                 ValidaDatos(SaveLocation)
                 If Lberror.Visible = False Then
-                    Dim Msg As String
-                    Dim Asunto As String
-                    Msg = "El usuario " & Session("User") & " acaba de subir los anticipos del lote " & Lote & " para su proceso<br>"
-                    Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A>"
-                    Asunto = "Carga de Anticipos " & Lote & " (Factoraje)"
-                    If Bandera = False Then
-                        EnviaCorreo(My.Settings.CorreoAdmin, Session("Correo"), Msg, Asunto)
-                        EnviaCorreo(My.Settings.CorreoAdmin, "ecacerest@finagil.com.mx", Msg, Asunto)
-                        Bandera = True
+                    If TipoLote = "FPR" Then
+                        GeneraCorreoPROV(Lote)
+                    Else
+                        Dim Msg As String
+                        Dim Asunto As String
+                        Msg = "El usuario " & Session("User") & " acaba de subir los anticipos del lote " & Lote & " para su proceso<br>"
+                        Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A>"
+                        Asunto = "Carga de Anticipos " & Lote & " (Factoraje)"
+                        If Bandera = False Then
+                            EnviaCorreo(My.Settings.CorreoAdmin, Session("Correo"), Msg, Asunto)
+                            EnviaCorreo(My.Settings.CorreoAdmin, "ecacerest@finagil.com.mx", Msg, Asunto)
+                            Bandera = True
+                        End If
                     End If
-                    
-
                     Response.Redirect("~\DetalleFACT.aspx?ID=" & Lote & "&Cesion=" & Cesion)
                 End If
 
@@ -103,9 +106,30 @@ Partial Public Class SubirAnti
             F.Close()
             Dim lot As New Factor100DSTableAdapters.WEB_LotesTableAdapter
             lot.LoteProcesado(Lote)
+            TipoLote = lot.SacaTipoLote(Lote)
         End If
 
     End Sub
 
-    
+    Sub GeneraCorreoPROV(lote As Decimal)
+        Dim ta As New Factor100DSTableAdapters.LotesPorDescontarTableAdapter
+        Dim t As New Factor100DS.LotesPorDescontarDataTable
+        ta.FillByLote(t, lote, "Descargado")
+        Dim Mensaje As String = ""
+        For Each r As Factor100DS.LotesPorDescontarRow In t.Rows
+            Mensaje = "<FONT FACE=""arial"">Estimado " & r.Nombre_Persona & "<br><br>Le informamos que la Compañía " & r.NombreCliente & " ha publicado " & r.Facturas
+            Mensaje += " facturas a favor de  " & r.Proveedor & " por un monto total de $" & r.ImporteFactura.ToString("n2")
+            Mensaje += " mismas que usted podrá solicitar su pago anticipado a través de la cesión de derechos de crédito que realice a FINAGIL, S.A. DE C.V. SOFOM E.N.R. en la siguiente liga:"
+            Mensaje += "<br><br><A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje Finagil</A><br><br>"
+            Mensaje += "Al aceptar la trasmisión de los derechos de crédito a FINAGIL, S.A. DE C.V. SOFOM E.N.R. usted estará recibiendo el pago el mismo día que realice su autorización, considerando un horario de operación de 9:00 AM a 12:30 PM.<br><br>"
+            Mensaje += "En caso de tener cualquier duda o comentario al respecto favor a contactarnos<BR><br>"
+            Mensaje += "Leonardo Ayala <layala@finagil.com.mx><BR>"
+            Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1200<br><br>"
+            Mensaje += "Leticia Mondragon <lmondragon@finagil.com.mx><BR>"
+            Mensaje += "Tel: (01722) 265 3400 / (01722) 214 5533 EXT 1207<br><br></p></FONT>"
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", r.Correo, Mensaje, "Finagil - Facturas para descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "ecacerest@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+            EnviaCorreo("Leonardo Ayala (Finagil) <layala@finagil.com.mx>", "layala@finagil.com.mx", Mensaje, "Finagil - Facturas para Descuento")
+        Next
+    End Sub
 End Class
