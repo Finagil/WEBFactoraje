@@ -40,7 +40,7 @@ Partial Public Class Saldos
             If Fecha >= CDate("01/12/2017") And Pag > 0 Then
                 Dim Cont As Integer = 0
                 Aux = ""
-                Factor = (Rete / Pag)
+                Factor = Math.Abs((Rete / Pag))
                 cFactor = Factor.ToString()
                 For x As Integer = 1 To cFactor.Length
                     If Mid(cFactor, x, 1) = "." Or Cont > 0 Then
@@ -110,6 +110,7 @@ Partial Public Class Saldos
 
         For x As Integer = 1 To 1000
             AuxRete = Math.Round(Tasa * Pago, 2)
+            Rete = Math.Abs(Rete)
             Diff = Math.Round(Rete - AuxRete, 2)
             Select Case Math.Abs(Diff)
                 Case >= 1000
@@ -129,7 +130,7 @@ Partial Public Class Saldos
             End Select
 
             If Diff > 0 Then
-                Pago -= Math.Round(Pago * Incre, 6)
+                Pago += Math.Round(Pago * Incre, 6)
             Else
                 Pago -= Math.Round(Pago * Incre, 6)
             End If
