@@ -87,9 +87,9 @@ Partial Public Class Saldos
             Case > 1
                 Incre = 0.00001
             Case > 0.02
-                Incre = 0.000001
+                Incre = 0.00001
             Case > 0.01
-                Incre = 0.0000001
+                Incre = 0.00001
             Case <= 0.01
                 Return Math.Round(Pago, 2)
         End Select
@@ -108,31 +108,31 @@ Partial Public Class Saldos
         Dim AuxRete As Decimal
         Dim Diff As Decimal
 
-        For x As Integer = 1 To 1000
+        For x As Integer = 1 To 3000
             AuxRete = Math.Round(Tasa * Pago, 2)
             Rete = Math.Abs(Rete)
             Diff = Math.Round(Rete - AuxRete, 2)
             Select Case Math.Abs(Diff)
                 Case >= 1000
-                    Incre = 0.1
+                    Incre = 100000
                 Case > 100
-                    Incre = 0.01
+                    Incre = 10000
                 Case > 10
-                    Incre = 0.0001
+                    Incre = 1000
                 Case > 1
-                    Incre = 0.00001
-                Case > 0.02
-                    Incre = 0.000001
+                    Incre = 100
+                Case > 0.1
+                    Incre = 10
                 Case > 0.01
-                    Incre = 0.0000001
+                    Incre = 0.1
                 Case <= 0.0
                     Exit For
             End Select
 
             If Diff > 0 Then
-                Pago += Math.Round(Pago * Incre, 6)
+                Pago = Math.Round(Pago + Incre, 6)
             Else
-                Pago -= Math.Round(Pago * Incre, 6)
+                Pago = Math.Round(Pago - Incre, 6)
             End If
         Next
         Return Math.Round(Pago, 6)
