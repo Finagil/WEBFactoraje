@@ -40,8 +40,11 @@ Module Globales
     '    EnviaCorreo(para, Mensaje, "Asignación de prospecto: " & rr.NombreProspecto)
     'End Sub
 
-    Public Sub EnviaCorreo(ByVal De As String, ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String)
+    Public Sub EnviaCorreo(ByVal De As String, ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String, Optional cc As String = "")
         Dim Mensage As New MailMessage(De, Trim(Para), Trim(Asunto), Mensaje)
+        If cc > "" Then
+            Mensage.CC.Add(cc)
+        End If
         Dim Cliente As New SmtpClient(My.Settings.SmtpSRV, My.Settings.SmtpPORT)
         Mensage.IsBodyHtml = True
         Cliente.Send(Mensage)
