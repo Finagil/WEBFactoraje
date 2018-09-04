@@ -11,34 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class DescontarLote
-    
-    '''<summary>
-    '''Control Label5.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Label5 As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control GridView2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents GridView2 As Global.System.Web.UI.WebControls.GridView
-    
-    '''<summary>
-    '''Control Lotes_DS.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents Lotes_DS As Global.System.Web.UI.WebControls.ObjectDataSource
+Partial Public Class WebForm1XML
     
     '''<summary>
     '''Control Label1.
@@ -50,6 +23,24 @@ Partial Public Class DescontarLote
     Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control FileUpload1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+    
+    '''<summary>
+    '''Control Submit1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Submit1 As Global.System.Web.UI.HtmlControls.HtmlInputSubmit
+    
+    '''<summary>
     '''Control GridView1.
     '''</summary>
     '''<remarks>
@@ -59,29 +50,38 @@ Partial Public Class DescontarLote
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
-    '''Control Detalle_DS.
+    '''Control LberrorXML0.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Detalle_DS As Global.System.Web.UI.WebControls.ObjectDataSource
+    Protected WithEvents LberrorXML0 As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control Label3.
+    '''Control Button2.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
-
+    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
+    
     '''<summary>
-    '''Control BotonEnviar2.
+    '''Control Button1.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents BotonEnviar2 As Global.RoderoLib.BotonEnviar
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control LberrorXML.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents LberrorXML As Global.System.Web.UI.WebControls.Label
 End Class

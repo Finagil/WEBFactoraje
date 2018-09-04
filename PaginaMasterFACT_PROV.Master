@@ -31,6 +31,7 @@
                         <Items>
                             <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Subir Facturas" Value="Subir Facturas" NavigateUrl="~/SubirFacts.aspx">
                             </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SubirFactsXML.aspx" SeparatorImageUrl="~/IMG/sep.JPG" Text="Subir Facturas (XML)" Value="Subir Facturas (XML)"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/LotesFact.aspx" SeparatorImageUrl="~/IMG/sep.JPG"
                                 Text="Lotes Pendientes" Value="Inicio"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/LoginX.aspx" Text="Salir" Value="Salir" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
