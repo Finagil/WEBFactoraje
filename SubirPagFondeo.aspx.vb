@@ -190,6 +190,16 @@ Partial Public Class SubirPagFondeo
                             EnviaCorreo(Session("Correo"), rx.Correo, Msg, Asunto)
                         Next
                         Bandera = True
+                        '++++++++++++CORREO PARA PALM+++++++++++++++++++++++++++++++++++++++++++++
+                        Msg = "El usuario " & Session("User") & " acaba de solicitar un reembolso:<br>"
+                        Msg += "Importe: " & Importe.ToString("n2") & "<br>"
+                        Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Pasivos Finagil</A>"
+                        Asunto = "Pago de Reembolso Importe: " & Importe.ToString("n2") & "<br>"
+                        tax.Fill(tx, "PAG_FONDEO_PALM")
+                        For Each rx As Factor100DS.FON_CorreosRow In tx.Rows
+                            EnviaCorreo(Session("Correo"), rx.Correo, Msg, Asunto, rx.cc)
+                        Next
+                        '++++++++++++CORREO PARA PALM+++++++++++++++++++++++++++++++++++++++++++++
                     End If
                     Session.Item("SaveLocation") = ""
                     Response.Redirect("~\SaldosFondeo.aspx")
