@@ -216,9 +216,11 @@ Partial Public Class WebForm1XML
                 End If
             Next
             If cont > 0 Then
-                MsgBox(cont.ToString & " comprobantes enviados correctamente...")
+                LberrorXML0.Visible = True
+                LberrorXML0.Text = cont.ToString & " comprobantes enviados correctamente..."
             Else
-                MsgBox("No hay comprobantes por enviar...")
+                LberrorXML0.Visible = True
+                LberrorXML0.Text = "No hay comprobantes por enviar..."
             End If
         Catch ex As Exception
             MsgBox(ex.ToString)
@@ -229,7 +231,7 @@ Partial Public Class WebForm1XML
         FileUpload1.Visible = True
         Submit1.Visible = True
         Button1.Visible = False
-        LberrorXML0.Visible = False
+        'LberrorXML0.Visible = False
     End Sub
 
 
