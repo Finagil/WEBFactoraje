@@ -24,9 +24,9 @@ Partial Public Class WebForm1XML
 
     Protected Sub Submit1_ServerClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Submit1.ServerClick
         Dim DVencimientos As New Factor100DSTableAdapters.WEB_DVencimientoTableAdapter
-        Dim dtF100 As New FactorVWDSTableAdapters.Vw_ChequesDetalleTableAdapter
-        Dim dtWebXML As New FactorVWDSTableAdapters.WEB_FacturasXMLTableAdapter
-        Dim dsF100 As New FactorVWDS.Vw_ChequesDetalleDataTable
+        Dim dtF100 As New FactorVWDS1TableAdapters.Vw_ChequesDetalleTableAdapter
+        Dim dtWebXML As New FactorVWDS1TableAdapters.WEB_FacturasXMLTableAdapter
+        Dim dsF100 As New FactorVWDS1.Vw_ChequesDetalleDataTable
 
         'columnas
         dt.Columns.Add(New DataColumn("Factura", System.Type.GetType("System.String")))

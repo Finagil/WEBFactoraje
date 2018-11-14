@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="LotesFactFinAll.aspx" />
     <Content Include="Proveedores\ConsultaLote.aspx" />
     <Content Include="Proveedores\DescontarLote.aspx" />
     <Content Include="DetalleComp.aspx" />
@@ -143,10 +144,17 @@
       <DependentUpon>ConfFondeo.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="FactorVWDS.Designer.vb">
+    <Compile Include="FactorVWDS1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FactorVWDS.xsd</DependentUpon>
+      <DependentUpon>FactorVWDS1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinAll.aspx.designer.vb">
+      <DependentUpon>LotesFactFinAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotesFactFinAll.aspx.vb">
+      <DependentUpon>LotesFactFinAll.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Proveedores\ConsultaLote.aspx.designer.vb">
       <DependentUpon>ConsultaLote.aspx</DependentUpon>
@@ -482,16 +490,16 @@
     <None Include="Factor100DS.xss">
       <DependentUpon>Factor100DS.xsd</DependentUpon>
     </None>
-    <Content Include="FactorVWDS.xsc">
-      <DependentUpon>FactorVWDS.xsd</DependentUpon>
+    <Content Include="FactorVWDS1.xsc">
+      <DependentUpon>FactorVWDS1.xsd</DependentUpon>
     </Content>
-    <None Include="FactorVWDS.xsd">
+    <None Include="FactorVWDS1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FactorVWDS.Designer.vb</LastGenOutput>
+      <LastGenOutput>FactorVWDS1.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="FactorVWDS.xss">
-      <DependentUpon>FactorVWDS.xsd</DependentUpon>
+    <Content Include="FactorVWDS1.xss">
+      <DependentUpon>FactorVWDS1.xsd</DependentUpon>
     </Content>
     <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
     <None Include="My Project\PublishProfiles\WEB_Factoraje.pubxml" />
