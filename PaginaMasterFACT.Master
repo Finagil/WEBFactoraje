@@ -49,6 +49,7 @@
                                 <asp:MenuItem NavigateUrl="~/BajaPagos.aspx" Text="Descargar Pagos"
                                     Value="Descargar Pagos"></asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/FacturasVenc.aspx" Text="Facturas Vencidas" Value="Facturas Vencidas"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/LotesFactFinAll.aspx" Text="Consulta Lotes" Value="Consulta Lotes"></asp:MenuItem>
                             </asp:MenuItem>
                             <asp:MenuItem SeparatorImageUrl="~/IMG/sep.JPG" Text="Fondeo" Value="Fondeo" Selectable="False">
                                 <asp:MenuItem NavigateUrl="~/SubirFondeo.aspx"
