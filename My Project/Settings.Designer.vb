@@ -93,8 +93,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=server-raid;Initial Catalog=WEB_Finagil;Persist Security Info=True;Us"& _ 
-            "er ID=User_PRO;Password=User_PRO2015")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=server-raid2;Initial Catalog=WEB_Finagil;Persist Security Info=True;U"& _ 
+            "ser ID=User_PRO;Password=User_PRO2015")>  _
         Public ReadOnly Property WEB_FinagilConnectionString() As String
             Get
                 Return CType(Me("WEB_FinagilConnectionString"),String)

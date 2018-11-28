@@ -62,4 +62,47 @@ Module Globales
     '    Next
     'End Sub
 
+
+    Sub LlenaDatosFactor100()
+        Dim rr As Factor100DS.CO_CLIENRow
+        Dim rr2 As Factor100DS.CO_TITCORow
+        Dim DSorg As New FactorVWDS1
+        Dim DSfin As New Factor100DS
+        Dim taCliORG As New FactorVWDS1TableAdapters.CO_CLIENTableAdapter
+        Dim taCliFIN As New Factor100DSTableAdapters.CO_CLIENTableAdapter
+        Dim taTitORG As New FactorVWDS1TableAdapters.CO_TITCOTableAdapter
+        Dim taTitFIN As New Factor100DSTableAdapters.CO_TITCOTableAdapter
+
+        taCliORG.Fill(DSorg.CO_CLIEN)
+        taCliFIN.Fill(DSfin.CO_CLIEN)
+        If DSorg.CO_CLIEN.Rows.Count <> DSfin.CO_CLIEN.Rows.Count Then
+            taCliFIN.Truncate("")
+            For Each r As DataRow In DSorg.CO_CLIEN.Rows
+                rr = DSfin.CO_CLIEN.NewCO_CLIENRow
+                For x As Integer = 0 To r.ItemArray.Length - 1
+                    rr.Item(x) = r.Item(x)
+                Next
+                DSfin.CO_CLIEN.AddCO_CLIENRow(rr)
+            Next
+            DSfin.CO_CLIEN.GetChanges()
+            taCliFIN.Update(DSfin.CO_CLIEN)
+        End If
+
+        taTitORG.Fill(DSorg.CO_TITCO)
+        taTitFIN.Fill(DSfin.CO_TITCO)
+
+        If DSorg.CO_TITCO.Rows.Count <> DSfin.CO_TITCO.Rows.Count Then
+            taTitFIN.Truncate("")
+            For Each r As DataRow In DSorg.CO_TITCO.Rows
+                rr2 = DSfin.CO_TITCO.NewCO_TITCORow
+                For x As Integer = 0 To r.ItemArray.Length - 1
+                    rr2.Item(x) = r.Item(x)
+                Next
+                DSfin.CO_TITCO.AddCO_TITCORow(rr2)
+            Next
+            DSfin.CO_TITCO.GetChanges()
+            taTitFIN.Update(DSfin.CO_TITCO)
+        End If
+    End Sub
+
 End Module
