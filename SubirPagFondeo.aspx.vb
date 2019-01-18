@@ -116,16 +116,14 @@ Partial Public Class SubirPagFondeo
     End Sub
 
     Function CalculaInteres(ByVal Factura As String, ByVal Valida As Boolean, ByVal FechaPago As Date) As Decimal
-        Dim TasaRete As Decimal = 0.006
+        Dim TasaRete As Decimal = 0.00
         Dim t As New Factor100DS.WEB_FondeoDataTable
         Dim r As Factor100DS.WEB_FondeoRow
         ta.FillByFactura(t, Factura)
         r = t.Rows(0)
         Dim Plazo As Integer = DateDiff(DateInterval.Day, r.FechaSolicitud, FechaPago)
         If Plazo < 0 Then Plazo = 0
-        If FechaPago >= CDate("01/01/2016") Then TasaRete = 0.005
-        If FechaPago >= CDate("01/01/2017") Then TasaRete = 0.0058
-        If FechaPago >= CDate("01/01/2018") Then TasaRete = 0.0046
+        TasaRete = ta.TasaRetesion(FechaPago)
         Dim TasaFondeo As Decimal = r.Tasa - 5
         Dim Comision As Decimal = 0.12
         Dim Interes As Decimal = (r.PrecioOperacion * TasaFondeo / 36000 * Plazo)
