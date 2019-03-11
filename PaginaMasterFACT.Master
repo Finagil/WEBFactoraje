@@ -62,6 +62,10 @@
                                 </asp:MenuItem>
                                 <asp:MenuItem NavigateUrl="~/CargarPagos.aspx" Text="Cargar Pagos" Value="Cargar Pagos"></asp:MenuItem>
                             </asp:MenuItem>
+                            <asp:MenuItem Text="Fira" Value="Fira">
+                                <asp:MenuItem NavigateUrl="~/SubirFactorajeFira.aspx" Text="Subir Facturas" Value="Subir Facturas"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SubirFactorajeFiraPagos.aspx" Text="Subir Pagos" Value="Subir Pagos"></asp:MenuItem>
+                            </asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/LoginX.aspx" Text="Salir" Value="Salir" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
                         </Items>
                     </asp:Menu>

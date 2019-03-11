@@ -91,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="DetalleFactorPag.aspx" />
+    <Content Include="DetalleFactor.aspx" />
     <Content Include="LotesFactFinAll.aspx" />
     <Content Include="Proveedores\ConsultaLote.aspx" />
     <Content Include="Proveedores\DescontarLote.aspx" />
@@ -99,6 +101,8 @@
     <Content Include="IMG\LOGO FINAGIL.JPG" />
     <Content Include="LoginX.aspx" />
     <Content Include="CargarPagos.aspx" />
+    <Content Include="SubirFactorajeFiraPagos.aspx" />
+    <Content Include="SubirFactorajeFira.aspx" />
     <Content Include="SubirFactsXML.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -142,6 +146,20 @@
     </Compile>
     <Compile Include="ConfFondeo.aspx.vb">
       <DependentUpon>ConfFondeo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFactorPag.aspx.designer.vb">
+      <DependentUpon>DetalleFactorPag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFactorPag.aspx.vb">
+      <DependentUpon>DetalleFactorPag.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DetalleFactor.aspx.designer.vb">
+      <DependentUpon>DetalleFactor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFactor.aspx.vb">
+      <DependentUpon>DetalleFactor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="FactorVWDS1.Designer.vb">
@@ -226,6 +244,20 @@
     <Compile Include="CargarPagos.aspx.vb">
       <DependentUpon>CargarPagos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubirFactorajeFiraPagos.aspx.designer.vb">
+      <DependentUpon>SubirFactorajeFiraPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirFactorajeFiraPagos.aspx.vb">
+      <DependentUpon>SubirFactorajeFiraPagos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SubirFactorajeFira.aspx.designer.vb">
+      <DependentUpon>SubirFactorajeFira.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SubirFactorajeFira.aspx.vb">
+      <DependentUpon>SubirFactorajeFira.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SubirFactsXML.aspx.designer.vb">
       <DependentUpon>SubirFactsXML.aspx</DependentUpon>
