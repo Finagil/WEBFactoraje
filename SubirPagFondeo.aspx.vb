@@ -178,7 +178,7 @@ Partial Public Class SubirPagFondeo
                     Dim Asunto As String
                     Msg = "El usuario " & Session("User") & " acaba de solicitar un reembolso:<br>"
                     Msg += "Importe: " & Importe.ToString("n2") & "<br>"
-                    Msg += "<A HREF='http://finagil.com.mx/pasivos'>Web de Pasivos Finagil</A>"
+                    Msg += "<A HREF='https://finagil.com.mx/pasivos'>Web de Pasivos Finagil</A>"
                     Asunto = "Pago de Reembolso Importe: " & Importe.ToString("n2") & "<br>"
                     If Bandera = False Then
                         Dim tax As New Factor100DSTableAdapters.FON_CorreosTableAdapter
@@ -191,7 +191,7 @@ Partial Public Class SubirPagFondeo
                         '++++++++++++CORREO PARA PALM+++++++++++++++++++++++++++++++++++++++++++++
                         Msg = "El usuario " & Session("User") & " acaba de solicitar un reembolso:<br>"
                         Msg += "Importe: " & Importe.ToString("n2") & "<br>"
-                        Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Pasivos Finagil</A>"
+                        Msg += "<A HREF='https://finagil.com.mx/factoraje'>Web de Pasivos Finagil</A>"
                         Asunto = "Pago de Reembolso Importe: " & Importe.ToString("n2") & "<br>"
                         tax.Fill(tx, "PAG_FONDEO_PALM")
                         For Each rx As Factor100DS.FON_CorreosRow In tx.Rows

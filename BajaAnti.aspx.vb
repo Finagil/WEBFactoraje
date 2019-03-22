@@ -25,7 +25,7 @@ Public Partial Class WebForm12
             Dim Msg As String
             Dim Asunto As String
             Msg = "El usuario " & Session("User") & " acaba de recibir el lote " & ID & " <br>"
-            Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A>"
+            Msg += "<A HREF='https://finagil.com.mx/factoraje'>Web de Factoraje</A>"
             Asunto = "Recepcion de lote " & ID & " (Factoraje)"
             If Bandera = False Then
                 EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin, Msg, Asunto)

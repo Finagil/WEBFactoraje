@@ -111,7 +111,7 @@ Partial Public Class SubirFondeo
                     Msg = "El usuario " & Session("User") & " acaba de solicitar un fondeo para su proceso:<br>"
                     Msg += "Lote: " & Lote & "<br>"
                     Msg += "Importe: " & Importe.ToString("n2") & "<br>"
-                    Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A>"
+                    Msg += "<A HREF='https://finagil.com.mx/factoraje'>Web de Factoraje</A>"
                     Asunto = "Solicitud de fondeo Lote: " & Lote & " (Factoraje)"
 
                     If Bandera = False Then

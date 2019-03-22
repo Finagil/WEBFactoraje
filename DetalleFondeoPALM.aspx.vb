@@ -45,7 +45,7 @@ Partial Public Class DetalleFondeoPALM
             Msg = "El usuario " & Session("User") & " acaba de confirmar un fondeo:<br>"
             Msg += "Lote: " & ID_lot & "<br>"
             Msg += "Importe: " & Himporte.Value & "<br>"
-            Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A>"
+            Msg += "<A HREF='https://finagil.com.mx/factoraje'>Web de Factoraje</A>"
             Asunto = "Solicitud de fondeo Confirmada Lote: " & ID_lot & " (Factoraje)"
 
             EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin, Msg, Asunto)

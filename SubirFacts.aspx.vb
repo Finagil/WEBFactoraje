@@ -38,7 +38,7 @@ Public Partial Class WebForm1
                     Dim Msg As String
                     Dim Asunto As String
                     Msg = "El usuario " & Session("User") & " acaba de generar el lote " & Lote & " para su proceso<br>"
-                    Msg += "<A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje</A><br>"
+                    Msg += "<A HREF='https://finagil.com.mx/factoraje'>Web de Factoraje</A><br>"
                     Msg += "Cliente: " & Cli & "<br>"
                     Msg += "Importe Total de Facturas: " & Total.ToString("n2") & "<br>"
                     Asunto = "Alta de Lote " & Lote & " (Factoraje)"
@@ -270,7 +270,7 @@ Public Partial Class WebForm1
             Mensaje = "<FONT FACE=""arial"">Estimado " & r.Nombre_Persona & "<br><br>Le informamos que la Compañía " & r.NombreCliente & " ha publicado " & r.Facturas
             Mensaje += " facturas a favor de  " & r.Proveedor & " por un monto total de $" & r.ImporteFactura.ToString("n2")
             Mensaje += " mismas que usted podrá solicitar su pago anticipado a través de la cesión de derechos de crédito que realice a FINAGIL, S.A. DE C.V. SOFOM E.N.R. en la siguiente liga:"
-            Mensaje += "<br><br><A HREF='http://finagil.com.mx/factoraje'>Web de Factoraje Finagil</A><br><br>"
+            Mensaje += "<br><br><A HREF='https://finagil.com.mx/factoraje'>Web de Factoraje Finagil</A><br><br>"
             Mensaje += "Al aceptar la trasmisión de los derechos de crédito a FINAGIL, S.A. DE C.V. SOFOM E.N.R. usted estará recibiendo el pago el mismo día que realice su autorización, considerando un horario de operación de 9:00 AM a 12:30 PM.<br><br>"
             Mensaje += "En caso de tener cualquier duda o comentario al respecto favor a contactarnos<BR><br>"
             Mensaje += "Leonardo Ayala <layala@finagil.com.mx><BR>"
