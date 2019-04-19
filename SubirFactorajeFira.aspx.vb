@@ -125,7 +125,7 @@ Partial Public Class WebFormFactorFact
             Dim RFC As String = ""
             Dim FecVecn As Date = Date.Now
 
-            LOT.Insert(Date.Now, Session.Item("User"), "Procesado", "FIRA", 0)
+            LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", "FIRA", 0)
             Lote = LOT.UltimoID()
             F = New System.IO.StreamReader(Archivo, True)
 
