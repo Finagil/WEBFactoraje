@@ -1419,6 +1419,20 @@ Partial Public Class FactorVWDS1
         
         Private columnCL_EDADMOR As Global.System.Data.DataColumn
         
+        Private columnCL_CP1 As Global.System.Data.DataColumn
+        
+        Private columnPR_NUM1 As Global.System.Data.DataColumn
+        
+        Private columnCL_NUMREP1 As Global.System.Data.DataColumn
+        
+        Private columnEJ_NUM1 As Global.System.Data.DataColumn
+        
+        Private columnCL_RETE1 As Global.System.Data.DataColumn
+        
+        Private columnCL_CPFIS1 As Global.System.Data.DataColumn
+        
+        Private columnCL_EDADMOR1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -1919,6 +1933,62 @@ Partial Public Class FactorVWDS1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CL_CP1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCL_CP1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PR_NUM1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPR_NUM1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CL_NUMREP1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCL_NUMREP1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property EJ_NUM1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEJ_NUM1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CL_RETE1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCL_RETE1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CL_CPFIS1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCL_CPFIS1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CL_EDADMOR1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCL_EDADMOR1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2013,9 +2083,16 @@ Partial Public Class FactorVWDS1
                     ByVal CL_MATERNOMOR As String,  _
                     ByVal CL_SEXOMOR As String,  _
                     ByVal CL_EDOCIVILMOR As String,  _
-                    ByVal CL_EDADMOR As String) As CO_CLIENRow
+                    ByVal CL_EDADMOR As String,  _
+                    ByVal CL_CP1 As Double,  _
+                    ByVal PR_NUM1 As String,  _
+                    ByVal CL_NUMREP1 As String,  _
+                    ByVal EJ_NUM1 As String,  _
+                    ByVal CL_RETE1 As Integer,  _
+                    ByVal CL_CPFIS1 As Double,  _
+                    ByVal CL_EDADMOR1 As Integer) As CO_CLIENRow
             Dim rowCO_CLIENRow As CO_CLIENRow = CType(Me.NewRow,CO_CLIENRow)
-            Dim columnValuesArray() As Object = New Object() {CL_NUM, CL_NOMBRE, CL_DIR, CL_COLONIA, CL_CIUDAD, EF_CLAVE, CL_CP, CL_FEALTA, CL_FEBAJA, PR_NUM, CL_REP1, CL_REP2, CL_TEL1, CL_TEL2, CL_REP3, CL_CONOP, CL_NUMREP, CL_RFC, RA_NUM, CL_TIPO2, EJ_NUM, RG_NUM, CL_PERSO, CL_JURI, DI_DIVISA, CL_AUTO, CL_FAX, SU_NUM, EF_NUM, CL_CON1, CL_CON2, CL_NIT, CL_RIESGO, CL_FECADU, CL_CONLE, NA_NUM, MI_NUM, CL_RETE, CL_FEOPE, CL_OVATION, CL_EXENTO, CL_MAIL, CL_DIRFIS, CL_COLFIS, CL_CIUDADFIS, EF_CLAVEFIS, CL_CPFIS, CL_EDOFIS, CL_TEL1FIS, CL_TEL2FIS, CL_FAXFIS, CL_MAILFIS, CL_NOMBREMOR, CL_PATERNOMOR, CL_MATERNOMOR, CL_SEXOMOR, CL_EDOCIVILMOR, CL_EDADMOR}
+            Dim columnValuesArray() As Object = New Object() {CL_NUM, CL_NOMBRE, CL_DIR, CL_COLONIA, CL_CIUDAD, EF_CLAVE, CL_CP, CL_FEALTA, CL_FEBAJA, PR_NUM, CL_REP1, CL_REP2, CL_TEL1, CL_TEL2, CL_REP3, CL_CONOP, CL_NUMREP, CL_RFC, RA_NUM, CL_TIPO2, EJ_NUM, RG_NUM, CL_PERSO, CL_JURI, DI_DIVISA, CL_AUTO, CL_FAX, SU_NUM, EF_NUM, CL_CON1, CL_CON2, CL_NIT, CL_RIESGO, CL_FECADU, CL_CONLE, NA_NUM, MI_NUM, CL_RETE, CL_FEOPE, CL_OVATION, CL_EXENTO, CL_MAIL, CL_DIRFIS, CL_COLFIS, CL_CIUDADFIS, EF_CLAVEFIS, CL_CPFIS, CL_EDOFIS, CL_TEL1FIS, CL_TEL2FIS, CL_FAXFIS, CL_MAILFIS, CL_NOMBREMOR, CL_PATERNOMOR, CL_MATERNOMOR, CL_SEXOMOR, CL_EDOCIVILMOR, CL_EDADMOR, CL_CP1, PR_NUM1, CL_NUMREP1, EJ_NUM1, CL_RETE1, CL_CPFIS1, CL_EDADMOR1}
             rowCO_CLIENRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCO_CLIENRow)
             Return rowCO_CLIENRow
@@ -2102,6 +2179,13 @@ Partial Public Class FactorVWDS1
             Me.columnCL_SEXOMOR = MyBase.Columns("CL_SEXOMOR")
             Me.columnCL_EDOCIVILMOR = MyBase.Columns("CL_EDOCIVILMOR")
             Me.columnCL_EDADMOR = MyBase.Columns("CL_EDADMOR")
+            Me.columnCL_CP1 = MyBase.Columns("CL_CP1")
+            Me.columnPR_NUM1 = MyBase.Columns("PR_NUM1")
+            Me.columnCL_NUMREP1 = MyBase.Columns("CL_NUMREP1")
+            Me.columnEJ_NUM1 = MyBase.Columns("EJ_NUM1")
+            Me.columnCL_RETE1 = MyBase.Columns("CL_RETE1")
+            Me.columnCL_CPFIS1 = MyBase.Columns("CL_CPFIS1")
+            Me.columnCL_EDADMOR1 = MyBase.Columns("CL_EDADMOR1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2223,6 +2307,20 @@ Partial Public Class FactorVWDS1
             MyBase.Columns.Add(Me.columnCL_EDOCIVILMOR)
             Me.columnCL_EDADMOR = New Global.System.Data.DataColumn("CL_EDADMOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCL_EDADMOR)
+            Me.columnCL_CP1 = New Global.System.Data.DataColumn("CL_CP1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCL_CP1)
+            Me.columnPR_NUM1 = New Global.System.Data.DataColumn("PR_NUM1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPR_NUM1)
+            Me.columnCL_NUMREP1 = New Global.System.Data.DataColumn("CL_NUMREP1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCL_NUMREP1)
+            Me.columnEJ_NUM1 = New Global.System.Data.DataColumn("EJ_NUM1", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEJ_NUM1)
+            Me.columnCL_RETE1 = New Global.System.Data.DataColumn("CL_RETE1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCL_RETE1)
+            Me.columnCL_CPFIS1 = New Global.System.Data.DataColumn("CL_CPFIS1", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCL_CPFIS1)
+            Me.columnCL_EDADMOR1 = New Global.System.Data.DataColumn("CL_EDADMOR1", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCL_EDADMOR1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCL_NUM}, true))
             Me.columnCL_NUM.AllowDBNull = false
             Me.columnCL_NUM.Unique = true
@@ -2238,6 +2336,7 @@ Partial Public Class FactorVWDS1
             Me.columnCL_TEL2.MaxLength = 20
             Me.columnCL_REP3.MaxLength = 55
             Me.columnCL_CONOP.MaxLength = 1
+            Me.columnCL_RFC.AllowDBNull = false
             Me.columnCL_RFC.MaxLength = 15
             Me.columnRA_NUM.MaxLength = 4
             Me.columnCL_TIPO2.MaxLength = 2
@@ -2273,6 +2372,21 @@ Partial Public Class FactorVWDS1
             Me.columnCL_SEXOMOR.MaxLength = 20
             Me.columnCL_EDOCIVILMOR.MaxLength = 20
             Me.columnCL_EDADMOR.MaxLength = 3
+            Me.columnCL_CP1.Caption = "CL_CP"
+            Me.columnPR_NUM1.ReadOnly = true
+            Me.columnPR_NUM1.Caption = "PR_NUM"
+            Me.columnPR_NUM1.MaxLength = 1
+            Me.columnCL_NUMREP1.ReadOnly = true
+            Me.columnCL_NUMREP1.Caption = "CL_NUMREP"
+            Me.columnCL_NUMREP1.MaxLength = 1
+            Me.columnEJ_NUM1.ReadOnly = true
+            Me.columnEJ_NUM1.Caption = "EJ_NUM"
+            Me.columnEJ_NUM1.MaxLength = 1
+            Me.columnCL_RETE1.ReadOnly = true
+            Me.columnCL_RETE1.Caption = "CL_RETE"
+            Me.columnCL_CPFIS1.Caption = "CL_CPFIS"
+            Me.columnCL_EDADMOR1.ReadOnly = true
+            Me.columnCL_EDADMOR1.Caption = "CL_EDADMOR"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2414,15 +2528,11 @@ Partial Public Class FactorVWDS1
         
         Private columnTC_NUM As Global.System.Data.DataColumn
         
-        Private columnPR_NUM As Global.System.Data.DataColumn
-        
         Private columnTC_DIR As Global.System.Data.DataColumn
         
         Private columnTC_CIUDAD As Global.System.Data.DataColumn
         
         Private columnEF_CLAVE As Global.System.Data.DataColumn
-        
-        Private columnTC_CP As Global.System.Data.DataColumn
         
         Private columnTC_FEALTA As Global.System.Data.DataColumn
         
@@ -2456,29 +2566,33 @@ Partial Public Class FactorVWDS1
         
         Private columnRG_NUM As Global.System.Data.DataColumn
         
-        Private columnTC_ANTICIP As Global.System.Data.DataColumn
-        
         Private columnTC_RIESGO As Global.System.Data.DataColumn
         
         Private columnNA_NUM As Global.System.Data.DataColumn
-        
-        Private columnTC_RETE As Global.System.Data.DataColumn
         
         Private columnTC_FECADU As Global.System.Data.DataColumn
         
         Private columnTC_DEUDOR As Global.System.Data.DataColumn
         
-        Private columnTC_VENTAS As Global.System.Data.DataColumn
-        
         Private columnTC_NUMEMP As Global.System.Data.DataColumn
-        
-        Private columnTC_EXENTO As Global.System.Data.DataColumn
         
         Private columnTC_MAIL As Global.System.Data.DataColumn
         
         Private columnTC_PERSO As Global.System.Data.DataColumn
         
         Private columnTC_FAX As Global.System.Data.DataColumn
+        
+        Private columnPR_NUM As Global.System.Data.DataColumn
+        
+        Private columnTC_CP As Global.System.Data.DataColumn
+        
+        Private columnTC_ANTICIP As Global.System.Data.DataColumn
+        
+        Private columnTC_RETE As Global.System.Data.DataColumn
+        
+        Private columnTC_VENTAS As Global.System.Data.DataColumn
+        
+        Private columnTC_EXENTO As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -2533,14 +2647,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property PR_NUMColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnPR_NUM
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property TC_DIRColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTC_DIR
@@ -2560,14 +2666,6 @@ Partial Public Class FactorVWDS1
         Public ReadOnly Property EF_CLAVEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnEF_CLAVE
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TC_CPColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTC_CP
             End Get
         End Property
         
@@ -2701,14 +2799,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TC_ANTICIPColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTC_ANTICIP
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property TC_RIESGOColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTC_RIESGO
@@ -2720,14 +2810,6 @@ Partial Public Class FactorVWDS1
         Public ReadOnly Property NA_NUMColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnNA_NUM
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TC_RETEColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTC_RETE
             End Get
         End Property
         
@@ -2749,25 +2831,9 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TC_VENTASColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTC_VENTAS
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property TC_NUMEMPColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTC_NUMEMP
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TC_EXENTOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTC_EXENTO
             End Get
         End Property
         
@@ -2792,6 +2858,54 @@ Partial Public Class FactorVWDS1
         Public ReadOnly Property TC_FAXColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTC_FAX
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PR_NUMColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPR_NUM
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TC_CPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTC_CP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TC_ANTICIPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTC_ANTICIP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TC_RETEColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTC_RETE
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TC_VENTASColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTC_VENTAS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TC_EXENTOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTC_EXENTO
             End Get
         End Property
         
@@ -2835,11 +2949,9 @@ Partial Public Class FactorVWDS1
         Public Overloads Function AddCO_TITCORow( _
                     ByVal TC_NOMBRE As String,  _
                     ByVal TC_NUM As String,  _
-                    ByVal PR_NUM As Integer,  _
                     ByVal TC_DIR As String,  _
                     ByVal TC_CIUDAD As String,  _
                     ByVal EF_CLAVE As String,  _
-                    ByVal TC_CP As Integer,  _
                     ByVal TC_FEALTA As Date,  _
                     ByVal TC_FEBAJA As Date,  _
                     ByVal TC_ENC1 As String,  _
@@ -2856,20 +2968,22 @@ Partial Public Class FactorVWDS1
                     ByVal TC_RFC As String,  _
                     ByVal TC_NIT As String,  _
                     ByVal RG_NUM As String,  _
-                    ByVal TC_ANTICIP As Integer,  _
                     ByVal TC_RIESGO As String,  _
                     ByVal NA_NUM As String,  _
-                    ByVal TC_RETE As Double,  _
                     ByVal TC_FECADU As Date,  _
                     ByVal TC_DEUDOR As String,  _
-                    ByVal TC_VENTAS As Single,  _
                     ByVal TC_NUMEMP As Integer,  _
-                    ByVal TC_EXENTO As Integer,  _
                     ByVal TC_MAIL As String,  _
                     ByVal TC_PERSO As String,  _
-                    ByVal TC_FAX As String) As CO_TITCORow
+                    ByVal TC_FAX As String,  _
+                    ByVal PR_NUM As String,  _
+                    ByVal TC_CP As Double,  _
+                    ByVal TC_ANTICIP As String,  _
+                    ByVal TC_RETE As String,  _
+                    ByVal TC_VENTAS As Integer,  _
+                    ByVal TC_EXENTO As String) As CO_TITCORow
             Dim rowCO_TITCORow As CO_TITCORow = CType(Me.NewRow,CO_TITCORow)
-            Dim columnValuesArray() As Object = New Object() {TC_NOMBRE, TC_NUM, PR_NUM, TC_DIR, TC_CIUDAD, EF_CLAVE, TC_CP, TC_FEALTA, TC_FEBAJA, TC_ENC1, TC_ENC2, TC_TEL1, TC_TEL2, TC_COLO, TC_TIPO1, RA_NUM, TC_TIPO2, TC_ENC3, TC_JURI, TC_AUTO, TC_RFC, TC_NIT, RG_NUM, TC_ANTICIP, TC_RIESGO, NA_NUM, TC_RETE, TC_FECADU, TC_DEUDOR, TC_VENTAS, TC_NUMEMP, TC_EXENTO, TC_MAIL, TC_PERSO, TC_FAX}
+            Dim columnValuesArray() As Object = New Object() {TC_NOMBRE, TC_NUM, TC_DIR, TC_CIUDAD, EF_CLAVE, TC_FEALTA, TC_FEBAJA, TC_ENC1, TC_ENC2, TC_TEL1, TC_TEL2, TC_COLO, TC_TIPO1, RA_NUM, TC_TIPO2, TC_ENC3, TC_JURI, TC_AUTO, TC_RFC, TC_NIT, RG_NUM, TC_RIESGO, NA_NUM, TC_FECADU, TC_DEUDOR, TC_NUMEMP, TC_MAIL, TC_PERSO, TC_FAX, PR_NUM, TC_CP, TC_ANTICIP, TC_RETE, TC_VENTAS, TC_EXENTO}
             rowCO_TITCORow.ItemArray = columnValuesArray
             Me.Rows.Add(rowCO_TITCORow)
             Return rowCO_TITCORow
@@ -2900,11 +3014,9 @@ Partial Public Class FactorVWDS1
         Friend Sub InitVars()
             Me.columnTC_NOMBRE = MyBase.Columns("TC_NOMBRE")
             Me.columnTC_NUM = MyBase.Columns("TC_NUM")
-            Me.columnPR_NUM = MyBase.Columns("PR_NUM")
             Me.columnTC_DIR = MyBase.Columns("TC_DIR")
             Me.columnTC_CIUDAD = MyBase.Columns("TC_CIUDAD")
             Me.columnEF_CLAVE = MyBase.Columns("EF_CLAVE")
-            Me.columnTC_CP = MyBase.Columns("TC_CP")
             Me.columnTC_FEALTA = MyBase.Columns("TC_FEALTA")
             Me.columnTC_FEBAJA = MyBase.Columns("TC_FEBAJA")
             Me.columnTC_ENC1 = MyBase.Columns("TC_ENC1")
@@ -2921,18 +3033,20 @@ Partial Public Class FactorVWDS1
             Me.columnTC_RFC = MyBase.Columns("TC_RFC")
             Me.columnTC_NIT = MyBase.Columns("TC_NIT")
             Me.columnRG_NUM = MyBase.Columns("RG_NUM")
-            Me.columnTC_ANTICIP = MyBase.Columns("TC_ANTICIP")
             Me.columnTC_RIESGO = MyBase.Columns("TC_RIESGO")
             Me.columnNA_NUM = MyBase.Columns("NA_NUM")
-            Me.columnTC_RETE = MyBase.Columns("TC_RETE")
             Me.columnTC_FECADU = MyBase.Columns("TC_FECADU")
             Me.columnTC_DEUDOR = MyBase.Columns("TC_DEUDOR")
-            Me.columnTC_VENTAS = MyBase.Columns("TC_VENTAS")
             Me.columnTC_NUMEMP = MyBase.Columns("TC_NUMEMP")
-            Me.columnTC_EXENTO = MyBase.Columns("TC_EXENTO")
             Me.columnTC_MAIL = MyBase.Columns("TC_MAIL")
             Me.columnTC_PERSO = MyBase.Columns("TC_PERSO")
             Me.columnTC_FAX = MyBase.Columns("TC_FAX")
+            Me.columnPR_NUM = MyBase.Columns("PR_NUM")
+            Me.columnTC_CP = MyBase.Columns("TC_CP")
+            Me.columnTC_ANTICIP = MyBase.Columns("TC_ANTICIP")
+            Me.columnTC_RETE = MyBase.Columns("TC_RETE")
+            Me.columnTC_VENTAS = MyBase.Columns("TC_VENTAS")
+            Me.columnTC_EXENTO = MyBase.Columns("TC_EXENTO")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2942,16 +3056,12 @@ Partial Public Class FactorVWDS1
             MyBase.Columns.Add(Me.columnTC_NOMBRE)
             Me.columnTC_NUM = New Global.System.Data.DataColumn("TC_NUM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_NUM)
-            Me.columnPR_NUM = New Global.System.Data.DataColumn("PR_NUM", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnPR_NUM)
             Me.columnTC_DIR = New Global.System.Data.DataColumn("TC_DIR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_DIR)
             Me.columnTC_CIUDAD = New Global.System.Data.DataColumn("TC_CIUDAD", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_CIUDAD)
             Me.columnEF_CLAVE = New Global.System.Data.DataColumn("EF_CLAVE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEF_CLAVE)
-            Me.columnTC_CP = New Global.System.Data.DataColumn("TC_CP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTC_CP)
             Me.columnTC_FEALTA = New Global.System.Data.DataColumn("TC_FEALTA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_FEALTA)
             Me.columnTC_FEBAJA = New Global.System.Data.DataColumn("TC_FEBAJA", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -2984,39 +3094,41 @@ Partial Public Class FactorVWDS1
             MyBase.Columns.Add(Me.columnTC_NIT)
             Me.columnRG_NUM = New Global.System.Data.DataColumn("RG_NUM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRG_NUM)
-            Me.columnTC_ANTICIP = New Global.System.Data.DataColumn("TC_ANTICIP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTC_ANTICIP)
             Me.columnTC_RIESGO = New Global.System.Data.DataColumn("TC_RIESGO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_RIESGO)
             Me.columnNA_NUM = New Global.System.Data.DataColumn("NA_NUM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNA_NUM)
-            Me.columnTC_RETE = New Global.System.Data.DataColumn("TC_RETE", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTC_RETE)
             Me.columnTC_FECADU = New Global.System.Data.DataColumn("TC_FECADU", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_FECADU)
             Me.columnTC_DEUDOR = New Global.System.Data.DataColumn("TC_DEUDOR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_DEUDOR)
-            Me.columnTC_VENTAS = New Global.System.Data.DataColumn("TC_VENTAS", GetType(Single), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTC_VENTAS)
             Me.columnTC_NUMEMP = New Global.System.Data.DataColumn("TC_NUMEMP", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_NUMEMP)
-            Me.columnTC_EXENTO = New Global.System.Data.DataColumn("TC_EXENTO", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTC_EXENTO)
             Me.columnTC_MAIL = New Global.System.Data.DataColumn("TC_MAIL", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_MAIL)
             Me.columnTC_PERSO = New Global.System.Data.DataColumn("TC_PERSO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_PERSO)
             Me.columnTC_FAX = New Global.System.Data.DataColumn("TC_FAX", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTC_FAX)
+            Me.columnPR_NUM = New Global.System.Data.DataColumn("PR_NUM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPR_NUM)
+            Me.columnTC_CP = New Global.System.Data.DataColumn("TC_CP", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTC_CP)
+            Me.columnTC_ANTICIP = New Global.System.Data.DataColumn("TC_ANTICIP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTC_ANTICIP)
+            Me.columnTC_RETE = New Global.System.Data.DataColumn("TC_RETE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTC_RETE)
+            Me.columnTC_VENTAS = New Global.System.Data.DataColumn("TC_VENTAS", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTC_VENTAS)
+            Me.columnTC_EXENTO = New Global.System.Data.DataColumn("TC_EXENTO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTC_EXENTO)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnTC_NUM}, true))
-            Me.columnTC_NOMBRE.AllowDBNull = false
             Me.columnTC_NOMBRE.MaxLength = 80
             Me.columnTC_NUM.AllowDBNull = false
             Me.columnTC_NUM.Unique = true
             Me.columnTC_NUM.MaxLength = 11
             Me.columnTC_DIR.MaxLength = 100
             Me.columnTC_CIUDAD.MaxLength = 30
-            Me.columnEF_CLAVE.AllowDBNull = false
             Me.columnEF_CLAVE.MaxLength = 6
             Me.columnTC_ENC1.MaxLength = 30
             Me.columnTC_ENC2.MaxLength = 30
@@ -3029,6 +3141,7 @@ Partial Public Class FactorVWDS1
             Me.columnTC_ENC3.MaxLength = 30
             Me.columnTC_JURI.MaxLength = 1
             Me.columnTC_AUTO.MaxLength = 1
+            Me.columnTC_RFC.AllowDBNull = false
             Me.columnTC_RFC.MaxLength = 15
             Me.columnTC_NIT.MaxLength = 30
             Me.columnRG_NUM.MaxLength = 4
@@ -3038,6 +3151,15 @@ Partial Public Class FactorVWDS1
             Me.columnTC_MAIL.MaxLength = 50
             Me.columnTC_PERSO.MaxLength = 1
             Me.columnTC_FAX.MaxLength = 20
+            Me.columnPR_NUM.ReadOnly = true
+            Me.columnPR_NUM.MaxLength = 1
+            Me.columnTC_ANTICIP.ReadOnly = true
+            Me.columnTC_ANTICIP.MaxLength = 3
+            Me.columnTC_RETE.ReadOnly = true
+            Me.columnTC_RETE.MaxLength = 1
+            Me.columnTC_VENTAS.ReadOnly = true
+            Me.columnTC_EXENTO.ReadOnly = true
+            Me.columnTC_EXENTO.MaxLength = 1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4234,11 +4356,7 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property CL_RFC() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableCO_CLIEN.CL_RFCColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_RFC' de la tabla 'CO_CLIEN' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableCO_CLIEN.CL_RFCColumn),String)
             End Get
             Set
                 Me(Me.tableCO_CLIEN.CL_RFCColumn) = value
@@ -4847,6 +4965,111 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CL_CP1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.CL_CP1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_CP1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.CL_CP1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property PR_NUM1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.PR_NUM1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PR_NUM1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.PR_NUM1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CL_NUMREP1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.CL_NUMREP1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_NUMREP1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.CL_NUMREP1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property EJ_NUM1() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.EJ_NUM1Column),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EJ_NUM1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.EJ_NUM1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CL_RETE1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.CL_RETE1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_RETE1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.CL_RETE1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CL_CPFIS1() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.CL_CPFIS1Column),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_CPFIS1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.CL_CPFIS1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CL_EDADMOR1() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_CLIEN.CL_EDADMOR1Column),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_EDADMOR1' de la tabla 'CO_CLIEN' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_CLIEN.CL_EDADMOR1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsCL_NOMBRENull() As Boolean
             Return Me.IsNull(Me.tableCO_CLIEN.CL_NOMBREColumn)
         End Function
@@ -5035,18 +5258,6 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetCL_NUMREPNull()
             Me(Me.tableCO_CLIEN.CL_NUMREPColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsCL_RFCNull() As Boolean
-            Return Me.IsNull(Me.tableCO_CLIEN.CL_RFCColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetCL_RFCNull()
-            Me(Me.tableCO_CLIEN.CL_RFCColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5528,6 +5739,90 @@ Partial Public Class FactorVWDS1
         Public Sub SetCL_EDADMORNull()
             Me(Me.tableCO_CLIEN.CL_EDADMORColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCL_CP1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.CL_CP1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCL_CP1Null()
+            Me(Me.tableCO_CLIEN.CL_CP1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPR_NUM1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.PR_NUM1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPR_NUM1Null()
+            Me(Me.tableCO_CLIEN.PR_NUM1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCL_NUMREP1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.CL_NUMREP1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCL_NUMREP1Null()
+            Me(Me.tableCO_CLIEN.CL_NUMREP1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsEJ_NUM1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.EJ_NUM1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetEJ_NUM1Null()
+            Me(Me.tableCO_CLIEN.EJ_NUM1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCL_RETE1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.CL_RETE1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCL_RETE1Null()
+            Me(Me.tableCO_CLIEN.CL_RETE1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCL_CPFIS1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.CL_CPFIS1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCL_CPFIS1Null()
+            Me(Me.tableCO_CLIEN.CL_CPFIS1Column) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCL_EDADMOR1Null() As Boolean
+            Return Me.IsNull(Me.tableCO_CLIEN.CL_EDADMOR1Column)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCL_EDADMOR1Null()
+            Me(Me.tableCO_CLIEN.CL_EDADMOR1Column) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -5549,7 +5844,11 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property TC_NOMBRE() As String
             Get
-                Return CType(Me(Me.tableCO_TITCO.TC_NOMBREColumn),String)
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_NOMBREColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_NOMBRE' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableCO_TITCO.TC_NOMBREColumn) = value
@@ -5564,21 +5863,6 @@ Partial Public Class FactorVWDS1
             End Get
             Set
                 Me(Me.tableCO_TITCO.TC_NUMColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property PR_NUM() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.PR_NUMColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PR_NUM' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.PR_NUMColumn) = value
             End Set
         End Property
         
@@ -5616,25 +5900,14 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property EF_CLAVE() As String
             Get
-                Return CType(Me(Me.tableCO_TITCO.EF_CLAVEColumn),String)
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.EF_CLAVEColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property TC_CP() As Integer
-            Get
                 Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_CPColumn),Integer)
+                    Return CType(Me(Me.tableCO_TITCO.EF_CLAVEColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_CP' de la tabla 'CO_TITCO' es DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'EF_CLAVE' de la tabla 'CO_TITCO' es DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableCO_TITCO.TC_CPColumn) = value
+                Me(Me.tableCO_TITCO.EF_CLAVEColumn) = value
             End Set
         End Property
         
@@ -5837,11 +6110,7 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property TC_RFC() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_RFCColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_RFC' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableCO_TITCO.TC_RFCColumn),String)
             End Get
             Set
                 Me(Me.tableCO_TITCO.TC_RFCColumn) = value
@@ -5880,21 +6149,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property TC_ANTICIP() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_ANTICIPColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_ANTICIP' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.TC_ANTICIPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property TC_RIESGO() As String
             Get
                 Try 
@@ -5920,21 +6174,6 @@ Partial Public Class FactorVWDS1
             End Get
             Set
                 Me(Me.tableCO_TITCO.NA_NUMColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property TC_RETE() As Double
-            Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_RETEColumn),Double)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_RETE' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.TC_RETEColumn) = value
             End Set
         End Property
         
@@ -5970,21 +6209,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property TC_VENTAS() As Single
-            Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_VENTASColumn),Single)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_VENTAS' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.TC_VENTASColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property TC_NUMEMP() As Integer
             Get
                 Try 
@@ -5995,21 +6219,6 @@ Partial Public Class FactorVWDS1
             End Get
             Set
                 Me(Me.tableCO_TITCO.TC_NUMEMPColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property TC_EXENTO() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableCO_TITCO.TC_EXENTOColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_EXENTO' de la tabla 'CO_TITCO' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableCO_TITCO.TC_EXENTOColumn) = value
             End Set
         End Property
         
@@ -6060,14 +6269,104 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsPR_NUMNull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.PR_NUMColumn)
+        Public Property PR_NUM() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.PR_NUMColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PR_NUM' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.PR_NUMColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property TC_CP() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_CPColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_CP' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.TC_CPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property TC_ANTICIP() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_ANTICIPColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_ANTICIP' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.TC_ANTICIPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property TC_RETE() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_RETEColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_RETE' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.TC_RETEColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property TC_VENTAS() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_VENTASColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_VENTAS' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.TC_VENTASColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property TC_EXENTO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableCO_TITCO.TC_EXENTOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'TC_EXENTO' de la tabla 'CO_TITCO' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableCO_TITCO.TC_EXENTOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_NOMBRENull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_NOMBREColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetPR_NUMNull()
-            Me(Me.tableCO_TITCO.PR_NUMColumn) = Global.System.Convert.DBNull
+        Public Sub SetTC_NOMBRENull()
+            Me(Me.tableCO_TITCO.TC_NOMBREColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6096,14 +6395,14 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_CPNull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_CPColumn)
+        Public Function IsEF_CLAVENull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.EF_CLAVEColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_CPNull()
-            Me(Me.tableCO_TITCO.TC_CPColumn) = Global.System.Convert.DBNull
+        Public Sub SetEF_CLAVENull()
+            Me(Me.tableCO_TITCO.EF_CLAVEColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6264,18 +6563,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_RFCNull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_RFCColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_RFCNull()
-            Me(Me.tableCO_TITCO.TC_RFCColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTC_NITNull() As Boolean
             Return Me.IsNull(Me.tableCO_TITCO.TC_NITColumn)
         End Function
@@ -6296,18 +6583,6 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetRG_NUMNull()
             Me(Me.tableCO_TITCO.RG_NUMColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_ANTICIPNull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_ANTICIPColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_ANTICIPNull()
-            Me(Me.tableCO_TITCO.TC_ANTICIPColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6336,18 +6611,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_RETENull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_RETEColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_RETENull()
-            Me(Me.tableCO_TITCO.TC_RETEColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTC_FECADUNull() As Boolean
             Return Me.IsNull(Me.tableCO_TITCO.TC_FECADUColumn)
         End Function
@@ -6372,18 +6635,6 @@ Partial Public Class FactorVWDS1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_VENTASNull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_VENTASColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_VENTASNull()
-            Me(Me.tableCO_TITCO.TC_VENTASColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTC_NUMEMPNull() As Boolean
             Return Me.IsNull(Me.tableCO_TITCO.TC_NUMEMPColumn)
         End Function
@@ -6392,18 +6643,6 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetTC_NUMEMPNull()
             Me(Me.tableCO_TITCO.TC_NUMEMPColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTC_EXENTONull() As Boolean
-            Return Me.IsNull(Me.tableCO_TITCO.TC_EXENTOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTC_EXENTONull()
-            Me(Me.tableCO_TITCO.TC_EXENTOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6440,6 +6679,78 @@ Partial Public Class FactorVWDS1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetTC_FAXNull()
             Me(Me.tableCO_TITCO.TC_FAXColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPR_NUMNull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.PR_NUMColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPR_NUMNull()
+            Me(Me.tableCO_TITCO.PR_NUMColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_CPNull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_CPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTC_CPNull()
+            Me(Me.tableCO_TITCO.TC_CPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_ANTICIPNull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_ANTICIPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTC_ANTICIPNull()
+            Me(Me.tableCO_TITCO.TC_ANTICIPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_RETENull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_RETEColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTC_RETENull()
+            Me(Me.tableCO_TITCO.TC_RETEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_VENTASNull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_VENTASColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTC_VENTASNull()
+            Me(Me.tableCO_TITCO.TC_VENTASColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTC_EXENTONull() As Boolean
+            Return Me.IsNull(Me.tableCO_TITCO.TC_EXENTOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTC_EXENTONull()
+            Me(Me.tableCO_TITCO.TC_EXENTOColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -7608,21 +7919,17 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.ColumnMappings.Add("CL_COLONIA", "CL_COLONIA")
             tableMapping.ColumnMappings.Add("CL_CIUDAD", "CL_CIUDAD")
             tableMapping.ColumnMappings.Add("EF_CLAVE", "EF_CLAVE")
-            tableMapping.ColumnMappings.Add("CL_CP", "CL_CP")
             tableMapping.ColumnMappings.Add("CL_FEALTA", "CL_FEALTA")
             tableMapping.ColumnMappings.Add("CL_FEBAJA", "CL_FEBAJA")
-            tableMapping.ColumnMappings.Add("PR_NUM", "PR_NUM")
             tableMapping.ColumnMappings.Add("CL_REP1", "CL_REP1")
             tableMapping.ColumnMappings.Add("CL_REP2", "CL_REP2")
             tableMapping.ColumnMappings.Add("CL_TEL1", "CL_TEL1")
             tableMapping.ColumnMappings.Add("CL_TEL2", "CL_TEL2")
             tableMapping.ColumnMappings.Add("CL_REP3", "CL_REP3")
             tableMapping.ColumnMappings.Add("CL_CONOP", "CL_CONOP")
-            tableMapping.ColumnMappings.Add("CL_NUMREP", "CL_NUMREP")
             tableMapping.ColumnMappings.Add("CL_RFC", "CL_RFC")
             tableMapping.ColumnMappings.Add("RA_NUM", "RA_NUM")
             tableMapping.ColumnMappings.Add("CL_TIPO2", "CL_TIPO2")
-            tableMapping.ColumnMappings.Add("EJ_NUM", "EJ_NUM")
             tableMapping.ColumnMappings.Add("RG_NUM", "RG_NUM")
             tableMapping.ColumnMappings.Add("CL_PERSO", "CL_PERSO")
             tableMapping.ColumnMappings.Add("CL_JURI", "CL_JURI")
@@ -7639,7 +7946,6 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.ColumnMappings.Add("CL_CONLE", "CL_CONLE")
             tableMapping.ColumnMappings.Add("NA_NUM", "NA_NUM")
             tableMapping.ColumnMappings.Add("MI_NUM", "MI_NUM")
-            tableMapping.ColumnMappings.Add("CL_RETE", "CL_RETE")
             tableMapping.ColumnMappings.Add("CL_FEOPE", "CL_FEOPE")
             tableMapping.ColumnMappings.Add("CL_OVATION", "CL_OVATION")
             tableMapping.ColumnMappings.Add("CL_EXENTO", "CL_EXENTO")
@@ -7648,7 +7954,6 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.ColumnMappings.Add("CL_COLFIS", "CL_COLFIS")
             tableMapping.ColumnMappings.Add("CL_CIUDADFIS", "CL_CIUDADFIS")
             tableMapping.ColumnMappings.Add("EF_CLAVEFIS", "EF_CLAVEFIS")
-            tableMapping.ColumnMappings.Add("CL_CPFIS", "CL_CPFIS")
             tableMapping.ColumnMappings.Add("CL_EDOFIS", "CL_EDOFIS")
             tableMapping.ColumnMappings.Add("CL_TEL1FIS", "CL_TEL1FIS")
             tableMapping.ColumnMappings.Add("CL_TEL2FIS", "CL_TEL2FIS")
@@ -7659,173 +7964,14 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.ColumnMappings.Add("CL_MATERNOMOR", "CL_MATERNOMOR")
             tableMapping.ColumnMappings.Add("CL_SEXOMOR", "CL_SEXOMOR")
             tableMapping.ColumnMappings.Add("CL_EDOCIVILMOR", "CL_EDOCIVILMOR")
-            tableMapping.ColumnMappings.Add("CL_EDADMOR", "CL_EDADMOR")
+            tableMapping.ColumnMappings.Add("CL_CP", "CL_CP1")
+            tableMapping.ColumnMappings.Add("PR_NUM", "PR_NUM1")
+            tableMapping.ColumnMappings.Add("CL_NUMREP", "CL_NUMREP1")
+            tableMapping.ColumnMappings.Add("EJ_NUM", "EJ_NUM1")
+            tableMapping.ColumnMappings.Add("CL_RETE", "CL_RETE1")
+            tableMapping.ColumnMappings.Add("CL_CPFIS", "CL_CPFIS1")
+            tableMapping.ColumnMappings.Add("CL_EDADMOR", "CL_EDADMOR1")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [CO_CLIEN] WHERE (([CL_NUM] = @Original_CL_NUM))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CL_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [CO_CLIEN] ([CL_NUM], [CL_NOMBRE], [CL_DIR], [CL_COLONIA], [CL_CIUDAD"& _ 
-                "], [EF_CLAVE], [CL_CP], [CL_FEALTA], [CL_FEBAJA], [PR_NUM], [CL_REP1], [CL_REP2]"& _ 
-                ", [CL_TEL1], [CL_TEL2], [CL_REP3], [CL_CONOP], [CL_NUMREP], [CL_RFC], [RA_NUM], "& _ 
-                "[CL_TIPO2], [EJ_NUM], [RG_NUM], [CL_PERSO], [CL_JURI], [DI_DIVISA], [CL_AUTO], ["& _ 
-                "CL_FAX], [SU_NUM], [EF_NUM], [CL_CON1], [CL_CON2], [CL_NIT], [CL_RIESGO], [CL_FE"& _ 
-                "CADU], [CL_CONLE], [NA_NUM], [MI_NUM], [CL_RETE], [CL_FEOPE], [CL_OVATION], [CL_"& _ 
-                "EXENTO], [CL_MAIL], [CL_DIRFIS], [CL_COLFIS], [CL_CIUDADFIS], [EF_CLAVEFIS], [CL"& _ 
-                "_CPFIS], [CL_EDOFIS], [CL_TEL1FIS], [CL_TEL2FIS], [CL_FAXFIS], [CL_MAILFIS], [CL"& _ 
-                "_NOMBREMOR], [CL_PATERNOMOR], [CL_MATERNOMOR], [CL_SEXOMOR], [CL_EDOCIVILMOR], ["& _ 
-                "CL_EDADMOR]) VALUES (@CL_NUM, @CL_NOMBRE, @CL_DIR, @CL_COLONIA, @CL_CIUDAD, @EF_"& _ 
-                "CLAVE, @CL_CP, @CL_FEALTA, @CL_FEBAJA, @PR_NUM, @CL_REP1, @CL_REP2, @CL_TEL1, @C"& _ 
-                "L_TEL2, @CL_REP3, @CL_CONOP, @CL_NUMREP, @CL_RFC, @RA_NUM, @CL_TIPO2, @EJ_NUM, @"& _ 
-                "RG_NUM, @CL_PERSO, @CL_JURI, @DI_DIVISA, @CL_AUTO, @CL_FAX, @SU_NUM, @EF_NUM, @C"& _ 
-                "L_CON1, @CL_CON2, @CL_NIT, @CL_RIESGO, @CL_FECADU, @CL_CONLE, @NA_NUM, @MI_NUM, "& _ 
-                "@CL_RETE, @CL_FEOPE, @CL_OVATION, @CL_EXENTO, @CL_MAIL, @CL_DIRFIS, @CL_COLFIS, "& _ 
-                "@CL_CIUDADFIS, @EF_CLAVEFIS, @CL_CPFIS, @CL_EDOFIS, @CL_TEL1FIS, @CL_TEL2FIS, @C"& _ 
-                "L_FAXFIS, @CL_MAILFIS, @CL_NOMBREMOR, @CL_PATERNOMOR, @CL_MATERNOMOR, @CL_SEXOMO"& _ 
-                "R, @CL_EDOCIVILMOR, @CL_EDADMOR)"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NOMBRE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_DIR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_DIR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_COLONIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_COLONIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CIUDAD", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CIUDAD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEALTA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEALTA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEBAJA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEBAJA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PR_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PR_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP3", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CONOP", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CONOP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NUMREP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUMREP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RFC", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RFC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TIPO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TIPO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EJ_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EJ_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RG_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RG_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_PERSO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_PERSO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_JURI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_JURI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DI_DIVISA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DI_DIVISA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_AUTO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_AUTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FAX", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FAX", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SU_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SU_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CON1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CON1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CON2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CON2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NIT", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RIESGO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RIESGO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FECADU", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FECADU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CONLE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CONLE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MI_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MI_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RETE", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RETE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEOPE", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEOPE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_OVATION", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_OVATION", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EXENTO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EXENTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MAIL", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MAIL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_DIRFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_DIRFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_COLFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_COLFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CIUDADFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CIUDADFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVEFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVEFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CPFIS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CPFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDOFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDOFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL1FIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL1FIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL2FIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL2FIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FAXFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FAXFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MAILFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MAILFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NOMBREMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NOMBREMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_PATERNOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_PATERNOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MATERNOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MATERNOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_SEXOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_SEXOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDOCIVILMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDOCIVILMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDADMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDADMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [CO_CLIEN] SET [CL_NUM] = @CL_NUM, [CL_NOMBRE] = @CL_NOMBRE, [CL_DIR] = @C"& _ 
-                "L_DIR, [CL_COLONIA] = @CL_COLONIA, [CL_CIUDAD] = @CL_CIUDAD, [EF_CLAVE] = @EF_CL"& _ 
-                "AVE, [CL_CP] = @CL_CP, [CL_FEALTA] = @CL_FEALTA, [CL_FEBAJA] = @CL_FEBAJA, [PR_N"& _ 
-                "UM] = @PR_NUM, [CL_REP1] = @CL_REP1, [CL_REP2] = @CL_REP2, [CL_TEL1] = @CL_TEL1,"& _ 
-                " [CL_TEL2] = @CL_TEL2, [CL_REP3] = @CL_REP3, [CL_CONOP] = @CL_CONOP, [CL_NUMREP]"& _ 
-                " = @CL_NUMREP, [CL_RFC] = @CL_RFC, [RA_NUM] = @RA_NUM, [CL_TIPO2] = @CL_TIPO2, ["& _ 
-                "EJ_NUM] = @EJ_NUM, [RG_NUM] = @RG_NUM, [CL_PERSO] = @CL_PERSO, [CL_JURI] = @CL_J"& _ 
-                "URI, [DI_DIVISA] = @DI_DIVISA, [CL_AUTO] = @CL_AUTO, [CL_FAX] = @CL_FAX, [SU_NUM"& _ 
-                "] = @SU_NUM, [EF_NUM] = @EF_NUM, [CL_CON1] = @CL_CON1, [CL_CON2] = @CL_CON2, [CL"& _ 
-                "_NIT] = @CL_NIT, [CL_RIESGO] = @CL_RIESGO, [CL_FECADU] = @CL_FECADU, [CL_CONLE] "& _ 
-                "= @CL_CONLE, [NA_NUM] = @NA_NUM, [MI_NUM] = @MI_NUM, [CL_RETE] = @CL_RETE, [CL_F"& _ 
-                "EOPE] = @CL_FEOPE, [CL_OVATION] = @CL_OVATION, [CL_EXENTO] = @CL_EXENTO, [CL_MAI"& _ 
-                "L] = @CL_MAIL, [CL_DIRFIS] = @CL_DIRFIS, [CL_COLFIS] = @CL_COLFIS, [CL_CIUDADFIS"& _ 
-                "] = @CL_CIUDADFIS, [EF_CLAVEFIS] = @EF_CLAVEFIS, [CL_CPFIS] = @CL_CPFIS, [CL_EDO"& _ 
-                "FIS] = @CL_EDOFIS, [CL_TEL1FIS] = @CL_TEL1FIS, [CL_TEL2FIS] = @CL_TEL2FIS, [CL_F"& _ 
-                "AXFIS] = @CL_FAXFIS, [CL_MAILFIS] = @CL_MAILFIS, [CL_NOMBREMOR] = @CL_NOMBREMOR,"& _ 
-                " [CL_PATERNOMOR] = @CL_PATERNOMOR, [CL_MATERNOMOR] = @CL_MATERNOMOR, [CL_SEXOMOR"& _ 
-                "] = @CL_SEXOMOR, [CL_EDOCIVILMOR] = @CL_EDOCIVILMOR, [CL_EDADMOR] = @CL_EDADMOR "& _ 
-                "WHERE (([CL_NUM] = @Original_CL_NUM))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NOMBRE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_DIR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_DIR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_COLONIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_COLONIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CIUDAD", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CIUDAD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEALTA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEALTA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEBAJA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEBAJA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PR_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PR_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_REP3", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_REP3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CONOP", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CONOP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NUMREP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUMREP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RFC", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RFC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TIPO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TIPO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EJ_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EJ_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RG_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RG_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_PERSO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_PERSO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_JURI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_JURI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DI_DIVISA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DI_DIVISA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_AUTO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_AUTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FAX", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FAX", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SU_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SU_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CON1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CON1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CON2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CON2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NIT", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RIESGO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RIESGO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FECADU", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FECADU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CONLE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CONLE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MI_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MI_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_RETE", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_RETE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FEOPE", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FEOPE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_OVATION", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_OVATION", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EXENTO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EXENTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MAIL", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MAIL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_DIRFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_DIRFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_COLFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_COLFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CIUDADFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CIUDADFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVEFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVEFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_CPFIS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_CPFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDOFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDOFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL1FIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL1FIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_TEL2FIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_TEL2FIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_FAXFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_FAXFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MAILFIS", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MAILFIS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_NOMBREMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NOMBREMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_PATERNOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_PATERNOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_MATERNOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_MATERNOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_SEXOMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_SEXOMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDOCIVILMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDOCIVILMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CL_EDADMOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_EDADMOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CL_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CL_NUM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7849,7 +7995,7 @@ Namespace FactorVWDS1TableAdapters
                 " CL_OVATION, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CL_EXENTO, CL_MAIL, CL_DIRFIS, CL_COLFIS"& _ 
                 ", CL_CIUDADFIS, EF_CLAVEFIS, CL_CPFIS, CL_EDOFIS, CL_TEL1FIS, CL_TEL2FIS, CL_FAX"& _ 
                 "FIS, CL_MAILFIS, CL_NOMBREMOR, CL_PATERNOMOR, CL_MATERNOMOR, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
-                "        CL_SEXOMOR, CL_EDOCIVILMOR, CL_EDADMOR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            CO_CLIEN"
+                "        CL_SEXOMOR, CL_EDOCIVILMOR, CL_EDADMOR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Co_Clien"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -7875,867 +8021,6 @@ Namespace FactorVWDS1TableAdapters
             Dim dataTable As FactorVWDS1.CO_CLIENDataTable = New FactorVWDS1.CO_CLIENDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As FactorVWDS1.CO_CLIENDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As FactorVWDS1) As Integer
-            Return Me.Adapter.Update(dataSet, "CO_CLIEN")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_CL_NUM As String) As Integer
-            If (Original_CL_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_CL_NUM")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_CL_NUM,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert( _
-                    ByVal CL_NUM As String,  _
-                    ByVal CL_NOMBRE As String,  _
-                    ByVal CL_DIR As String,  _
-                    ByVal CL_COLONIA As String,  _
-                    ByVal CL_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal CL_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal CL_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_REP1 As String,  _
-                    ByVal CL_REP2 As String,  _
-                    ByVal CL_TEL1 As String,  _
-                    ByVal CL_TEL2 As String,  _
-                    ByVal CL_REP3 As String,  _
-                    ByVal CL_CONOP As String,  _
-                    ByVal CL_NUMREP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_RFC As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal CL_TIPO2 As String,  _
-                    ByVal EJ_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal RG_NUM As String,  _
-                    ByVal CL_PERSO As String,  _
-                    ByVal CL_JURI As String,  _
-                    ByVal DI_DIVISA As String,  _
-                    ByVal CL_AUTO As String,  _
-                    ByVal CL_FAX As String,  _
-                    ByVal SU_NUM As String,  _
-                    ByVal EF_NUM As String,  _
-                    ByVal CL_CON1 As String,  _
-                    ByVal CL_CON2 As String,  _
-                    ByVal CL_NIT As String,  _
-                    ByVal CL_RIESGO As String,  _
-                    ByVal CL_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal CL_CONLE As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal MI_NUM As String,  _
-                    ByVal CL_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal CL_FEOPE As Global.System.Nullable(Of Date),  _
-                    ByVal CL_OVATION As String,  _
-                    ByVal CL_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_MAIL As String,  _
-                    ByVal CL_DIRFIS As String,  _
-                    ByVal CL_COLFIS As String,  _
-                    ByVal CL_CIUDADFIS As String,  _
-                    ByVal EF_CLAVEFIS As String,  _
-                    ByVal CL_CPFIS As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_EDOFIS As String,  _
-                    ByVal CL_TEL1FIS As String,  _
-                    ByVal CL_TEL2FIS As String,  _
-                    ByVal CL_FAXFIS As String,  _
-                    ByVal CL_MAILFIS As String,  _
-                    ByVal CL_NOMBREMOR As String,  _
-                    ByVal CL_PATERNOMOR As String,  _
-                    ByVal CL_MATERNOMOR As String,  _
-                    ByVal CL_SEXOMOR As String,  _
-                    ByVal CL_EDOCIVILMOR As String,  _
-                    ByVal CL_EDADMOR As String) As Integer
-            If (CL_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("CL_NUM")
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(CL_NUM,String)
-            End If
-            If (CL_NOMBRE Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(CL_NOMBRE,String)
-            End If
-            If (CL_DIR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(CL_DIR,String)
-            End If
-            If (CL_COLONIA Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(CL_COLONIA,String)
-            End If
-            If (CL_CIUDAD Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(CL_CIUDAD,String)
-            End If
-            If (EF_CLAVE Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(EF_CLAVE,String)
-            End If
-            If (CL_CP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(CL_CP.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEALTA.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(CL_FEALTA.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEBAJA.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(CL_FEBAJA.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (PR_NUM.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(PR_NUM.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (CL_REP1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(CL_REP1,String)
-            End If
-            If (CL_REP2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(CL_REP2,String)
-            End If
-            If (CL_TEL1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(CL_TEL1,String)
-            End If
-            If (CL_TEL2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(CL_TEL2,String)
-            End If
-            If (CL_REP3 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(CL_REP3,String)
-            End If
-            If (CL_CONOP Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(CL_CONOP,String)
-            End If
-            If (CL_NUMREP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(CL_NUMREP.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (CL_RFC Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(CL_RFC,String)
-            End If
-            If (RA_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(RA_NUM,String)
-            End If
-            If (CL_TIPO2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(CL_TIPO2,String)
-            End If
-            If (EJ_NUM.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(EJ_NUM.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (RG_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(RG_NUM,String)
-            End If
-            If (CL_PERSO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(CL_PERSO,String)
-            End If
-            If (CL_JURI Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(CL_JURI,String)
-            End If
-            If (DI_DIVISA Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(DI_DIVISA,String)
-            End If
-            If (CL_AUTO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(CL_AUTO,String)
-            End If
-            If (CL_FAX Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(CL_FAX,String)
-            End If
-            If (SU_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(SU_NUM,String)
-            End If
-            If (EF_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(28).Value = CType(EF_NUM,String)
-            End If
-            If (CL_CON1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(CL_CON1,String)
-            End If
-            If (CL_CON2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(CL_CON2,String)
-            End If
-            If (CL_NIT Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(31).Value = CType(CL_NIT,String)
-            End If
-            If (CL_RIESGO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(32).Value = CType(CL_RIESGO,String)
-            End If
-            If (CL_FECADU.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(33).Value = CType(CL_FECADU.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
-            If (CL_CONLE Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(34).Value = CType(CL_CONLE,String)
-            End If
-            If (NA_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(35).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(35).Value = CType(NA_NUM,String)
-            End If
-            If (MI_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(36).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(36).Value = CType(MI_NUM,String)
-            End If
-            If (CL_RETE.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(37).Value = CType(CL_RETE.Value,Double)
-            Else
-                Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEOPE.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(38).Value = CType(CL_FEOPE.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (CL_OVATION Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(39).Value = CType(CL_OVATION,String)
-            End If
-            If (CL_EXENTO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(40).Value = CType(CL_EXENTO.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (CL_MAIL Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(41).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(41).Value = CType(CL_MAIL,String)
-            End If
-            If (CL_DIRFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(42).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(42).Value = CType(CL_DIRFIS,String)
-            End If
-            If (CL_COLFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(43).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(43).Value = CType(CL_COLFIS,String)
-            End If
-            If (CL_CIUDADFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(44).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(44).Value = CType(CL_CIUDADFIS,String)
-            End If
-            If (EF_CLAVEFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(45).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(45).Value = CType(EF_CLAVEFIS,String)
-            End If
-            If (CL_CPFIS.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(46).Value = CType(CL_CPFIS.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(46).Value = Global.System.DBNull.Value
-            End If
-            If (CL_EDOFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(47).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(47).Value = CType(CL_EDOFIS,String)
-            End If
-            If (CL_TEL1FIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(48).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(48).Value = CType(CL_TEL1FIS,String)
-            End If
-            If (CL_TEL2FIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(49).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(49).Value = CType(CL_TEL2FIS,String)
-            End If
-            If (CL_FAXFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(50).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(50).Value = CType(CL_FAXFIS,String)
-            End If
-            If (CL_MAILFIS Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(51).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(51).Value = CType(CL_MAILFIS,String)
-            End If
-            If (CL_NOMBREMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(52).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(52).Value = CType(CL_NOMBREMOR,String)
-            End If
-            If (CL_PATERNOMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(53).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(53).Value = CType(CL_PATERNOMOR,String)
-            End If
-            If (CL_MATERNOMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(54).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(54).Value = CType(CL_MATERNOMOR,String)
-            End If
-            If (CL_SEXOMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(55).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(55).Value = CType(CL_SEXOMOR,String)
-            End If
-            If (CL_EDOCIVILMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(56).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(56).Value = CType(CL_EDOCIVILMOR,String)
-            End If
-            If (CL_EDADMOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(57).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(57).Value = CType(CL_EDADMOR,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal CL_NUM As String,  _
-                    ByVal CL_NOMBRE As String,  _
-                    ByVal CL_DIR As String,  _
-                    ByVal CL_COLONIA As String,  _
-                    ByVal CL_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal CL_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal CL_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_REP1 As String,  _
-                    ByVal CL_REP2 As String,  _
-                    ByVal CL_TEL1 As String,  _
-                    ByVal CL_TEL2 As String,  _
-                    ByVal CL_REP3 As String,  _
-                    ByVal CL_CONOP As String,  _
-                    ByVal CL_NUMREP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_RFC As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal CL_TIPO2 As String,  _
-                    ByVal EJ_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal RG_NUM As String,  _
-                    ByVal CL_PERSO As String,  _
-                    ByVal CL_JURI As String,  _
-                    ByVal DI_DIVISA As String,  _
-                    ByVal CL_AUTO As String,  _
-                    ByVal CL_FAX As String,  _
-                    ByVal SU_NUM As String,  _
-                    ByVal EF_NUM As String,  _
-                    ByVal CL_CON1 As String,  _
-                    ByVal CL_CON2 As String,  _
-                    ByVal CL_NIT As String,  _
-                    ByVal CL_RIESGO As String,  _
-                    ByVal CL_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal CL_CONLE As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal MI_NUM As String,  _
-                    ByVal CL_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal CL_FEOPE As Global.System.Nullable(Of Date),  _
-                    ByVal CL_OVATION As String,  _
-                    ByVal CL_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_MAIL As String,  _
-                    ByVal CL_DIRFIS As String,  _
-                    ByVal CL_COLFIS As String,  _
-                    ByVal CL_CIUDADFIS As String,  _
-                    ByVal EF_CLAVEFIS As String,  _
-                    ByVal CL_CPFIS As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_EDOFIS As String,  _
-                    ByVal CL_TEL1FIS As String,  _
-                    ByVal CL_TEL2FIS As String,  _
-                    ByVal CL_FAXFIS As String,  _
-                    ByVal CL_MAILFIS As String,  _
-                    ByVal CL_NOMBREMOR As String,  _
-                    ByVal CL_PATERNOMOR As String,  _
-                    ByVal CL_MATERNOMOR As String,  _
-                    ByVal CL_SEXOMOR As String,  _
-                    ByVal CL_EDOCIVILMOR As String,  _
-                    ByVal CL_EDADMOR As String,  _
-                    ByVal Original_CL_NUM As String) As Integer
-            If (CL_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("CL_NUM")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CL_NUM,String)
-            End If
-            If (CL_NOMBRE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(CL_NOMBRE,String)
-            End If
-            If (CL_DIR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(CL_DIR,String)
-            End If
-            If (CL_COLONIA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CL_COLONIA,String)
-            End If
-            If (CL_CIUDAD Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(CL_CIUDAD,String)
-            End If
-            If (EF_CLAVE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(EF_CLAVE,String)
-            End If
-            If (CL_CP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(CL_CP.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEALTA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(CL_FEALTA.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEBAJA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(CL_FEBAJA.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (PR_NUM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(PR_NUM.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (CL_REP1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(CL_REP1,String)
-            End If
-            If (CL_REP2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(CL_REP2,String)
-            End If
-            If (CL_TEL1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(CL_TEL1,String)
-            End If
-            If (CL_TEL2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(CL_TEL2,String)
-            End If
-            If (CL_REP3 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(CL_REP3,String)
-            End If
-            If (CL_CONOP Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(CL_CONOP,String)
-            End If
-            If (CL_NUMREP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(CL_NUMREP.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (CL_RFC Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(CL_RFC,String)
-            End If
-            If (RA_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(RA_NUM,String)
-            End If
-            If (CL_TIPO2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(CL_TIPO2,String)
-            End If
-            If (EJ_NUM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(EJ_NUM.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            End If
-            If (RG_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(RG_NUM,String)
-            End If
-            If (CL_PERSO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(CL_PERSO,String)
-            End If
-            If (CL_JURI Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(CL_JURI,String)
-            End If
-            If (DI_DIVISA Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(DI_DIVISA,String)
-            End If
-            If (CL_AUTO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(CL_AUTO,String)
-            End If
-            If (CL_FAX Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(CL_FAX,String)
-            End If
-            If (SU_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(SU_NUM,String)
-            End If
-            If (EF_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(EF_NUM,String)
-            End If
-            If (CL_CON1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(CL_CON1,String)
-            End If
-            If (CL_CON2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(CL_CON2,String)
-            End If
-            If (CL_NIT Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(CL_NIT,String)
-            End If
-            If (CL_RIESGO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(CL_RIESGO,String)
-            End If
-            If (CL_FECADU.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(CL_FECADU.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            End If
-            If (CL_CONLE Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(CL_CONLE,String)
-            End If
-            If (NA_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(NA_NUM,String)
-            End If
-            If (MI_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(MI_NUM,String)
-            End If
-            If (CL_RETE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(CL_RETE.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
-            End If
-            If (CL_FEOPE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(CL_FEOPE.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
-            End If
-            If (CL_OVATION Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(CL_OVATION,String)
-            End If
-            If (CL_EXENTO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(CL_EXENTO.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
-            End If
-            If (CL_MAIL Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(CL_MAIL,String)
-            End If
-            If (CL_DIRFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(CL_DIRFIS,String)
-            End If
-            If (CL_COLFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(CL_COLFIS,String)
-            End If
-            If (CL_CIUDADFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(CL_CIUDADFIS,String)
-            End If
-            If (EF_CLAVEFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(EF_CLAVEFIS,String)
-            End If
-            If (CL_CPFIS.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(CL_CPFIS.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
-            End If
-            If (CL_EDOFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(CL_EDOFIS,String)
-            End If
-            If (CL_TEL1FIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(CL_TEL1FIS,String)
-            End If
-            If (CL_TEL2FIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(CL_TEL2FIS,String)
-            End If
-            If (CL_FAXFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(CL_FAXFIS,String)
-            End If
-            If (CL_MAILFIS Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(CL_MAILFIS,String)
-            End If
-            If (CL_NOMBREMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(CL_NOMBREMOR,String)
-            End If
-            If (CL_PATERNOMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(CL_PATERNOMOR,String)
-            End If
-            If (CL_MATERNOMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(CL_MATERNOMOR,String)
-            End If
-            If (CL_SEXOMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(CL_SEXOMOR,String)
-            End If
-            If (CL_EDOCIVILMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(CL_EDOCIVILMOR,String)
-            End If
-            If (CL_EDADMOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(CL_EDADMOR,String)
-            End If
-            If (Original_CL_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_CL_NUM")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_CL_NUM,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal CL_NOMBRE As String,  _
-                    ByVal CL_DIR As String,  _
-                    ByVal CL_COLONIA As String,  _
-                    ByVal CL_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal CL_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal CL_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_REP1 As String,  _
-                    ByVal CL_REP2 As String,  _
-                    ByVal CL_TEL1 As String,  _
-                    ByVal CL_TEL2 As String,  _
-                    ByVal CL_REP3 As String,  _
-                    ByVal CL_CONOP As String,  _
-                    ByVal CL_NUMREP As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_RFC As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal CL_TIPO2 As String,  _
-                    ByVal EJ_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal RG_NUM As String,  _
-                    ByVal CL_PERSO As String,  _
-                    ByVal CL_JURI As String,  _
-                    ByVal DI_DIVISA As String,  _
-                    ByVal CL_AUTO As String,  _
-                    ByVal CL_FAX As String,  _
-                    ByVal SU_NUM As String,  _
-                    ByVal EF_NUM As String,  _
-                    ByVal CL_CON1 As String,  _
-                    ByVal CL_CON2 As String,  _
-                    ByVal CL_NIT As String,  _
-                    ByVal CL_RIESGO As String,  _
-                    ByVal CL_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal CL_CONLE As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal MI_NUM As String,  _
-                    ByVal CL_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal CL_FEOPE As Global.System.Nullable(Of Date),  _
-                    ByVal CL_OVATION As String,  _
-                    ByVal CL_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_MAIL As String,  _
-                    ByVal CL_DIRFIS As String,  _
-                    ByVal CL_COLFIS As String,  _
-                    ByVal CL_CIUDADFIS As String,  _
-                    ByVal EF_CLAVEFIS As String,  _
-                    ByVal CL_CPFIS As Global.System.Nullable(Of Integer),  _
-                    ByVal CL_EDOFIS As String,  _
-                    ByVal CL_TEL1FIS As String,  _
-                    ByVal CL_TEL2FIS As String,  _
-                    ByVal CL_FAXFIS As String,  _
-                    ByVal CL_MAILFIS As String,  _
-                    ByVal CL_NOMBREMOR As String,  _
-                    ByVal CL_PATERNOMOR As String,  _
-                    ByVal CL_MATERNOMOR As String,  _
-                    ByVal CL_SEXOMOR As String,  _
-                    ByVal CL_EDOCIVILMOR As String,  _
-                    ByVal CL_EDADMOR As String,  _
-                    ByVal Original_CL_NUM As String) As Integer
-            Return Me.Update(Original_CL_NUM, CL_NOMBRE, CL_DIR, CL_COLONIA, CL_CIUDAD, EF_CLAVE, CL_CP, CL_FEALTA, CL_FEBAJA, PR_NUM, CL_REP1, CL_REP2, CL_TEL1, CL_TEL2, CL_REP3, CL_CONOP, CL_NUMREP, CL_RFC, RA_NUM, CL_TIPO2, EJ_NUM, RG_NUM, CL_PERSO, CL_JURI, DI_DIVISA, CL_AUTO, CL_FAX, SU_NUM, EF_NUM, CL_CON1, CL_CON2, CL_NIT, CL_RIESGO, CL_FECADU, CL_CONLE, NA_NUM, MI_NUM, CL_RETE, CL_FEOPE, CL_OVATION, CL_EXENTO, CL_MAIL, CL_DIRFIS, CL_COLFIS, CL_CIUDADFIS, EF_CLAVEFIS, CL_CPFIS, CL_EDOFIS, CL_TEL1FIS, CL_TEL2FIS, CL_FAXFIS, CL_MAILFIS, CL_NOMBREMOR, CL_PATERNOMOR, CL_MATERNOMOR, CL_SEXOMOR, CL_EDOCIVILMOR, CL_EDADMOR, Original_CL_NUM)
         End Function
     End Class
     
@@ -8868,11 +8153,9 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.DataSetTable = "CO_TITCO"
             tableMapping.ColumnMappings.Add("TC_NOMBRE", "TC_NOMBRE")
             tableMapping.ColumnMappings.Add("TC_NUM", "TC_NUM")
-            tableMapping.ColumnMappings.Add("PR_NUM", "PR_NUM")
             tableMapping.ColumnMappings.Add("TC_DIR", "TC_DIR")
             tableMapping.ColumnMappings.Add("TC_CIUDAD", "TC_CIUDAD")
             tableMapping.ColumnMappings.Add("EF_CLAVE", "EF_CLAVE")
-            tableMapping.ColumnMappings.Add("TC_CP", "TC_CP")
             tableMapping.ColumnMappings.Add("TC_FEALTA", "TC_FEALTA")
             tableMapping.ColumnMappings.Add("TC_FEBAJA", "TC_FEBAJA")
             tableMapping.ColumnMappings.Add("TC_ENC1", "TC_ENC1")
@@ -8889,122 +8172,21 @@ Namespace FactorVWDS1TableAdapters
             tableMapping.ColumnMappings.Add("TC_RFC", "TC_RFC")
             tableMapping.ColumnMappings.Add("TC_NIT", "TC_NIT")
             tableMapping.ColumnMappings.Add("RG_NUM", "RG_NUM")
-            tableMapping.ColumnMappings.Add("TC_ANTICIP", "TC_ANTICIP")
             tableMapping.ColumnMappings.Add("TC_RIESGO", "TC_RIESGO")
             tableMapping.ColumnMappings.Add("NA_NUM", "NA_NUM")
-            tableMapping.ColumnMappings.Add("TC_RETE", "TC_RETE")
             tableMapping.ColumnMappings.Add("TC_FECADU", "TC_FECADU")
             tableMapping.ColumnMappings.Add("TC_DEUDOR", "TC_DEUDOR")
-            tableMapping.ColumnMappings.Add("TC_VENTAS", "TC_VENTAS")
             tableMapping.ColumnMappings.Add("TC_NUMEMP", "TC_NUMEMP")
-            tableMapping.ColumnMappings.Add("TC_EXENTO", "TC_EXENTO")
             tableMapping.ColumnMappings.Add("TC_MAIL", "TC_MAIL")
             tableMapping.ColumnMappings.Add("TC_PERSO", "TC_PERSO")
             tableMapping.ColumnMappings.Add("TC_FAX", "TC_FAX")
+            tableMapping.ColumnMappings.Add("PR_NUM", "PR_NUM")
+            tableMapping.ColumnMappings.Add("TC_CP", "TC_CP")
+            tableMapping.ColumnMappings.Add("TC_ANTICIP", "TC_ANTICIP")
+            tableMapping.ColumnMappings.Add("TC_RETE", "TC_RETE")
+            tableMapping.ColumnMappings.Add("TC_VENTAS", "TC_VENTAS")
+            tableMapping.ColumnMappings.Add("TC_EXENTO", "TC_EXENTO")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [CO_TITCO] WHERE (([TC_NUM] = @Original_TC_NUM))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TC_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [CO_TITCO] ([TC_NOMBRE], [TC_NUM], [PR_NUM], [TC_DIR], [TC_CIUDAD], ["& _ 
-                "EF_CLAVE], [TC_CP], [TC_FEALTA], [TC_FEBAJA], [TC_ENC1], [TC_ENC2], [TC_TEL1], ["& _ 
-                "TC_TEL2], [TC_COLO], [TC_TIPO1], [RA_NUM], [TC_TIPO2], [TC_ENC3], [TC_JURI], [TC"& _ 
-                "_AUTO], [TC_RFC], [TC_NIT], [RG_NUM], [TC_ANTICIP], [TC_RIESGO], [NA_NUM], [TC_R"& _ 
-                "ETE], [TC_FECADU], [TC_DEUDOR], [TC_VENTAS], [TC_NUMEMP], [TC_EXENTO], [TC_MAIL]"& _ 
-                ", [TC_PERSO], [TC_FAX]) VALUES (@TC_NOMBRE, @TC_NUM, @PR_NUM, @TC_DIR, @TC_CIUDA"& _ 
-                "D, @EF_CLAVE, @TC_CP, @TC_FEALTA, @TC_FEBAJA, @TC_ENC1, @TC_ENC2, @TC_TEL1, @TC_"& _ 
-                "TEL2, @TC_COLO, @TC_TIPO1, @RA_NUM, @TC_TIPO2, @TC_ENC3, @TC_JURI, @TC_AUTO, @TC"& _ 
-                "_RFC, @TC_NIT, @RG_NUM, @TC_ANTICIP, @TC_RIESGO, @NA_NUM, @TC_RETE, @TC_FECADU, "& _ 
-                "@TC_DEUDOR, @TC_VENTAS, @TC_NUMEMP, @TC_EXENTO, @TC_MAIL, @TC_PERSO, @TC_FAX)"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NOMBRE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PR_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PR_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_DIR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_DIR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_CIUDAD", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_CIUDAD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_CP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_CP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FEALTA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FEALTA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FEBAJA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FEBAJA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TEL1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TEL1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TEL2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TEL2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_COLO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_COLO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TIPO1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TIPO1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TIPO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TIPO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC3", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_JURI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_JURI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_AUTO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_AUTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RFC", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RFC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NIT", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RG_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RG_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ANTICIP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ANTICIP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RIESGO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RIESGO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RETE", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RETE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FECADU", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FECADU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_DEUDOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_DEUDOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_VENTAS", Global.System.Data.SqlDbType.Real, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_VENTAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NUMEMP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUMEMP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_EXENTO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_EXENTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_MAIL", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_MAIL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_PERSO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_PERSO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FAX", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FAX", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [CO_TITCO] SET [TC_NOMBRE] = @TC_NOMBRE, [TC_NUM] = @TC_NUM, [PR_NUM] = @P"& _ 
-                "R_NUM, [TC_DIR] = @TC_DIR, [TC_CIUDAD] = @TC_CIUDAD, [EF_CLAVE] = @EF_CLAVE, [TC"& _ 
-                "_CP] = @TC_CP, [TC_FEALTA] = @TC_FEALTA, [TC_FEBAJA] = @TC_FEBAJA, [TC_ENC1] = @"& _ 
-                "TC_ENC1, [TC_ENC2] = @TC_ENC2, [TC_TEL1] = @TC_TEL1, [TC_TEL2] = @TC_TEL2, [TC_C"& _ 
-                "OLO] = @TC_COLO, [TC_TIPO1] = @TC_TIPO1, [RA_NUM] = @RA_NUM, [TC_TIPO2] = @TC_TI"& _ 
-                "PO2, [TC_ENC3] = @TC_ENC3, [TC_JURI] = @TC_JURI, [TC_AUTO] = @TC_AUTO, [TC_RFC] "& _ 
-                "= @TC_RFC, [TC_NIT] = @TC_NIT, [RG_NUM] = @RG_NUM, [TC_ANTICIP] = @TC_ANTICIP, ["& _ 
-                "TC_RIESGO] = @TC_RIESGO, [NA_NUM] = @NA_NUM, [TC_RETE] = @TC_RETE, [TC_FECADU] ="& _ 
-                " @TC_FECADU, [TC_DEUDOR] = @TC_DEUDOR, [TC_VENTAS] = @TC_VENTAS, [TC_NUMEMP] = @"& _ 
-                "TC_NUMEMP, [TC_EXENTO] = @TC_EXENTO, [TC_MAIL] = @TC_MAIL, [TC_PERSO] = @TC_PERS"& _ 
-                "O, [TC_FAX] = @TC_FAX WHERE (([TC_NUM] = @Original_TC_NUM))"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NOMBRE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NOMBRE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PR_NUM", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PR_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_DIR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_DIR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_CIUDAD", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_CIUDAD", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EF_CLAVE", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EF_CLAVE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_CP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_CP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FEALTA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FEALTA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FEBAJA", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FEBAJA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TEL1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TEL1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TEL2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TEL2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_COLO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_COLO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TIPO1", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TIPO1", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_TIPO2", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_TIPO2", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ENC3", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ENC3", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_JURI", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_JURI", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_AUTO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_AUTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RFC", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RFC", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NIT", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NIT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RG_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "RG_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_ANTICIP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_ANTICIP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RIESGO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RIESGO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NA_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NA_NUM", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_RETE", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_RETE", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FECADU", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FECADU", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_DEUDOR", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_DEUDOR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_VENTAS", Global.System.Data.SqlDbType.Real, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_VENTAS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_NUMEMP", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUMEMP", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_EXENTO", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_EXENTO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_MAIL", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_MAIL", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_PERSO", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_PERSO", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TC_FAX", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_FAX", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_TC_NUM", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TC_NUM", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9023,8 +8205,9 @@ Namespace FactorVWDS1TableAdapters
             Me._commandCollection(0).CommandText = "SELECT        TC_NOMBRE, TC_NUM, PR_NUM, TC_DIR, TC_CIUDAD, EF_CLAVE, TC_CP, TC_F"& _ 
                 "EALTA, TC_FEBAJA, TC_ENC1, TC_ENC2, TC_TEL1, TC_TEL2, TC_COLO, TC_TIPO1, RA_NUM,"& _ 
                 " TC_TIPO2, TC_ENC3, TC_JURI, TC_AUTO, TC_RFC, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         TC_NIT,"& _ 
-                " RG_NUM, TC_ANTICIP, TC_RIESGO, NA_NUM, TC_RETE, TC_FECADU, TC_DEUDOR, TC_VENTAS"& _ 
-                ", TC_NUMEMP, TC_EXENTO, TC_MAIL, TC_PERSO, TC_FAX"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            CO_TITCO"
+                " RG_NUM, TC_ANTICIP, TC_RIESGO, NA_NUM, '' as TC_RETE, TC_FECADU, TC_DEUDOR, TC_"& _ 
+                "VENTAS, TC_NUMEMP, TC_EXENTO, TC_MAIL, TC_PERSO, TC_FAX"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            CO_TITC"& _ 
+                "O"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9051,568 +8234,6 @@ Namespace FactorVWDS1TableAdapters
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As FactorVWDS1.CO_TITCODataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As FactorVWDS1) As Integer
-            Return Me.Adapter.Update(dataSet, "CO_TITCO")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_TC_NUM As String) As Integer
-            If (Original_TC_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_TC_NUM")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_TC_NUM,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert( _
-                    ByVal TC_NOMBRE As String,  _
-                    ByVal TC_NUM As String,  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_DIR As String,  _
-                    ByVal TC_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal TC_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_ENC1 As String,  _
-                    ByVal TC_ENC2 As String,  _
-                    ByVal TC_TEL1 As String,  _
-                    ByVal TC_TEL2 As String,  _
-                    ByVal TC_COLO As String,  _
-                    ByVal TC_TIPO1 As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal TC_TIPO2 As String,  _
-                    ByVal TC_ENC3 As String,  _
-                    ByVal TC_JURI As String,  _
-                    ByVal TC_AUTO As String,  _
-                    ByVal TC_RFC As String,  _
-                    ByVal TC_NIT As String,  _
-                    ByVal RG_NUM As String,  _
-                    ByVal TC_ANTICIP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_RIESGO As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal TC_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal TC_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal TC_DEUDOR As String,  _
-                    ByVal TC_VENTAS As Global.System.Nullable(Of Single),  _
-                    ByVal TC_NUMEMP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_MAIL As String,  _
-                    ByVal TC_PERSO As String,  _
-                    ByVal TC_FAX As String) As Integer
-            If (TC_NOMBRE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TC_NOMBRE")
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(TC_NOMBRE,String)
-            End If
-            If (TC_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TC_NUM")
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(TC_NUM,String)
-            End If
-            If (PR_NUM.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(PR_NUM.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (TC_DIR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(TC_DIR,String)
-            End If
-            If (TC_CIUDAD Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(TC_CIUDAD,String)
-            End If
-            If (EF_CLAVE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("EF_CLAVE")
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(EF_CLAVE,String)
-            End If
-            If (TC_CP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(TC_CP.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FEALTA.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(TC_FEALTA.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FEBAJA.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(TC_FEBAJA.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (TC_ENC1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(TC_ENC1,String)
-            End If
-            If (TC_ENC2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(TC_ENC2,String)
-            End If
-            If (TC_TEL1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(TC_TEL1,String)
-            End If
-            If (TC_TEL2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(TC_TEL2,String)
-            End If
-            If (TC_COLO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(TC_COLO,String)
-            End If
-            If (TC_TIPO1 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(TC_TIPO1,String)
-            End If
-            If (RA_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(RA_NUM,String)
-            End If
-            If (TC_TIPO2 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(16).Value = CType(TC_TIPO2,String)
-            End If
-            If (TC_ENC3 Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(17).Value = CType(TC_ENC3,String)
-            End If
-            If (TC_JURI Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(18).Value = CType(TC_JURI,String)
-            End If
-            If (TC_AUTO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(19).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(19).Value = CType(TC_AUTO,String)
-            End If
-            If (TC_RFC Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(20).Value = CType(TC_RFC,String)
-            End If
-            If (TC_NIT Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(21).Value = CType(TC_NIT,String)
-            End If
-            If (RG_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(22).Value = CType(RG_NUM,String)
-            End If
-            If (TC_ANTICIP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(23).Value = CType(TC_ANTICIP.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(23).Value = Global.System.DBNull.Value
-            End If
-            If (TC_RIESGO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(24).Value = CType(TC_RIESGO,String)
-            End If
-            If (NA_NUM Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(25).Value = CType(NA_NUM,String)
-            End If
-            If (TC_RETE.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(26).Value = CType(TC_RETE.Value,Double)
-            Else
-                Me.Adapter.InsertCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FECADU.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(27).Value = CType(TC_FECADU.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (TC_DEUDOR Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(28).Value = CType(TC_DEUDOR,String)
-            End If
-            If (TC_VENTAS.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(29).Value = CType(TC_VENTAS.Value,Single)
-            Else
-                Me.Adapter.InsertCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (TC_NUMEMP.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(30).Value = CType(TC_NUMEMP.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (TC_EXENTO.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(31).Value = CType(TC_EXENTO.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (TC_MAIL Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(32).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(32).Value = CType(TC_MAIL,String)
-            End If
-            If (TC_PERSO Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(33).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(33).Value = CType(TC_PERSO,String)
-            End If
-            If (TC_FAX Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(34).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(34).Value = CType(TC_FAX,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal TC_NOMBRE As String,  _
-                    ByVal TC_NUM As String,  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_DIR As String,  _
-                    ByVal TC_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal TC_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_ENC1 As String,  _
-                    ByVal TC_ENC2 As String,  _
-                    ByVal TC_TEL1 As String,  _
-                    ByVal TC_TEL2 As String,  _
-                    ByVal TC_COLO As String,  _
-                    ByVal TC_TIPO1 As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal TC_TIPO2 As String,  _
-                    ByVal TC_ENC3 As String,  _
-                    ByVal TC_JURI As String,  _
-                    ByVal TC_AUTO As String,  _
-                    ByVal TC_RFC As String,  _
-                    ByVal TC_NIT As String,  _
-                    ByVal RG_NUM As String,  _
-                    ByVal TC_ANTICIP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_RIESGO As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal TC_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal TC_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal TC_DEUDOR As String,  _
-                    ByVal TC_VENTAS As Global.System.Nullable(Of Single),  _
-                    ByVal TC_NUMEMP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_MAIL As String,  _
-                    ByVal TC_PERSO As String,  _
-                    ByVal TC_FAX As String,  _
-                    ByVal Original_TC_NUM As String) As Integer
-            If (TC_NOMBRE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TC_NOMBRE")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(TC_NOMBRE,String)
-            End If
-            If (TC_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("TC_NUM")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(TC_NUM,String)
-            End If
-            If (PR_NUM.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(PR_NUM.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            End If
-            If (TC_DIR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(TC_DIR,String)
-            End If
-            If (TC_CIUDAD Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(TC_CIUDAD,String)
-            End If
-            If (EF_CLAVE Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("EF_CLAVE")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(EF_CLAVE,String)
-            End If
-            If (TC_CP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(TC_CP.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FEALTA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(TC_FEALTA.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FEBAJA.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(TC_FEBAJA.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (TC_ENC1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(TC_ENC1,String)
-            End If
-            If (TC_ENC2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(TC_ENC2,String)
-            End If
-            If (TC_TEL1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(TC_TEL1,String)
-            End If
-            If (TC_TEL2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(TC_TEL2,String)
-            End If
-            If (TC_COLO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(TC_COLO,String)
-            End If
-            If (TC_TIPO1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(TC_TIPO1,String)
-            End If
-            If (RA_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(RA_NUM,String)
-            End If
-            If (TC_TIPO2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(TC_TIPO2,String)
-            End If
-            If (TC_ENC3 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(TC_ENC3,String)
-            End If
-            If (TC_JURI Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(TC_JURI,String)
-            End If
-            If (TC_AUTO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(TC_AUTO,String)
-            End If
-            If (TC_RFC Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(TC_RFC,String)
-            End If
-            If (TC_NIT Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(TC_NIT,String)
-            End If
-            If (RG_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(RG_NUM,String)
-            End If
-            If (TC_ANTICIP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(TC_ANTICIP.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
-            End If
-            If (TC_RIESGO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(TC_RIESGO,String)
-            End If
-            If (NA_NUM Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(NA_NUM,String)
-            End If
-            If (TC_RETE.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(TC_RETE.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
-            End If
-            If (TC_FECADU.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(TC_FECADU.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
-            End If
-            If (TC_DEUDOR Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(TC_DEUDOR,String)
-            End If
-            If (TC_VENTAS.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(TC_VENTAS.Value,Single)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
-            End If
-            If (TC_NUMEMP.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(TC_NUMEMP.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
-            End If
-            If (TC_EXENTO.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(TC_EXENTO.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
-            End If
-            If (TC_MAIL Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(TC_MAIL,String)
-            End If
-            If (TC_PERSO Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(TC_PERSO,String)
-            End If
-            If (TC_FAX Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(TC_FAX,String)
-            End If
-            If (Original_TC_NUM Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_TC_NUM")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_TC_NUM,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal TC_NOMBRE As String,  _
-                    ByVal PR_NUM As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_DIR As String,  _
-                    ByVal TC_CIUDAD As String,  _
-                    ByVal EF_CLAVE As String,  _
-                    ByVal TC_CP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_FEALTA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_FEBAJA As Global.System.Nullable(Of Date),  _
-                    ByVal TC_ENC1 As String,  _
-                    ByVal TC_ENC2 As String,  _
-                    ByVal TC_TEL1 As String,  _
-                    ByVal TC_TEL2 As String,  _
-                    ByVal TC_COLO As String,  _
-                    ByVal TC_TIPO1 As String,  _
-                    ByVal RA_NUM As String,  _
-                    ByVal TC_TIPO2 As String,  _
-                    ByVal TC_ENC3 As String,  _
-                    ByVal TC_JURI As String,  _
-                    ByVal TC_AUTO As String,  _
-                    ByVal TC_RFC As String,  _
-                    ByVal TC_NIT As String,  _
-                    ByVal RG_NUM As String,  _
-                    ByVal TC_ANTICIP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_RIESGO As String,  _
-                    ByVal NA_NUM As String,  _
-                    ByVal TC_RETE As Global.System.Nullable(Of Double),  _
-                    ByVal TC_FECADU As Global.System.Nullable(Of Date),  _
-                    ByVal TC_DEUDOR As String,  _
-                    ByVal TC_VENTAS As Global.System.Nullable(Of Single),  _
-                    ByVal TC_NUMEMP As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_EXENTO As Global.System.Nullable(Of Integer),  _
-                    ByVal TC_MAIL As String,  _
-                    ByVal TC_PERSO As String,  _
-                    ByVal TC_FAX As String,  _
-                    ByVal Original_TC_NUM As String) As Integer
-            Return Me.Update(TC_NOMBRE, Original_TC_NUM, PR_NUM, TC_DIR, TC_CIUDAD, EF_CLAVE, TC_CP, TC_FEALTA, TC_FEBAJA, TC_ENC1, TC_ENC2, TC_TEL1, TC_TEL2, TC_COLO, TC_TIPO1, RA_NUM, TC_TIPO2, TC_ENC3, TC_JURI, TC_AUTO, TC_RFC, TC_NIT, RG_NUM, TC_ANTICIP, TC_RIESGO, NA_NUM, TC_RETE, TC_FECADU, TC_DEUDOR, TC_VENTAS, TC_NUMEMP, TC_EXENTO, TC_MAIL, TC_PERSO, TC_FAX, Original_TC_NUM)
-        End Function
     End Class
     
     '''<summary>
@@ -9629,10 +8250,6 @@ Namespace FactorVWDS1TableAdapters
         Private _updateOrder As UpdateOrderOption
         
         Private _wEB_FacturasXMLTableAdapter As WEB_FacturasXMLTableAdapter
-        
-        Private _cO_CLIENTableAdapter As CO_CLIENTableAdapter
-        
-        Private _cO_TITCOTableAdapter As CO_TITCOTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -9664,34 +8281,6 @@ Namespace FactorVWDS1TableAdapters
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
-            "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property CO_CLIENTableAdapter() As CO_CLIENTableAdapter
-            Get
-                Return Me._cO_CLIENTableAdapter
-            End Get
-            Set
-                Me._cO_CLIENTableAdapter = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
-            "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property CO_TITCOTableAdapter() As CO_TITCOTableAdapter
-            Get
-                Return Me._cO_TITCOTableAdapter
-            End Get
-            Set
-                Me._cO_TITCOTableAdapter = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property BackupDataSetBeforeUpdate() As Boolean
             Get
@@ -9714,14 +8303,6 @@ Namespace FactorVWDS1TableAdapters
                             AndAlso (Not (Me._wEB_FacturasXMLTableAdapter.Connection) Is Nothing)) Then
                     Return Me._wEB_FacturasXMLTableAdapter.Connection
                 End If
-                If ((Not (Me._cO_CLIENTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._cO_CLIENTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._cO_CLIENTableAdapter.Connection
-                End If
-                If ((Not (Me._cO_TITCOTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._cO_TITCOTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._cO_TITCOTableAdapter.Connection
-                End If
                 Return Nothing
             End Get
             Set
@@ -9736,12 +8317,6 @@ Namespace FactorVWDS1TableAdapters
             Get
                 Dim count As Integer = 0
                 If (Not (Me._wEB_FacturasXMLTableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
-                If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                    count = (count + 1)
-                End If
-                If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -9764,24 +8339,6 @@ Namespace FactorVWDS1TableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.CO_CLIEN.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._cO_CLIENTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.CO_TITCO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._cO_TITCOTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -9800,22 +8357,6 @@ Namespace FactorVWDS1TableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.CO_CLIEN.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._cO_CLIENTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.CO_TITCO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._cO_TITCOTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
             Return result
         End Function
         
@@ -9826,22 +8367,6 @@ Namespace FactorVWDS1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As FactorVWDS1, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.CO_TITCO.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._cO_TITCOTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
-            If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.CO_CLIEN.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._cO_CLIENTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._wEB_FacturasXMLTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.WEB_FacturasXML.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -9896,16 +8421,6 @@ Namespace FactorVWDS1TableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._cO_CLIENTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._cO_CLIENTableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
-                        "sma cadena de conexión.")
-            End If
-            If ((Not (Me._cO_TITCOTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._cO_TITCOTableAdapter.Connection) = false)) Then
-                Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
-                        "sma cadena de conexión.")
-            End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
                 Throw New Global.System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda"& _ 
@@ -9945,24 +8460,6 @@ Namespace FactorVWDS1TableAdapters
                     If Me._wEB_FacturasXMLTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._wEB_FacturasXMLTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._wEB_FacturasXMLTableAdapter.Adapter)
-                    End If
-                End If
-                If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._cO_CLIENTableAdapter, Me._cO_CLIENTableAdapter.Connection)
-                    Me._cO_CLIENTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._cO_CLIENTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._cO_CLIENTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._cO_CLIENTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._cO_CLIENTableAdapter.Adapter)
-                    End If
-                End If
-                If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._cO_TITCOTableAdapter, Me._cO_TITCOTableAdapter.Connection)
-                    Me._cO_TITCOTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._cO_TITCOTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._cO_TITCOTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._cO_TITCOTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._cO_TITCOTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -10028,14 +8525,6 @@ Namespace FactorVWDS1TableAdapters
                 If (Not (Me._wEB_FacturasXMLTableAdapter) Is Nothing) Then
                     Me._wEB_FacturasXMLTableAdapter.Connection = CType(revertConnections(Me._wEB_FacturasXMLTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._wEB_FacturasXMLTableAdapter.Transaction = Nothing
-                End If
-                If (Not (Me._cO_CLIENTableAdapter) Is Nothing) Then
-                    Me._cO_CLIENTableAdapter.Connection = CType(revertConnections(Me._cO_CLIENTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._cO_CLIENTableAdapter.Transaction = Nothing
-                End If
-                If (Not (Me._cO_TITCOTableAdapter) Is Nothing) Then
-                    Me._cO_TITCOTableAdapter.Connection = CType(revertConnections(Me._cO_TITCOTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._cO_TITCOTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter
