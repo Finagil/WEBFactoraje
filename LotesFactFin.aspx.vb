@@ -27,9 +27,9 @@ Partial Public Class LotesFactFin
                 f.WriteLine("CESION,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto")
                 For Each r In TL.Rows
                     If r.Planta = "FPR" Then
-                        f.WriteLine(TxtCesion.Text & "," & r.Cuenta & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.RFC_Cliente & ",FS")
+                        f.WriteLine(TxtCesion.Text & "," & r.Cuenta & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Cliente & ",FS")
                     Else
-                        f.WriteLine(TxtCesion.Text & "," & r.NoCliente & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.FechaVencimiento.ToString("MM/dd/yyyy") & "," & r.RFC_Filial & ",FS")
+                        f.WriteLine(TxtCesion.Text & "," & r.NoCliente & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Filial & ",FS")
                     End If
                 Next
                 f.Close()
