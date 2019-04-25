@@ -42,7 +42,7 @@ Public Partial Class LoginX
                 Session.Item("TipoCadena") = R.id_depto
                 Session.Item("Correo") = R.correo
                 Autentificacion = True
-                'LlenaDatosFactor100()
+                LlenaDatosFactor100()
             End If
         Else
             Dim taU As New Factor100DSTableAdapters.WEB_UsuariosTableAdapter

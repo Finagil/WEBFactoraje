@@ -141,6 +141,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CofidiDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComunInfo100DS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComunInfo100DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConfFondeo.aspx.designer.vb">
       <DependentUpon>ConfFondeo.aspx</DependentUpon>
     </Compile>
@@ -510,6 +515,17 @@
     </None>
     <Content Include="CofidiDS.xss">
       <DependentUpon>CofidiDS.xsd</DependentUpon>
+    </Content>
+    <Content Include="ComunInfo100DS.xsc">
+      <DependentUpon>ComunInfo100DS.xsd</DependentUpon>
+    </Content>
+    <None Include="ComunInfo100DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComunInfo100DS.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="ComunInfo100DS.xss">
+      <DependentUpon>ComunInfo100DS.xsd</DependentUpon>
     </Content>
     <None Include="Factor100DS.xsc">
       <DependentUpon>Factor100DS.xsd</DependentUpon>
