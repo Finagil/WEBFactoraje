@@ -3054,13 +3054,14 @@ Partial Public Class Factor100DS
                     ByVal ImporteFactura As Decimal,  _
                     ByVal Cesion As Decimal,  _
                     ByVal Nombre As String,  _
+                    ByVal id_Cliente As String,  _
                     ByVal CL_NUM As String,  _
                     ByVal NoCliente As String,  _
                     ByVal RFC_Filial As String,  _
                     ByVal RFC_Cliente As String,  _
                     ByVal CL_Nombre As String) As VW_LotesRow
             Dim rowVW_LotesRow As VW_LotesRow = CType(Me.NewRow,VW_LotesRow)
-            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, Nothing, CL_NUM, NoCliente, RFC_Filial, RFC_Cliente, CL_Nombre}
+            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, id_Cliente, CL_NUM, NoCliente, RFC_Filial, RFC_Cliente, CL_Nombre}
             rowVW_LotesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVW_LotesRow)
             Return rowVW_LotesRow
@@ -3136,7 +3137,7 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnCesion)
             Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombre)
-            Me.columnid_Cliente = New Global.System.Data.DataColumn("id_Cliente", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnid_Cliente = New Global.System.Data.DataColumn("id_Cliente", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_Cliente)
             Me.columnCL_NUM = New Global.System.Data.DataColumn("CL_NUM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCL_NUM)
@@ -3159,9 +3160,9 @@ Partial Public Class Factor100DS
             Me.columnId_factura.ReadOnly = true
             Me.columnId_factura.Unique = true
             Me.columnNombre.MaxLength = 150
-            Me.columnid_Cliente.AutoIncrement = true
             Me.columnid_Cliente.AllowDBNull = false
             Me.columnid_Cliente.ReadOnly = true
+            Me.columnid_Cliente.MaxLength = 10
             Me.columnCL_NUM.MaxLength = 11
             Me.columnNoCliente.MaxLength = 10
             Me.columnRFC_Filial.MaxLength = 13
@@ -10982,9 +10983,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property id_Cliente() As Decimal
+        Public Property id_Cliente() As String
             Get
-                Return CType(Me(Me.tableVW_Lotes.id_ClienteColumn),Decimal)
+                Return CType(Me(Me.tableVW_Lotes.id_ClienteColumn),String)
             End Get
             Set
                 Me(Me.tableVW_Lotes.id_ClienteColumn) = value

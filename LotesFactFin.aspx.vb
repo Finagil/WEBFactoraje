@@ -24,12 +24,12 @@ Partial Public Class LotesFactFin
             End If
             If TL.Rows.Count > 0 Then
                 Dim f As New System.IO.StreamWriter(Server.MapPath("Temp") & "\Lote" & ID & ".csv", False)
-                f.WriteLine("CESION,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto")
+                f.WriteLine("CLIENTE,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto,CEDIDO,ANTICIPO,Linea Factoraje")
                 For Each r In TL.Rows
                     If r.Planta = "FPR" Then
-                        f.WriteLine(TxtCesion.Text & "," & r.Cuenta & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Cliente & ",FS")
+                        f.WriteLine(r.NoCliente & "," & r.CL_NUM & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Cliente & ",FS,SI,95%,FSR")
                     Else
-                        f.WriteLine(TxtCesion.Text & "," & r.NoCliente & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Filial & ",FS")
+                        f.WriteLine(r.NoCliente & "," & r.CL_NUM & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Filial & ",FS,SI,95%,FSR")
                     End If
                 Next
                 f.Close()
