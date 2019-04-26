@@ -16,9 +16,9 @@ Partial Public Class LotesFactFinPROC
             f.WriteLine("CLIENTE,DEUDOR,POBLACION,FOLIO,NO. FACT.,IMP. NETO,FEC/EXP.,FEC/REV.,FEC/VENC,R. F. C.,tipo docto,CEDIDO,ANTICIPO,Linea Factoraje")
             For Each r In TL.Rows
                 If r.Planta = "FPR" Then
-                    f.WriteLine(r.NoCliente & "," & r.CL_NUM & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Cliente & ",FS,SI,95%,FSR")
+                    f.WriteLine(r.NoCliente & ",=""" & r.CL_NUM & """,,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Cliente & ",FS,SI,95%,FSR")
                 Else
-                    f.WriteLine(r.NoCliente & "," & r.CL_NUM & ",,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Filial & ",FS,SI,95%,FSR")
+                    f.WriteLine(r.NoCliente & ",=""" & r.CL_NUM & """,,," & r.Factura & "," & r.ImporteFactura & "," & Date.Now.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.FechaVencimiento.ToString("dd/MM/yyyy") & "," & r.RFC_Filial & ",FS,SI,95%,FSR")
                 End If
             Next
             f.Close()
