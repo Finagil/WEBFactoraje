@@ -2826,6 +2826,8 @@ Partial Public Class Factor100DS
         
         Private columnCL_Nombre As Global.System.Data.DataColumn
         
+        Private columnid_Cliente1 As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -3006,6 +3008,14 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property id_Cliente1Column() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_Cliente1
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3061,7 +3071,7 @@ Partial Public Class Factor100DS
                     ByVal RFC_Cliente As String,  _
                     ByVal CL_Nombre As String) As VW_LotesRow
             Dim rowVW_LotesRow As VW_LotesRow = CType(Me.NewRow,VW_LotesRow)
-            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, id_Cliente, CL_NUM, NoCliente, RFC_Filial, RFC_Cliente, CL_Nombre}
+            Dim columnValuesArray() As Object = New Object() {TipoDocumento, Factura, FechaFactura, FechaVencimiento, ImporteAnticipo, Cuenta, Planta, Micelaneo, ImporteFactura, Nothing, Cesion, Nombre, id_Cliente, CL_NUM, NoCliente, RFC_Filial, RFC_Cliente, CL_Nombre, Nothing}
             rowVW_LotesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVW_LotesRow)
             Return rowVW_LotesRow
@@ -3108,6 +3118,7 @@ Partial Public Class Factor100DS
             Me.columnRFC_Filial = MyBase.Columns("RFC_Filial")
             Me.columnRFC_Cliente = MyBase.Columns("RFC_Cliente")
             Me.columnCL_Nombre = MyBase.Columns("CL_Nombre")
+            Me.columnid_Cliente1 = MyBase.Columns("id_Cliente1")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3149,6 +3160,8 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnRFC_Cliente)
             Me.columnCL_Nombre = New Global.System.Data.DataColumn("CL_Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCL_Nombre)
+            Me.columnid_Cliente1 = New Global.System.Data.DataColumn("id_Cliente1", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_Cliente1)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_factura}, true))
             Me.columnTipoDocumento.MaxLength = 5
             Me.columnFactura.MaxLength = 20
@@ -3168,6 +3181,12 @@ Partial Public Class Factor100DS
             Me.columnRFC_Filial.MaxLength = 13
             Me.columnRFC_Cliente.MaxLength = 13
             Me.columnCL_Nombre.MaxLength = 200
+            Me.columnid_Cliente1.AutoIncrement = true
+            Me.columnid_Cliente1.AutoIncrementSeed = -1
+            Me.columnid_Cliente1.AutoIncrementStep = -1
+            Me.columnid_Cliente1.AllowDBNull = false
+            Me.columnid_Cliente1.ReadOnly = true
+            Me.columnid_Cliente1.Caption = "id_Cliente"
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11069,6 +11088,17 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property id_Cliente1() As Decimal
+            Get
+                Return CType(Me(Me.tableVW_Lotes.id_Cliente1Column),Decimal)
+            End Get
+            Set
+                Me(Me.tableVW_Lotes.id_Cliente1Column) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsTipoDocumentoNull() As Boolean
             Return Me.IsNull(Me.tableVW_Lotes.TipoDocumentoColumn)
         End Function
@@ -18928,12 +18958,12 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("Id_factura", "Id_factura")
             tableMapping.ColumnMappings.Add("Cesion", "Cesion")
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
-            tableMapping.ColumnMappings.Add("id_Cliente", "id_Cliente")
             tableMapping.ColumnMappings.Add("CL_NUM", "CL_NUM")
             tableMapping.ColumnMappings.Add("NoCliente", "NoCliente")
             tableMapping.ColumnMappings.Add("RFC_Filial", "RFC_Filial")
             tableMapping.ColumnMappings.Add("RFC_Cliente", "RFC_Cliente")
             tableMapping.ColumnMappings.Add("CL_Nombre", "CL_Nombre")
+            tableMapping.ColumnMappings.Add("id_Cliente", "id_Cliente1")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -18960,7 +18990,8 @@ Namespace Factor100DSTableAdapters
                 "NER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes"& _ 
                 ".Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Facturas.RFC ="& _ 
                 " WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_Facturas."& _ 
-                "RFC = CO_CLIEN.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote)"
+                "RFC = CO_CLIEN.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (NOT (CO_CLIEN."& _ 
+                "ID_CLIENTE LIKE 'D%'))"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
