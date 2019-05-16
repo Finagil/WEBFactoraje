@@ -46,6 +46,7 @@ Module Globales
             Mensage.CC.Add(cc)
         End If
         Dim Cliente As New SmtpClient(My.Settings.SmtpSRV, My.Settings.SmtpPORT)
+        Cliente.Credentials = New System.Net.NetworkCredential("ecacerest", "c4c3r1t0s", "cmoderna")
         Mensage.IsBodyHtml = True
         Cliente.Send(Mensage)
     End Sub
