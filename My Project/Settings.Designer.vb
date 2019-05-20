@@ -154,6 +154,15 @@ Namespace My
                 Return CType(Me("ComunInfo100CS"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ecacerest,c4c3r1t0s,cmoderna")>  _
+        Public ReadOnly Property SmtpCreden() As String
+            Get
+                Return CType(Me("SmtpCreden"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
