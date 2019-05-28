@@ -1,11 +1,11 @@
 Imports System
 Imports System.IO
-Imports System.Collections.Generic
-Imports System.Web
-Imports System.Web.UI
+'Imports System.Collections.Generic
+'Imports System.Web
+'Imports System.Web.UI
 Imports System.Web.UI.WebControls
 Imports System.Web.UI.HtmlControls
-Imports System.Collections
+'Imports System.Collections
 Imports System.Xml
 
 Partial Public Class WebForm1XML
@@ -50,9 +50,12 @@ Partial Public Class WebForm1XML
         Dim total As Double = 0
         Dim row As DataRow
         Try
-            If FileUpload1.HasFiles Then
+            If Request.Files.Count > 0 Then
                 Dim rootPath As String = Server.MapPath("Temp")
-                For Each arch As HttpPostedFile In FileUpload1.PostedFiles
+                Dim attachs As HttpFileCollection = Request.Files
+                Dim arch As HttpPostedFile
+                For z As Integer = 0 To attachs.Count - 1
+                    arch = attachs(z)
                     Dim GU As Guid = Guid.NewGuid
                     Dim ext() As String = arch.FileName.Split(".")
 

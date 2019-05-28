@@ -8,7 +8,8 @@
 <asp:Label id="Label1" runat="server" Text="Subir Lote de Facturas en formato XML" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
     <br />
     <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" />
-    <INPUT id="Submit1" type=submit value="Subir" runat="server" visible="True" /><br />
+    <INPUT id="Submit1" type=submit value="Subir" runat="server" visible="True" />
+    <br />
     <br />
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" Font-Names="Verdana" Font-Size="Smaller"
