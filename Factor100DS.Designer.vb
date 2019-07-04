@@ -9687,7 +9687,9 @@ Partial Public Class Factor100DS
             Me.columnid_Cliente.AutoIncrementStep = -1
             Me.columnid_Cliente.AllowDBNull = false
             Me.columnid_Cliente.ReadOnly = true
+            Me.columnCL_NUM.AllowDBNull = false
             Me.columnCL_NUM.MaxLength = 10
+            Me.columnCL_Nombre.AllowDBNull = false
             Me.columnCL_Nombre.MaxLength = 200
             Me.columnRFC_Filial.MaxLength = 13
             Me.columnNoCliente.MaxLength = 10
@@ -15407,11 +15409,7 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property CL_NUM() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableVW_Lotes.CL_NUMColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_NUM' de la tabla 'VW_Lotes' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableVW_Lotes.CL_NUMColumn),String)
             End Get
             Set
                 Me(Me.tableVW_Lotes.CL_NUMColumn) = value
@@ -15422,11 +15420,7 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property CL_Nombre() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableVW_Lotes.CL_NombreColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CL_Nombre' de la tabla 'VW_Lotes' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableVW_Lotes.CL_NombreColumn),String)
             End Get
             Set
                 Me(Me.tableVW_Lotes.CL_NombreColumn) = value
@@ -15608,30 +15602,6 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetNombreNull()
             Me(Me.tableVW_Lotes.NombreColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsCL_NUMNull() As Boolean
-            Return Me.IsNull(Me.tableVW_Lotes.CL_NUMColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetCL_NUMNull()
-            Me(Me.tableVW_Lotes.CL_NUMColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsCL_NombreNull() As Boolean
-            Return Me.IsNull(Me.tableVW_Lotes.CL_NombreColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetCL_NombreNull()
-            Me(Me.tableVW_Lotes.CL_NombreColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -26156,14 +26126,15 @@ Namespace Factor100DSTableAdapters
                 "ctura, WEB_Facturas.FechaVencimiento, WEB_Facturas.ImporteAnticipo, WEB_Clientes"& _ 
                 ".Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
                 " WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Cli"& _ 
-                "entes.Nombre, WEB_Clientes.id_Cliente, CO_CLIEN.ID_CLIENTE AS CL_NUM, CO_CLIEN.C"& _ 
-                "L_Nombre, WEB_Clientes.Filial AS RFC_Filial, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clie"& _ 
-                "ntes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Facturas IN"& _ 
-                "NER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes"& _ 
-                ".Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Facturas.RFC ="& _ 
-                " WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_Facturas."& _ 
-                "RFC = CO_CLIEN.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (NOT (CO_CLIEN."& _ 
-                "ID_CLIENTE LIKE 'D%'))"
+                "entes.Nombre, WEB_Clientes.id_Cliente, CO_TITCO.TC_NUM AS CL_NUM, CO_TITCO.TC_NO"& _ 
+                "MBRE AS CL_Nombre, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes.Filial AS RFC_Filial,"& _ 
+                " WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Fa"& _ 
+                "cturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Facturas.Id_Lote = "& _ 
+                "WEB_Lotes.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Factu"& _ 
+                "ras.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_"& _ 
+                "Facturas.RFC = CO_CLIEN.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB"& _ 
+                "_Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (N"& _ 
+                "OT (CO_TITCO.TC_NUM LIKE 'D%'))"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
