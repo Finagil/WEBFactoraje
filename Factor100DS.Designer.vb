@@ -26134,7 +26134,7 @@ Namespace Factor100DSTableAdapters
                 "ras.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_"& _ 
                 "Facturas.RFC = CO_CLIEN.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB"& _ 
                 "_Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (N"& _ 
-                "OT (CO_TITCO.TC_NUM LIKE 'D%'))"
+                "OT (CO_TITCO.TC_NUM LIKE 'D%')) AND (CO_CLIEN.idPersona <> 'P0726')"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
