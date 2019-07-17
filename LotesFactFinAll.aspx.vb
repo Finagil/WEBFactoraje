@@ -19,7 +19,7 @@ Partial Public Class LotesFactFinAll
             f.Close()
             Response.Write("Lote sin Facturas")
             Response.Redirect("~\Temp\Lote" & ID & ".csv", False)
-            taL.LoteDescargado(ID, 0)
+            'taL.LoteDescargado(,ID, 0)
         Else
             Response.Write("Lote sin Facturas")
         End If

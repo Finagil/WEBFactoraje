@@ -25,45 +25,15 @@ Module Globales
         Return (dias)
     End Function
 
-    'Public Sub MandaCorreo(ByVal id As Integer, ByVal Notas As String)
-    '    Dim tp As New ProductionDSTableAdapters.PromotoresTableAdapter
-    '    Dim ts As New ProductionDSTableAdapters.PROM_SeguimientoTableAdapter
-    '    Dim tts As New ProductionDS.PROM_SeguimientoDataTable
-    '    Dim rr As ProductionDS.PROM_SeguimientoRow
-    '    ts.FillByID(tts, id)
-    '    rr = tts.Rows(0)
-    '    Dim para As String = tp.SacaCorreo(rr.Promotor)
-    '    Dim Mensaje As String = ""
-    '    Mensaje += "<b>Asignación de prospecto:</b> " & rr.NombreProspecto & "<br>"
-    '    Mensaje += "<b>Fecha :</b> " & rr.Fecha.ToShortDateString & "<br>"
-    '    Mensaje += "<b>Notas :</b> " & Notas & "<br>"
-    '    EnviaCorreo(para, Mensaje, "Asignación de prospecto: " & rr.NombreProspecto)
-    'End Sub
-
     Public Sub EnviaCorreo(ByVal De As String, ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String, Optional cc As String = "")
         Dim Mensage As New MailMessage(De, Trim(Para), Trim(Asunto), Mensaje)
         If cc > "" Then
-            Mensage.CC.Add(cc)
+            Para += ";" & (cc)
         End If
-        Dim Cliente As New SmtpClient(My.Settings.SmtpSRV, My.Settings.SmtpPORT)
-        Dim Credenciales As String() = My.Settings.SmtpCreden.Split(",")
-        Cliente.Credentials = New System.Net.NetworkCredential(Credenciales(0), Credenciales(1), Credenciales(2))
-        Mensage.IsBodyHtml = True
-        Cliente.Send(Mensage)
+        Dim taCorreos As New ProdDSTableAdapters.GEN_Correos_SistemaFinagilTableAdapter
+        taCorreos.Insert(De, Para, Asunto, Mensaje, False, Date.Now, "")
+        taCorreos.Dispose()
     End Sub
-
-    'Public Sub CargaFacturas()
-    '    Dim Baan As New BaanDSTableAdapters.ttfacr962200TableAdapter
-    '    Dim Tbaan As New BaanDS.ttfacr962200DataTable
-    '    Dim ta As New Factor100DSTableAdapters.WEB_FacturasTableAdapter
-    '    Baan.Fill(Tbaan, Date.Now.AddDays(-40))
-    '    For Each r As BaanDS.ttfacr962200Row In Tbaan.Rows
-    '        If ta.ExisteFactura(r.factura) <= 0 Then
-    '            ta.InsertNuevo(r.factura.Trim, r.rfc.Trim, r.importe, r.fechaproceso, r.fechavencimiento)
-    '        End If
-    '    Next
-    'End Sub
-
 
     Sub LlenaDatosFactor100()
         Dim rr As Factor100DS.CO_CLIENRow

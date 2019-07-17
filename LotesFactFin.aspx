@@ -12,7 +12,20 @@
         Text="Num. Cesión:"></asp:Label>
     <asp:TextBox ID="TxtCesion" runat="server" Width="93px"></asp:TextBox>
     <asp:Label ID="LbError" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="Red"
-        Text="Num. Cesión No valida." Visible="False"></asp:Label><br />
+        Text="Num. Cesión No valida." Visible="False"></asp:Label>
+    <br />
+    <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#FF6600"
+        Text="Fondeo:"></asp:Label>
+    <asp:DropDownList ID="ComboFondeo" runat="server">
+        <asp:ListItem>Propios</asp:ListItem>
+        <asp:ListItem>Fira</asp:ListItem>
+        <asp:ListItem>Palm</asp:ListItem>
+    </asp:DropDownList>
+    <br />
+    <asp:Label ID="Label5" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#FF6600"
+        Text="Tasa IF:"></asp:Label>
+    <asp:TextBox ID="TxtTasaIF" runat="server" Width="93px"></asp:TextBox>
+    <br />
     <br />
     <asp:GridView ID="GridView1" runat="server"
             AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id_Lote" DataSourceID="Lotes_DS"

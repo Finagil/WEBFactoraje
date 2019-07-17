@@ -2,17 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="SmtpPORT" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">26</Value>
-    </Setting>
     <Setting Name="CorreoAdmin" Type="System.String" Scope="Application">
       <Value Profile="(Default)">layala@finagil.com.mx</Value>
     </Setting>
     <Setting Name="CorreoAdmin2" Type="System.String" Scope="Application">
       <Value Profile="(Default)">lmondragon@finagil.com.mx</Value>
-    </Setting>
-    <Setting Name="SmtpSRV" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">smtp85.cmoderna.com</Value>
     </Setting>
     <Setting Name="WEB_FinagilConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
@@ -61,9 +55,6 @@
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=server-raid2;Initial Catalog=ComunInfo100;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015</Value>
-    </Setting>
-    <Setting Name="SmtpCreden" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ecacerest,c4c3r1t0s,cmoderna</Value>
     </Setting>
   </Settings>
 </SettingsFile>

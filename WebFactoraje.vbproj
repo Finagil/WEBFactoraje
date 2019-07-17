@@ -179,6 +179,11 @@
       <DependentUpon>LotesFactFinAll.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ProdDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProdDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores\ConsultaLote.aspx.designer.vb">
       <DependentUpon>ConsultaLote.aspx</DependentUpon>
     </Compile>
@@ -250,6 +255,7 @@
       <DependentUpon>CargarPagos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Settings.vb" />
     <Compile Include="SubirFactorajeFiraPagos.aspx.designer.vb">
       <DependentUpon>SubirFactorajeFiraPagos.aspx</DependentUpon>
     </Compile>
@@ -566,6 +572,17 @@
     <Content Include="PaginaMasterFACT_PROV.Master" />
     <Content Include="PaginaMasterDefault.Master" />
     <Content Include="PaginaMasterPROV.Master" />
+    <Content Include="ProdDS.xsc">
+      <DependentUpon>ProdDS.xsd</DependentUpon>
+    </Content>
+    <None Include="ProdDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProdDS.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="ProdDS.xss">
+      <DependentUpon>ProdDS.xsd</DependentUpon>
+    </Content>
     <None Include="SeguridadDS.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SeguridadDS1.Designer.vb</LastGenOutput>
