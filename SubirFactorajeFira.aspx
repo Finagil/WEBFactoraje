@@ -5,7 +5,11 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Subir Lote de Facturas FIRA" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+<asp:Label id="Label1" runat="server" Text="Subir Lote de Facturas FIRA" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label>
+    <br />
+<asp:Label id="Label2" runat="server" Text="(Archivo separado por Tabuladores, sin encabezados)" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="False"></asp:Label>
+    <br />
+<asp:Label id="Label3" runat="server" Text="(Nombre Cliente, Factura, Fecha Vencimiento, Importe, Tasa)" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="False"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 
 runat="server" />&nbsp;

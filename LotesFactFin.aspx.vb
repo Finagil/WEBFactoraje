@@ -33,14 +33,13 @@ Partial Public Class LotesFactFin
                     End If
                 Next
                 f.Close()
-                taL.LoteDescargadoCesion(TxtCesion.Text, ComboFondeo.Text, ID)
+                taL.LoteDescargadoCesion(TxtCesion.Text, ComboFondeo.Text & "X", ID)
                 If ComboFondeo.Text = "Fira" Then
-                    Dim tx As New Factor100DSTableAdapters.CONT_CPF_Factor_FacturasTableAdapter
+                    Dim tx As New Factor100DSTableAdapters.Factor_FacturasTableAdapter
                     For Each r In TL.Rows
-                        tx.Insert(r.Factura, r.RFC_Cliente, r.RFC_Filial, r.ImporteFactura, 0, r.FechaFactura, r.FechaVencimiento, False, ID)
+                        tx.Insert(r.Factura, r.RFC_Cliente, r.RFC_Filial, 0, 0, r.FechaFactura, r.FechaVencimiento, True, ID)
                     Next
-                    EnviaCorreo("Factoraje@finagil.com.mx", "ajoshin@finagil.com.mx;maria.bautista@finagil.com.mx;ecacerest@finagil.com.mx;denise.gonzalez@finagil.com.mx" _
-                                , "Tienes un nuevo lote de fira para procesar.", "Lote para descuento en Fira: " & ID)
+                    EnviaCorreo("Factoraje@finagil.com.mx", My.Settings.CorreosFira, "Tienes un nuevo lote de fira para procesar.", "Lote para descuento en Fira: " & ID)
                 End If
                 TxtCesion.Text = ""
                 'Response.Redirect("~\Temp\Lote" & ID & ".csv", False)
