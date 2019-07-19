@@ -42,7 +42,7 @@ Partial Public Class WebFormFactorFact
                     Asunto = "Alta de Lote FIRA " & Lote & " (Factoraje)"
 
                     If Bandera = False Then
-                        EnviaCorreo(Session("Correo"), My.Settings.CorreosFira, Msg, Asunto)
+                        EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin, Msg, Asunto)
                         EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin2, Msg, Asunto)
 
                         Dim tcor As New Factor100DSTableAdapters.FON_CorreosTableAdapter
