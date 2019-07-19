@@ -26,10 +26,6 @@ Module Globales
     End Function
 
     Public Sub EnviaCorreo(ByVal De As String, ByVal Para As String, ByVal Mensaje As String, ByVal Asunto As String, Optional cc As String = "")
-        Dim Mensage As New MailMessage(De, Trim(Para), Trim(Asunto), Mensaje)
-        If cc > "" Then
-            Para += ";" & (cc)
-        End If
         Dim taCorreos As New ProdDSTableAdapters.GEN_Correos_SistemaFinagilTableAdapter
         taCorreos.Insert(De, Para, Asunto, Mensaje, False, Date.Now, "")
         taCorreos.Dispose()
