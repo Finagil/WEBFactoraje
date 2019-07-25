@@ -39,7 +39,7 @@ Partial Public Class LotesFactFin
                     For Each r In TL.Rows
                         tx.Insert(r.Factura, r.RFC_Cliente, r.RFC_Filial, 0, 0, r.FechaFactura, r.FechaVencimiento, True, ID)
                     Next
-                    EnviaCorreo("Factoraje@finagil.com.mx", My.Settings.CorreosFira, "Tienes un nuevo lote de fira para procesar.", "Lote para descuento en Fira: " & ID)
+                    'EnviaCorreo("Factoraje@finagil.com.mx", My.Settings.CorreosFira, "Tienes un nuevo lote de fira para procesar.", "Lote para descuento en Fira: " & ID)
                 End If
                 TxtCesion.Text = ""
                 'Response.Redirect("~\Temp\Lote" & ID & ".csv", False)
