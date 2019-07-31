@@ -79,7 +79,7 @@ Partial Public Class FRMSubirFactorajeFiraPagos
         Dim NunLine As Integer = 0
         While Not F.EndOfStream
             L = F.ReadLine.Split(",")
-            If L(0) = "DOCUMENTO" Then 'se salta la linea de encabezado
+            If L(0) = "ID" Then 'se salta la linea de encabezado
                 L = F.ReadLine.Split(",")
             End If
 
@@ -96,8 +96,10 @@ Partial Public Class FRMSubirFactorajeFiraPagos
                 Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
             End If
             If ta.ExisteFactura(L(0)) <= 0 Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> La factura no ha sido registrada " & L(1) & " Linea: " & NunLine
+                If ta.ExisteFacturaPasivo(L(0)) <= 0 Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> La factura no ha sido registrada " & L(1) & " Linea: " & NunLine
+                End If
             End If
             If Not IsNumeric(L(1)) Then
                 Lberror.Visible = True
@@ -109,8 +111,8 @@ Partial Public Class FRMSubirFactorajeFiraPagos
             End If
             Saldo = ta.SaldoFactura(L(0))
             If Saldo < L(1) Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> El pago es Mayor al Saldo de la Factura " & L(2) & " Linea: " & NunLine & " Saldo: " & Saldo.ToString("n2")
+                'Lberror.Visible = True
+                'Lberror.Text = Lberror.Text & "<BR> El pago es Mayor al Saldo de la Factura " & L(2) & " Linea: " & NunLine & " Saldo: " & Saldo.ToString("n2")
             End If
         End While
         F.Close()
@@ -127,7 +129,7 @@ Partial Public Class FRMSubirFactorajeFiraPagos
 
             While Not F.EndOfStream
                 L = F.ReadLine.Split(",")
-                If L(0) = "DOCUMENTO" Then 'se salta la linea de encabezado
+                If L(0) = "ID" Then 'se salta la linea de encabezado
                     L = F.ReadLine.Split(",")
                 End If
 
@@ -135,6 +137,8 @@ Partial Public Class FRMSubirFactorajeFiraPagos
                 total += CDec(L(1))
                 FecVecn = CDate(L(2))
                 If ta.ExisteFactura(L(0)) > 0 Then
+                    ta.Insert(L(0), L(1), L(2), False, Lote)
+                ElseIf ta.ExisteFacturaPasivo(L(0)) > 0 Then
                     ta.Insert(L(0), L(1), L(2), False, Lote)
                 End If
             End While
