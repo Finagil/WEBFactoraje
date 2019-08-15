@@ -70,68 +70,13 @@ Partial Public Class WebFormFactorFact
     End Sub
 
     Sub ValidaDatos(ByVal Archivo As String, ByRef total As Decimal)
-        Dim F As New System.IO.StreamReader(Archivo, True)
-        Dim ta As New Factor100DSTableAdapters.Factor_FacturasTableAdapter
-        Dim RFC As String = ""
-        Dim L() As String
-        Dim Lim As Integer = 5
-        Dim NunLine As Integer = 0
-        While Not F.EndOfStream
-            L = F.ReadLine.Split(vbTab)
-            If L(0) = "No. DE DOCUMENTO" Then 'se salta la linea de encabezado
-                L = F.ReadLine.Split(",")
-            End If
-            For x As Integer = 0 To L.Length - 1
-                L(x) = L(x).Replace("""", "")
-            Next
-
-            If L.Length <> Lim Then
-                Lberror.Visible = True
-                Lberror.Text = "Formato de archivo Incorrecto"
-                Exit While
-            End If
-
-            NunLine += 1
-            Dim user As String = L(0)
-
-            If InStr(L(1).Trim, " ") > 0 Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
-            End If
-            If ta.ExisteFactura(L(1)) <= 0 Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> La factura no existe para descuento Fira " & L(1) & " Linea: " & NunLine
-            End If
-            If Not IsNumeric(L(3)) Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> Importe de Factura no valido " & L(2) & " Linea: " & NunLine
-            End If
-            If Not IsNumeric(L(4)) Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> Tasa no valida " & L(2) & " Linea: " & NunLine
-            End If
-            If Not IsDate(L(2)) Then
-                Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> Fecha de vencimiento no valida " & L(2) & " Linea: " & NunLine
-            End If
-        End While
-        F.Close()
-        RFC = ta.SacaRFC(L(0)).Trim
-        Lote = ta.SacaLote(L(1), RFC)
-        If ta.EstatusLote(Lote) = "Fira" Then
-            Lberror.Visible = True
-            Lberror.Text = Lberror.Text & "<BR> El lote ya esta procesado: " & Lote & " Linea: " & NunLine
-        End If
-        If ta.EstatusLote(Lote) = "No Existe" Then
-            Lberror.Visible = True
-            Lberror.Text = Lberror.Text & "<BR> El lote no esta listo para Descuento Fira: " & Lote & " Linea: " & NunLine
-        End If
-
-
-        If Lberror.Visible = False Then
-            total = 0
-            Dim FecVecn As Date = Date.Now
-            F = New System.IO.StreamReader(Archivo, True)
+        Try
+            Dim F As New System.IO.StreamReader(Archivo, True)
+            Dim ta As New Factor100DSTableAdapters.Factor_FacturasTableAdapter
+            Dim RFC As String = ""
+            Dim L() As String
+            Dim Lim As Integer = 5
+            Dim NunLine As Integer = 0
             While Not F.EndOfStream
                 L = F.ReadLine.Split(vbTab)
                 If L(0) = "No. DE DOCUMENTO" Then 'se salta la linea de encabezado
@@ -141,15 +86,75 @@ Partial Public Class WebFormFactorFact
                     L(x) = L(x).Replace("""", "")
                 Next
 
-                total += CDec(L(3))
-                FecVecn = CDate(L(2)).AddDays(30)
-                If ta.ExisteFactura(L(1)) > 0 Then
-                    ta.UpdateFacturaFira(L(4), Date.Now.Date, FecVecn, False, L(3), L(1), RFC, 0)
+                If L.Length <> Lim Then
+                    Lberror.Visible = True
+                    Lberror.Text = "Formato de archivo Incorrecto"
+                    Exit While
+                End If
+
+                NunLine += 1
+                Dim user As String = L(0)
+
+                If InStr(L(1).Trim, " ") > 0 Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
+                End If
+                If ta.ExisteFactura(L(1)) <= 0 Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> La factura no existe para descuento Fira " & L(1) & " Linea: " & NunLine
+                End If
+                If Not IsNumeric(L(3)) Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Importe de Factura no valido " & L(2) & " Linea: " & NunLine
+                End If
+                If Not IsNumeric(L(4)) Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Tasa no valida " & L(2) & " Linea: " & NunLine
+                End If
+                If Not IsDate(L(2)) Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Fecha de vencimiento no valida " & L(2) & " Linea: " & NunLine
                 End If
             End While
-            ta.ProcesaLoteFira(Lote)
             F.Close()
-        End If
+            RFC = ta.SacaRFC(L(0)).Trim
+            Lote = ta.SacaLote(L(1), RFC)
+            If ta.EstatusLote(Lote) = "Fira" Then
+                Lberror.Visible = True
+                Lberror.Text = Lberror.Text & "<BR> El lote ya esta procesado: " & Lote & " Linea: " & NunLine
+            End If
+            If ta.EstatusLote(Lote) = "No Existe" Then
+                Lberror.Visible = True
+                Lberror.Text = Lberror.Text & "<BR> El lote no esta listo para Descuento Fira: " & Lote & " Linea: " & NunLine
+            End If
+
+
+            If Lberror.Visible = False Then
+                total = 0
+                Dim FecVecn As Date = Date.Now
+                F = New System.IO.StreamReader(Archivo, True)
+                While Not F.EndOfStream
+                    L = F.ReadLine.Split(vbTab)
+                    If L(0) = "No. DE DOCUMENTO" Then 'se salta la linea de encabezado
+                        L = F.ReadLine.Split(",")
+                    End If
+                    For x As Integer = 0 To L.Length - 1
+                        L(x) = L(x).Replace("""", "")
+                    Next
+
+                    total += CDec(L(3))
+                    FecVecn = CDate(L(2)).AddDays(30)
+                    If ta.ExisteFactura(L(1)) > 0 Then
+                        ta.UpdateFacturaFira(L(4), Date.Now.Date, FecVecn, False, L(3), L(1), RFC, 0)
+                    End If
+                End While
+                ta.ProcesaLoteFira(Lote)
+                F.Close()
+            End If
+        Catch ex As Exception
+            Lberror.Visible = True
+            Lberror.Text = ex.Message
+        End Try
 
     End Sub
 
