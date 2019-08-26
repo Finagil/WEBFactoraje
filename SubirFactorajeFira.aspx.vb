@@ -53,7 +53,10 @@ Partial Public Class WebFormFactorFact
                         For Each r In ds.FON_Correos.Rows
                             EnviaCorreo(Session("Correo"), r.Correo, Msg, Asunto)
                         Next
-
+                        tcor.Fill(ds.FON_Correos, "TESORERIA")
+                        For Each r In ds.FON_Correos.Rows
+                            EnviaCorreo(Session("Correo"), r.Correo, Msg, Asunto)
+                        Next
                         Bandera = True
                     End If
                     Response.Redirect("~\DetalleFactor.aspx?ID=" & Lote)
