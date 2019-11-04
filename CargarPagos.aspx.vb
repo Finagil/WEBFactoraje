@@ -88,7 +88,7 @@ Partial Public Class CargarPagos
 
     Protected Sub Submit1_ServerClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Submit1.ServerClick
         Submit1.Disabled = True
-        Shell("C:\Jobs\CargaMINDS.exe", AppWinStyle.NormalFocus, False)
+        Shell("C:\Jobs\CargaMINDS.exe FACTORAJE", AppWinStyle.NormalFocus, False)
         Lberror.Visible = True
     End Sub
 
