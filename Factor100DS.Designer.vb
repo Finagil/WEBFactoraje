@@ -17648,14 +17648,16 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "UPDATE    WEB_Facturas"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET              ImporteAnticipo = @ImporteAnticipo, Proc"& _ 
-                "esado = @Procesado, Estatus = @Estatus, FechaPagoFinagil = @FechaPagoFinagil"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
-                "ERE     (Factura = @Factura)"
+            Me._commandCollection(6).CommandText = "UPDATE       WEB_Facturas"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                ImporteAnticipo = @ImporteAnticipo,"& _ 
+                " Procesado = @Procesado, Estatus = @Estatus, FechaPagoFinagil = @FechaPagoFinagi"& _ 
+                "l, FechaInicio = @FechaInicio, Tasa = @Tasa"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Factura = @Factura)"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ImporteAnticipo", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 12, 2, "ImporteAnticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Procesado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Procesado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaPagoFinagil", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaPagoFinagil", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaInicio", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tasa", Global.System.Data.SqlDbType.[Decimal], 5, Global.System.Data.ParameterDirection.Input, 7, 4, "Tasa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Factura", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Factura", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
@@ -18052,7 +18054,7 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function UpdateFACT(ByVal ImporteAnticipo As Global.System.Nullable(Of Decimal), ByVal Procesado As Global.System.Nullable(Of Boolean), ByVal Estatus As String, ByVal FechaPagoFinagil As Global.System.Nullable(Of Date), ByVal Factura As String) As Integer
+        Public Overloads Overridable Function UpdateFACT(ByVal ImporteAnticipo As Global.System.Nullable(Of Decimal), ByVal Procesado As Global.System.Nullable(Of Boolean), ByVal Estatus As String, ByVal FechaPagoFinagil As Global.System.Nullable(Of Date), ByVal FechaInicio As Global.System.Nullable(Of Date), ByVal Tasa As Global.System.Nullable(Of Decimal), ByVal Factura As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(6)
             If (ImporteAnticipo.HasValue = true) Then
                 command.Parameters(0).Value = CType(ImporteAnticipo.Value,Decimal)
@@ -18074,10 +18076,20 @@ Namespace Factor100DSTableAdapters
             Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (Factura Is Nothing) Then
-                command.Parameters(4).Value = Global.System.DBNull.Value
+            If (FechaInicio.HasValue = true) Then
+                command.Parameters(4).Value = CType(FechaInicio.Value,Date)
             Else
-                command.Parameters(4).Value = CType(Factura,String)
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Tasa.HasValue = true) Then
+                command.Parameters(5).Value = CType(Tasa.Value,Decimal)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Factura Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(Factura,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

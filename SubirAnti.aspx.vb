@@ -76,18 +76,22 @@ Partial Public Class SubirAnti
         While Not F.EndOfStream
             L = F.ReadLine.Split(",")
             NunLine += 1
-            If L.Length <> 3 Then
+            If L.Length <> 5 Then
                 Lberror.Visible = True
                 Lberror.Text = "Formato de archivo Incorrecto"
                 Exit While
             End If
             If ta.ExisteFacturaLote(L(0), Lote) <= 0 Then
                 Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> La factura No esta cargada ó no pertenece a este lote " & L(1) & " Linea: " & NunLine
+                Lberror.Text = Lberror.Text & "<BR> La factura No esta cargada ó no pertenece a este lote " & L(2) & " Linea: " & NunLine
+            End If
+            If Not IsDate(L(2)) Then
+                Lberror.Visible = True
+                Lberror.Text = Lberror.Text & "<BR> Fecha Pago Finagil no valida " & L(2) & " Linea: " & NunLine
             End If
             If Not IsDate(L(1)) Then
                 Lberror.Visible = True
-                Lberror.Text = Lberror.Text & "<BR> Fecha Pago Finagil no valida " & L(1) & " Linea: " & NunLine
+                Lberror.Text = Lberror.Text & "<BR> Fecha Inicio Finagil no valida " & L(1) & " Linea: " & NunLine
             End If
         End While
         F.Close()
@@ -100,7 +104,7 @@ Partial Public Class SubirAnti
             F = New System.IO.StreamReader(Archivo, True)
             While Not F.EndOfStream
                 L = F.ReadLine.Split(",")
-                ta.UpdateFACT(L(2), True, "Descontada", L(1), L(0))
+                ta.UpdateFACT(L(2), True, "Descontada", L(2), L(1), L(4), L(0))
                 Lote = ta.IDLote(L(0))
             End While
             F.Close()
