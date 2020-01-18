@@ -104,7 +104,7 @@ Partial Public Class SubirAnti
             F = New System.IO.StreamReader(Archivo, True)
             While Not F.EndOfStream
                 L = F.ReadLine.Split(",")
-                ta.UpdateFACT(L(2), True, "Descontada", L(2), L(1), L(4), L(0))
+                ta.UpdateFACT(L(3), True, "Descontada", L(2), L(1), L(4), L(0))
                 Lote = ta.IDLote(L(0))
             End While
             F.Close()
