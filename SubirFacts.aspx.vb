@@ -153,9 +153,9 @@ Public Partial Class WebForm1
             Dim Banco As String = tb.SacaBanco(L(0))
             Dim FecVecn As Date = Date.Now
             If Session.Item("TipoCadena") = "FPR" Then
-                LOT.Insert(Date.Now, Session.Item("User"), "Por Descontar", Session.Item("TipoCadena"), 0)
+                LOT.Insert(Date.Now, Session.Item("User"), "Por Descontar", Session.Item("TipoCadena"), 0, Session.Item("CIA"))
             Else
-                LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", Banco, 0)
+                LOT.Insert(Date.Now, Session.Item("User"), "Pendiente", Banco, 0, Session.Item("CIA"))
             End If
 
             Lote = LOT.UltimoID()
@@ -174,7 +174,7 @@ Public Partial Class WebForm1
                     FecVecn = CDate(L(3))
                     CalculaFecVecnt(FecVecn, L(0))
                     If ta.ExisteFactura(L(1), L(0)) <= 0 And RFC = L(0) Then
-                        ta.Insert(Lote, L(1), L(0), L(4), 0, L(2), FecVecn, False, "", NuloFec)
+                        ta.Insert(Lote, L(1).Trim, L(0).Trim, L(4).Trim, 0, L(2), FecVecn, False, "", NuloFec)
                     End If
                 Else
                     If L(0) = "TIENDAS SORIANA" Then
@@ -194,7 +194,7 @@ Public Partial Class WebForm1
                     FecVecn = CDate(L(3))
                     CalculaFecVecnt(FecVecn, RFC)
                     If ta.ExisteFactura(L(1), RFC) <= 0 Then
-                        ta.Insert(Lote, L(1), RFC, L(4), 0, L(2), FecVecn, False, "", NuloFec)
+                        ta.Insert(Lote, L(1).Trim, RFC.Trim, L(4).Trim, 0, L(2).Trim, FecVecn, False, "", NuloFec)
                     End If
                 End If
             End While

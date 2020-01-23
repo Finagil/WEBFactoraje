@@ -179,6 +179,13 @@
       <DependentUpon>LotesFactFinAll.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="PaginaMasterEXTERNO.Master.designer.vb">
+      <DependentUpon>PaginaMasterEXTERNO.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMasterEXTERNO.Master.vb">
+      <DependentUpon>PaginaMasterEXTERNO.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="ProdDS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -575,6 +582,7 @@
     <Content Include="ProdDS.xsc">
       <DependentUpon>ProdDS.xsd</DependentUpon>
     </Content>
+    <Content Include="PaginaMasterEXTERNO.Master" />
     <None Include="ProdDS.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>

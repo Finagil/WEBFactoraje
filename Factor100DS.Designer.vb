@@ -2469,6 +2469,8 @@ Partial Public Class Factor100DS
         
         Private columnTipo As Global.System.Data.DataColumn
         
+        Private columnCIA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -2553,6 +2555,14 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2589,9 +2599,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddWEB_UsuariosRow(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String) As WEB_UsuariosRow
+        Public Overloads Function AddWEB_UsuariosRow(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String, ByVal CIA As String) As WEB_UsuariosRow
             Dim rowWEB_UsuariosRow As WEB_UsuariosRow = CType(Me.NewRow,WEB_UsuariosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Usuario, Nombre, Acceso, Correo, Tipo}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Usuario, Nombre, Acceso, Correo, Tipo, CIA}
             rowWEB_UsuariosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWEB_UsuariosRow)
             Return rowWEB_UsuariosRow
@@ -2626,6 +2636,7 @@ Partial Public Class Factor100DS
             Me.columnAcceso = MyBase.Columns("Acceso")
             Me.columnCorreo = MyBase.Columns("Correo")
             Me.columnTipo = MyBase.Columns("Tipo")
+            Me.columnCIA = MyBase.Columns("CIA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2643,6 +2654,8 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnCorreo)
             Me.columnTipo = New Global.System.Data.DataColumn("Tipo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTipo)
+            Me.columnCIA = New Global.System.Data.DataColumn("CIA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCIA)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid_usuario}, true))
             Me.columnid_usuario.AutoIncrement = true
             Me.columnid_usuario.AllowDBNull = false
@@ -2653,6 +2666,7 @@ Partial Public Class Factor100DS
             Me.columnAcceso.MaxLength = 10
             Me.columnCorreo.MaxLength = 50
             Me.columnTipo.MaxLength = 3
+            Me.columnCIA.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2804,6 +2818,8 @@ Partial Public Class Factor100DS
         
         Private columnNombre As Global.System.Data.DataColumn
         
+        Private columnCIA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -2896,6 +2912,14 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2932,9 +2956,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddWEB_LotesAuxRow(ByVal Cesion As Decimal, ByVal Estatus As String, ByVal Fecha As Date, ByVal TipoDocumento As String, ByVal Usuario As String, ByVal Nombre As String) As WEB_LotesAuxRow
+        Public Overloads Function AddWEB_LotesAuxRow(ByVal Cesion As Decimal, ByVal Estatus As String, ByVal Fecha As Date, ByVal TipoDocumento As String, ByVal Usuario As String, ByVal Nombre As String, ByVal CIA As String) As WEB_LotesAuxRow
             Dim rowWEB_LotesAuxRow As WEB_LotesAuxRow = CType(Me.NewRow,WEB_LotesAuxRow)
-            Dim columnValuesArray() As Object = New Object() {Cesion, Estatus, Fecha, Nothing, TipoDocumento, Usuario, Nombre}
+            Dim columnValuesArray() As Object = New Object() {Cesion, Estatus, Fecha, Nothing, TipoDocumento, Usuario, Nombre, CIA}
             rowWEB_LotesAuxRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWEB_LotesAuxRow)
             Return rowWEB_LotesAuxRow
@@ -2970,6 +2994,7 @@ Partial Public Class Factor100DS
             Me.columnTipoDocumento = MyBase.Columns("TipoDocumento")
             Me.columnUsuario = MyBase.Columns("Usuario")
             Me.columnNombre = MyBase.Columns("Nombre")
+            Me.columnCIA = MyBase.Columns("CIA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2989,6 +3014,8 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnUsuario)
             Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombre)
+            Me.columnCIA = New Global.System.Data.DataColumn("CIA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCIA)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_Lote}, true))
             Me.columnEstatus.MaxLength = 15
             Me.columnId_Lote.AutoIncrement = true
@@ -2998,6 +3025,7 @@ Partial Public Class Factor100DS
             Me.columnTipoDocumento.MaxLength = 5
             Me.columnUsuario.MaxLength = 20
             Me.columnNombre.MaxLength = 150
+            Me.columnCIA.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6169,6 +6197,8 @@ Partial Public Class Factor100DS
         
         Private columnCesion As Global.System.Data.DataColumn
         
+        Private columnCIA As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -6253,6 +6283,14 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property CIAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCIA
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6289,9 +6327,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddWEB_LotesRow(ByVal Fecha As Date, ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Decimal) As WEB_LotesRow
+        Public Overloads Function AddWEB_LotesRow(ByVal Fecha As Date, ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Decimal, ByVal CIA As String) As WEB_LotesRow
             Dim rowWEB_LotesRow As WEB_LotesRow = CType(Me.NewRow,WEB_LotesRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Fecha, Usuario, Estatus, TipoDocumento, Cesion}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Fecha, Usuario, Estatus, TipoDocumento, Cesion, CIA}
             rowWEB_LotesRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWEB_LotesRow)
             Return rowWEB_LotesRow
@@ -6326,6 +6364,7 @@ Partial Public Class Factor100DS
             Me.columnEstatus = MyBase.Columns("Estatus")
             Me.columnTipoDocumento = MyBase.Columns("TipoDocumento")
             Me.columnCesion = MyBase.Columns("Cesion")
+            Me.columnCIA = MyBase.Columns("CIA")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6343,6 +6382,8 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnTipoDocumento)
             Me.columnCesion = New Global.System.Data.DataColumn("Cesion", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCesion)
+            Me.columnCIA = New Global.System.Data.DataColumn("CIA", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCIA)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_Lote, Me.columnFecha}, true))
             Me.columnId_Lote.AutoIncrement = true
             Me.columnId_Lote.AutoIncrementSeed = -1
@@ -6353,6 +6394,7 @@ Partial Public Class Factor100DS
             Me.columnUsuario.MaxLength = 20
             Me.columnEstatus.MaxLength = 15
             Me.columnTipoDocumento.MaxLength = 5
+            Me.columnCIA.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10736,6 +10778,21 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CIA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableWEB_Usuarios.CIAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CIA' de la tabla 'WEB_Usuarios' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWEB_Usuarios.CIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsUsuarioNull() As Boolean
             Return Me.IsNull(Me.tableWEB_Usuarios.UsuarioColumn)
         End Function
@@ -10792,6 +10849,18 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetTipoNull()
             Me(Me.tableWEB_Usuarios.TipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCIANull() As Boolean
+            Return Me.IsNull(Me.tableWEB_Usuarios.CIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCIANull()
+            Me(Me.tableWEB_Usuarios.CIAColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -10913,6 +10982,21 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CIA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableWEB_LotesAux.CIAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CIA' de la tabla 'WEB_LotesAux' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWEB_LotesAux.CIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsCesionNull() As Boolean
             Return Me.IsNull(Me.tableWEB_LotesAux.CesionColumn)
         End Function
@@ -10981,6 +11065,18 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetNombreNull()
             Me(Me.tableWEB_LotesAux.NombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCIANull() As Boolean
+            Return Me.IsNull(Me.tableWEB_LotesAux.CIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCIANull()
+            Me(Me.tableWEB_LotesAux.CIAColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -12759,6 +12855,21 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property CIA() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableWEB_Lotes.CIAColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CIA' de la tabla 'WEB_Lotes' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWEB_Lotes.CIAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsUsuarioNull() As Boolean
             Return Me.IsNull(Me.tableWEB_Lotes.UsuarioColumn)
         End Function
@@ -12803,6 +12914,18 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetCesionNull()
             Me(Me.tableWEB_Lotes.CesionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsCIANull() As Boolean
+            Return Me.IsNull(Me.tableWEB_Lotes.CIAColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetCIANull()
+            Me(Me.tableWEB_Lotes.CIAColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -18580,6 +18703,7 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("Acceso", "Acceso")
             tableMapping.ColumnMappings.Add("Correo", "Correo")
             tableMapping.ColumnMappings.Add("Tipo", "Tipo")
+            tableMapping.ColumnMappings.Add("CIA", "CIA")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -18588,25 +18712,27 @@ Namespace Factor100DSTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_usuario", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_usuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [WEB_Usuarios] ([Usuario], [Nombre], [Acceso], [Correo], [Tipo]) VALU"& _ 
-                "ES (@Usuario, @Nombre, @Acceso, @Correo, @Tipo)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [WEB_Usuarios] ([Usuario], [Nombre], [Acceso], [Correo], [Tipo], [CIA"& _ 
+                "]) VALUES (@Usuario, @Nombre, @Acceso, @Correo, @Tipo, @CIA)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Acceso", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Acceso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Correo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [WEB_Usuarios] SET [Usuario] = @Usuario, [Nombre] = @Nombre, [Acceso] = @A"& _ 
-                "cceso, [Correo] = @Correo, [Tipo] = @Tipo WHERE (([id_usuario] = @Original_id_us"& _ 
-                "uario))"
+                "cceso, [Correo] = @Correo, [Tipo] = @Tipo, [CIA] = @CIA WHERE (([id_usuario] = @"& _ 
+                "Original_id_usuario))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Acceso", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Acceso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Correo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tipo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Tipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_usuario", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "id_usuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
@@ -18623,8 +18749,8 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        id_usuario, Usuario, Nombre, Acceso, Correo, Tipo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            "& _ 
-                "WEB_Usuarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Usuario = @Usuario)"
+            Me._commandCollection(0).CommandText = "SELECT        id_usuario, Usuario, Nombre, Acceso, Correo, Tipo, CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     WEB_Usuarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Usuario = @Usuario)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -18716,7 +18842,7 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String, ByVal CIA As String) As Integer
             If (Usuario Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -18742,6 +18868,11 @@ Namespace Factor100DSTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(Tipo,String)
             End If
+            If (CIA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(CIA,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -18761,7 +18892,7 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String, ByVal Original_id_usuario As Decimal) As Integer
+        Public Overloads Overridable Function Update(ByVal Usuario As String, ByVal Nombre As String, ByVal Acceso As String, ByVal Correo As String, ByVal Tipo As String, ByVal CIA As String, ByVal Original_id_usuario As Decimal) As Integer
             If (Usuario Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -18787,7 +18918,12 @@ Namespace Factor100DSTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Tipo,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_id_usuario,Decimal)
+            If (CIA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(CIA,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_id_usuario,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -18908,6 +19044,7 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("TipoDocumento", "TipoDocumento")
             tableMapping.ColumnMappings.Add("Usuario", "Usuario")
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
+            tableMapping.ColumnMappings.Add("CIA", "CIA")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -18924,38 +19061,40 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lot"& _ 
-                "e, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Clien"& _ 
-                "tes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Factura"& _ 
+            Me._commandCollection(0).CommandText = "SELECT        WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_"& _ 
+                "Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes"& _ 
+                ".CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesion, "& _ 
-                "WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, "& _ 
-                "WEB_Lotes.Usuario, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Clientes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING      (WEB"& _ 
-                "_Lotes.Estatus = @Estatus) AND (WEB_Lotes.Usuario = @User)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.I"& _ 
-                "d_Lote DESC"
+                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesio"& _ 
+                "n, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocument"& _ 
+                "o, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lot"& _ 
+                "es.Estatus = @Estatus) AND (WEB_Lotes.Usuario = @User)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lo"& _ 
+                "te DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@User", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@User", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT     WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lot"& _ 
-                "e, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Clien"& _ 
-                "tes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Factura"& _ 
+            Me._commandCollection(1).CommandText = "SELECT        WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_"& _ 
+                "Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes"& _ 
+                ".CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesion, "& _ 
-                "WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, "& _ 
-                "WEB_Lotes.Usuario, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Clientes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING      (WEB"& _ 
-                "_Lotes.Estatus = @Estatus)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
+                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesio"& _ 
+                "n, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocument"& _ 
+                "o, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lot"& _ 
+                "es.Estatus = @Estatus)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "SELECT        TOP (150) WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB"& _ 
-                "_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Facturas ON "& _ 
-                "WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WE"& _ 
-                "B_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesion, WE"& _ 
-                "B_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WE"& _ 
-                "B_Lotes.Usuario, WEB_Clientes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
+                "_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre,"& _ 
+                " WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         W"& _ 
+                "EB_Facturas ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
+                "             WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_L"& _ 
+                "otes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.Ti"& _ 
+                "poDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB"& _ 
+                "_Lotes.Id_Lote DESC"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -22000,6 +22139,7 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("Estatus", "Estatus")
             tableMapping.ColumnMappings.Add("TipoDocumento", "TipoDocumento")
             tableMapping.ColumnMappings.Add("Cesion", "Cesion")
+            tableMapping.ColumnMappings.Add("CIA", "CIA")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -22009,24 +22149,26 @@ Namespace Factor100DSTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [WEB_Lotes] ([Fecha], [Usuario], [Estatus], [TipoDocumento], [Cesion]"& _ 
-                ") VALUES (@Fecha, @Usuario, @Estatus, @TipoDocumento, @Cesion)"
+                ", [CIA]) VALUES (@Fecha, @Usuario, @Estatus, @TipoDocumento, @Cesion, @CIA)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cesion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "Cesion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [WEB_Lotes] SET [Fecha] = @Fecha, [Usuario] = @Usuario, [Estatus] = @Estat"& _ 
-                "us, [TipoDocumento] = @TipoDocumento, [Cesion] = @Cesion WHERE (([Id_Lote] = @Or"& _ 
-                "iginal_Id_Lote))"
+                "us, [TipoDocumento] = @TipoDocumento, [Cesion] = @Cesion, [CIA] = @CIA WHERE ((["& _ 
+                "Id_Lote] = @Original_Id_Lote))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cesion", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "Cesion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CIA", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CIA", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Lote", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
@@ -22043,42 +22185,40 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(9) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     Id_Lote, Fecha, Usuario, Estatus, TipoDocumento, Cesion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         "& _ 
-                "WEB_Lotes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (Usuario = @Usuario) AND (Estatus = @Estatus)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Id_"& _ 
-                "Lote DESC"
+            Me._commandCollection(0).CommandText = "SELECT        Id_Lote, Fecha, Usuario, Estatus, TipoDocumento, Cesion, CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM "& _ 
+                "           WEB_Lotes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Usuario = @Usuario) AND (Estatus = @Estatus)"& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Id_Lote DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Usuario", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario FROM WEB_Lotes WHE"& _ 
-                "RE (Estatus = @Estatus) AND (TipoDocumento <> 'FON') ORDER BY Id_Lote DESC"
+            Me._commandCollection(1).CommandText = "SELECT CIA, Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario FROM WEB_Lote"& _ 
+                "s WHERE (Estatus = @Estatus) AND (TipoDocumento <> 'FON') ORDER BY Id_Lote DESC"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT     Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         "& _ 
-                "WEB_Lotes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (Estatus = @Estatus) AND (TipoDocumento = 'FON') AND (Id_Lo"& _ 
-                "te IN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                          (SELECT     Lote"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                            F"& _ 
-                "ROM          WEB_Fondeo))"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY Id_Lote DESC"
+            Me._commandCollection(2).CommandText = "SELECT CIA, Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario FROM WEB_Lote"& _ 
+                "s WHERE (Estatus = @Estatus) AND (TipoDocumento = 'FON') AND (Id_Lote IN (SELECT"& _ 
+                " Lote FROM WEB_Fondeo)) ORDER BY Id_Lote DESC"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "SELECT Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario FROM WEB_Lotes WHE"& _ 
-                "RE (Id_Lote = @ID) ORDER BY Id_Lote DESC"
+            Me._commandCollection(3).CommandText = "SELECT CIA, Cesion, Estatus, Fecha, Id_Lote, TipoDocumento, Usuario FROM WEB_Lote"& _ 
+                "s WHERE (Id_Lote = @ID) ORDER BY Id_Lote DESC"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT        WEB_Lotes.Id_Lote, WEB_Lotes.Fecha, WEB_Lotes.Usuario, WEB_Lotes.Es"& _ 
-                "tatus, WEB_Lotes.TipoDocumento, WEB_Lotes.Cesion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNE"& _ 
-                "R JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Facturas ON WEB_Lotes.Id_Lote = WEB_Factura"& _ 
-                "s.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Usuarios ON WEB_Facturas.RFC "& _ 
-                "= WEB_Usuarios.Usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Id_Lote, WEB_Lotes.Fecha, WEB_Lotes.U"& _ 
-                "suario, WEB_Lotes.Estatus, WEB_Lotes.TipoDocumento, WEB_Lotes.Cesion, WEB_Usuari"& _ 
-                "os.Usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lotes.Estatus = @Estatus) AND (WEB_Usuarios.Usuar"& _ 
-                "io = @usuario)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
+            Me._commandCollection(4).CommandText = "SELECT WEB_Lotes.CIA, WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_L"& _ 
+                "otes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario FROM WEB_Lotes INNER JO"& _ 
+                "IN WEB_Facturas ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN WEB_Usuar"& _ 
+                "ios ON WEB_Facturas.RFC = WEB_Usuarios.Usuario GROUP BY WEB_Lotes.Id_Lote, WEB_L"& _ 
+                "otes.Fecha, WEB_Lotes.Usuario, WEB_Lotes.Estatus, WEB_Lotes.TipoDocumento, WEB_L"& _ 
+                "otes.Cesion, WEB_Usuarios.Usuario HAVING (WEB_Lotes.Estatus = @Estatus) AND (WEB"& _ 
+                "_Usuarios.Usuario = @usuario) ORDER BY WEB_Lotes.Id_Lote DESC"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@usuario", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -22375,8 +22515,12 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Fecha As Date, ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Global.System.Nullable(Of Decimal)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Fecha,Date)
+        Public Overloads Overridable Function Insert(ByVal Fecha As Global.System.Nullable(Of Date), ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Global.System.Nullable(Of Decimal), ByVal CIA As String) As Integer
+            If (Fecha.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Fecha.Value,Date)
+            Else
+                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             If (Usuario Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
@@ -22397,6 +22541,11 @@ Namespace Factor100DSTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
+            If (CIA Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(CIA,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -22416,8 +22565,12 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Fecha As Date, ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Global.System.Nullable(Of Decimal), ByVal Original_Id_Lote As Decimal) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Fecha,Date)
+        Public Overloads Overridable Function Update(ByVal Fecha As Global.System.Nullable(Of Date), ByVal Usuario As String, ByVal Estatus As String, ByVal TipoDocumento As String, ByVal Cesion As Global.System.Nullable(Of Decimal), ByVal CIA As String, ByVal Original_Id_Lote As Decimal) As Integer
+            If (Fecha.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Fecha.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
+            End If
             If (Usuario Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
@@ -22438,7 +22591,12 @@ Namespace Factor100DSTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Id_Lote,Decimal)
+            If (CIA Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(CIA,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Id_Lote,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

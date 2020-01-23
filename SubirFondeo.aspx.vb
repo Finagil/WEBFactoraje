@@ -69,7 +69,7 @@ Partial Public Class SubirFondeo
             Importe = 0
             Dim Feven As Date
             Dim LOT As New Factor100DSTableAdapters.WEB_LotesTableAdapter
-            LOT.Insert(Date.Now, "layala", "Pendiente", "FON", 0)
+            LOT.Insert(Date.Now, "layala", "Pendiente", "FON", 0, "FINAGIL")
             Lote = LOT.UltimoID()
             F = New System.IO.StreamReader(Archivo, True)
             While Not F.EndOfStream

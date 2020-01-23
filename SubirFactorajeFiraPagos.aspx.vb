@@ -127,7 +127,7 @@ Partial Public Class FRMSubirFactorajeFiraPagos
             Dim RFC As String = ""
             Dim FecVecn As Date = Date.Now
 
-            LOT.Insert(Date.Now, Session.Item("User"), "Procesado", "FIRAP", 0)
+            LOT.Insert(Date.Now, Session.Item("User"), "Procesado", "FIRAP", 0, Session.Item("CIA"))
             Lote = LOT.UltimoID()
             F = New System.IO.StreamReader(Archivo, True)
 

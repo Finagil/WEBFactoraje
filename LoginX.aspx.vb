@@ -41,6 +41,7 @@ Public Partial Class LoginX
                 Session.Item("Nombre") = Trim(R.Nombre)
                 Session.Item("TipoCadena") = R.id_depto
                 Session.Item("Correo") = R.correo
+                Session.Item("CIA") = "FINAGIL"
                 Autentificacion = True
                 LlenaDatosFactor100()
             End If
@@ -56,6 +57,7 @@ Public Partial Class LoginX
                     Session.Item("Nombre") = Trim(Rr.Nombre)
                     Session.Item("TipoCadena") = Rr.Tipo
                     Session.Item("Correo") = Rr.Correo
+                    Session.Item("CIA") = Rr.CIA
                     Autentificacion = True
                 End If
             End If
