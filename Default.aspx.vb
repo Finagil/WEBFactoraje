@@ -7,7 +7,11 @@ Partial Public Class _Default
                 Session("MasterPage") = "~/PaginaMasterFACT.Master"
                 Response.Redirect("~/LotesFactFin.aspx", True)
             Case "USR"
-                Session("MasterPage") = "~/PaginaMasterPALM.Master"
+                If Session("MasterPage") = "PALM" Then
+                    Session("MasterPage") = "~/PaginaMasterPALM.Master"
+                Else
+                    Session("MasterPage") = "~/PaginaMasterEXTERNO.Master"
+                End If
                 Response.Redirect("~/SubirFacts.aspx", True)
             Case "TES"
                 Session("MasterPage") = "~/PaginaMasterPALMT.Master"
