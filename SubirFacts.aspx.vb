@@ -75,7 +75,7 @@ Public Partial Class WebForm1
         Dim NunLine As Integer = 0
         While Not F.EndOfStream
             L = F.ReadLine.Split(",")
-            If L(0) = "RFC" Then 'se salta la linea de encabezado
+            If L(0) = "RFC" Or L(0).ToUpper = "CLIENTE" Then 'se salta la linea de encabezado
                 L = F.ReadLine.Split(",")
             End If
 
@@ -83,9 +83,9 @@ Public Partial Class WebForm1
                 Lim = 5
             End If
 
-            If L(0) = "TIENDAS SORIANA" And L.Length = 6 Then
+            If L(0) = "TIENDAS SORIANA" Or L.Length = 6 Then
                 Lim = 6
-                L(0) = L(0) & "," & L(1)
+                L(0) = L(0).Replace("""", "") & "," & L(1).Replace("""", "")
                 L(1) = L(2)
                 L(2) = L(3)
                 L(3) = L(4)
@@ -163,7 +163,7 @@ Public Partial Class WebForm1
             Dim NuloFec As Nullable(Of Date)
             While Not F.EndOfStream
                 L = F.ReadLine.Split(",")
-                If L(0) = "RFC" Then 'se salta la linea de encabezado
+                If L(0) = "RFC" Or L(0).ToUpper = "CLIENTE" Then 'se salta la linea de encabezado
                     L = F.ReadLine.Split(",")
                 End If
                 If Session.Item("TipoCadena") = "FPR" Then
@@ -177,9 +177,9 @@ Public Partial Class WebForm1
                         ta.Insert(Lote, L(1).Trim, L(0).Trim, L(4).Trim, 0, L(2), FecVecn, False, "", NuloFec)
                     End If
                 Else
-                    If L(0) = "TIENDAS SORIANA" Then
+                    If L(0) = "TIENDAS SORIANA" Or L.Length = 6 Then
                         Lim = 6
-                        L(0) = L(0) & "," & L(1)
+                        L(0) = L(0).Replace("""", "") & "," & L(1).Replace("""", "")
                         L(1) = L(2)
                         L(2) = L(3)
                         L(3) = L(4)
