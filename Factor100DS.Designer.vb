@@ -19079,10 +19079,11 @@ Namespace Factor100DSTableAdapters
                 "Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes"& _ 
                 ".CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesio"& _ 
-                "n, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocument"& _ 
-                "o, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lot"& _ 
-                "es.Estatus = @Estatus)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
+                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = W"& _ 
+                "EB_Clientes.Usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fec"& _ 
+                "ha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes."& _ 
+                "Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lotes.Estatus = @Estatus)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WE"& _ 
+                "B_Lotes.Id_Lote DESC"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
