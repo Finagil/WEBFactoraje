@@ -519,7 +519,7 @@ WHERE        (Usuario = @Usuario)</CommandText>
                     <CommandText>SELECT        WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA
 FROM            WEB_Lotes INNER JOIN
                          WEB_Facturas ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN
-                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC
+                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = WEB_Clientes.Usuario
 GROUP BY WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA
 HAVING        (WEB_Lotes.Estatus = @Estatus) AND (WEB_Lotes.Usuario = @User)
 ORDER BY WEB_Lotes.Id_Lote DESC</CommandText>
@@ -2056,7 +2056,7 @@ FROM            CO_TITCO</CommandText>
                          WEB_Clientes.Filial AS RFC_Filial, WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente
 FROM            WEB_Facturas INNER JOIN
                          WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote INNER JOIN
-                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC INNER JOIN
+                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = WEB_Clientes.Usuario INNER JOIN
                          CO_CLIEN ON WEB_Facturas.RFC = CO_CLIEN.RFC INNER JOIN
                          CO_TITCO ON WEB_Clientes.RFC = CO_TITCO.TC_RFC
 WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (NOT (CO_TITCO.TC_NUM LIKE 'D%')) AND (CO_CLIEN.idPersona &lt;&gt; 'P0726')</CommandText>
@@ -2092,11 +2092,11 @@ WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (NOT (CO_TITCO.TC_NUM LIKE 'D%')) A
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        WEB_Lotes.TipoDocumento, WEB_Facturas.Factura, WEB_Facturas.FechaFactura, WEB_Facturas.FechaVencimiento, WEB_Facturas.ImporteAnticipo, WEB_Clientes.Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, 
-                         WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Clientes.Nombre, WEB_Clientes.id_Cliente, CO_TITCO.TC_NUM AS CL_NUM, 
-                         CO_TITCO.TC_NOMBRE AS CL_NOMBRE, WEB_Clientes.Filial AS RFC_Filial, WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente
+                         WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Clientes.Nombre, WEB_Clientes.id_Cliente, CO_TITCO.TC_NUM AS CL_NUM, CO_TITCO.TC_NOMBRE AS CL_NOMBRE, 
+                         WEB_Clientes.Filial AS RFC_Filial, WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente
 FROM            WEB_Facturas INNER JOIN
                          WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote INNER JOIN
-                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC INNER JOIN
+                         WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = WEB_Clientes.Usuario INNER JOIN
                          CO_TITCO ON WEB_Clientes.RFC = CO_TITCO.TC_RFC
 WHERE        (WEB_Lotes.Id_Lote = @Lote)</CommandText>
                     <Parameters>

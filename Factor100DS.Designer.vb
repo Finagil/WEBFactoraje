@@ -19065,11 +19065,11 @@ Namespace Factor100DSTableAdapters
                 "Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes"& _ 
                 ".CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Lotes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s ON WEB_Lotes.Id_Lote = WEB_Facturas.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      "& _ 
-                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesio"& _ 
-                "n, WEB_Lotes.Estatus, WEB_Lotes.Fecha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocument"& _ 
-                "o, WEB_Lotes.Usuario, WEB_Clientes.Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lot"& _ 
-                "es.Estatus = @Estatus) AND (WEB_Lotes.Usuario = @User)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lo"& _ 
-                "te DESC"
+                "   WEB_Clientes ON WEB_Facturas.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = W"& _ 
+                "EB_Clientes.Usuario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Lotes.Cesion, WEB_Lotes.Estatus, WEB_Lotes.Fec"& _ 
+                "ha, WEB_Lotes.Id_Lote, WEB_Lotes.TipoDocumento, WEB_Lotes.Usuario, WEB_Clientes."& _ 
+                "Nombre, WEB_Lotes.CIA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"HAVING        (WEB_Lotes.Estatus = @Estatus) AND (WEB_Lot"& _ 
+                "es.Usuario = @User)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Lotes.Id_Lote DESC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Estatus", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "Estatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@User", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -26557,10 +26557,11 @@ Namespace Factor100DSTableAdapters
                 " WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Fa"& _ 
                 "cturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Facturas.Id_Lote = "& _ 
                 "WEB_Lotes.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Factu"& _ 
-                "ras.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_"& _ 
-                "Facturas.RFC = CO_CLIEN.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB"& _ 
-                "_Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote) AND (N"& _ 
-                "OT (CO_TITCO.TC_NUM LIKE 'D%')) AND (CO_CLIEN.idPersona <> 'P0726')"
+                "ras.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = WEB_Clientes.Usuario INNER JO"& _ 
+                "IN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_CLIEN ON WEB_Facturas.RFC = CO_CLIEN.RFC INNER J"& _ 
+                "OIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB_Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WH"& _ 
+                "ERE        (WEB_Lotes.Id_Lote = @Lote) AND (NOT (CO_TITCO.TC_NUM LIKE 'D%')) AND"& _ 
+                " (CO_CLIEN.idPersona <> 'P0726')"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
@@ -26569,13 +26570,14 @@ Namespace Factor100DSTableAdapters
                 "ctura, WEB_Facturas.FechaVencimiento, WEB_Facturas.ImporteAnticipo, WEB_Clientes"& _ 
                 ".Cuenta, WEB_Clientes.Planta, WEB_Clientes.Micelaneo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
                 " WEB_Facturas.ImporteFactura, WEB_Facturas.Id_factura, WEB_Lotes.Cesion, WEB_Cli"& _ 
-                "entes.Nombre, WEB_Clientes.id_Cliente, CO_TITCO.TC_NUM AS CL_NUM, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
-                "             CO_TITCO.TC_NOMBRE AS CL_NOMBRE, WEB_Clientes.Filial AS RFC_Filial,"& _ 
+                "entes.Nombre, WEB_Clientes.id_Cliente, CO_TITCO.TC_NUM AS CL_NUM, CO_TITCO.TC_NO"& _ 
+                "MBRE AS CL_NOMBRE, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes.Filial AS RFC_Filial,"& _ 
                 " WEB_Clientes.NoCliente, WEB_Clientes.RFC AS RFC_Cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Fa"& _ 
                 "cturas INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Lotes ON WEB_Facturas.Id_Lote = "& _ 
                 "WEB_Lotes.Id_Lote INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Clientes ON WEB_Factu"& _ 
-                "ras.RFC = WEB_Clientes.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB_"& _ 
-                "Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Lotes.Id_Lote = @Lote)"
+                "ras.RFC = WEB_Clientes.RFC AND WEB_Lotes.Usuario = WEB_Clientes.Usuario INNER JO"& _ 
+                "IN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CO_TITCO ON WEB_Clientes.RFC = CO_TITCO.TC_RFC"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHE"& _ 
+                "RE        (WEB_Lotes.Id_Lote = @Lote)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Lote", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Id_Lote", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
