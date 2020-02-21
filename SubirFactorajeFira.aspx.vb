@@ -80,6 +80,8 @@ Partial Public Class WebFormFactorFact
             Dim L() As String
             Dim Lim As Integer = 5
             Dim NunLine As Integer = 0
+            Dim Aux As Object
+            Dim t As Type
             While Not F.EndOfStream
                 L = F.ReadLine.Split(vbTab)
                 If L(0) = "No. DE DOCUMENTO" Then 'se salta la linea de encabezado
@@ -88,7 +90,6 @@ Partial Public Class WebFormFactorFact
                 For x As Integer = 0 To L.Length - 1
                     L(x) = L(x).Replace("""", "")
                 Next
-
                 If L.Length <> Lim Then
                     Lberror.Visible = True
                     Lberror.Text = "Formato de archivo Incorrecto"
@@ -120,7 +121,13 @@ Partial Public Class WebFormFactorFact
                 End If
             End While
             F.Close()
-            RFC = ta.SacaRFC(L(0)).Trim
+            Try
+                RFC = ta.SacaRFC(L(0)).Trim
+            Catch ex1 As Exception
+                Lberror.Visible = True
+                Lberror.Text = "Faltan datos del cliente : " & L(0)
+                Exit Sub
+            End Try
             Lote = ta.SacaLote(L(1), RFC)
             If ta.EstatusLote(Lote) = "Fira" Then
                 Lberror.Visible = True
