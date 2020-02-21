@@ -19323,32 +19323,34 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Impor"& _ 
-                "te, WEB_Pagos.Tipo, WEB_Pagos.Linea, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      WEB_Pagos.Descargad"& _ 
-                "o, WEB_Clientes.Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         WEB_Clientes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                  "& _ 
+            Me._commandCollection(0).CommandText = "SELECT        WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Im"& _ 
+                "porte, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, MAX(WEB_Clientes.N"& _ 
+                "ombre) AS Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Clientes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
                 "    WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
-                "                WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE    "& _ 
-                " (WEB_Pagos.Descargado = @Descargado) AND (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"            "& _ 
-                "          WEB_Pagos.Tipo = 200) AND (WEB_Pagos.Linea = @NumPago)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_P"& _ 
-                "agos.Fecha, WEB_Pagos.Factura"
+                "                   WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE "& _ 
+                "       (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = 200) "& _ 
+                "AND (WEB_Pagos.Linea = @NumPago) AND (WEB_Pagos.Descargado = @Descargado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP"& _ 
+                " BY WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Importe, WE"& _ 
+                "B_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, W"& _ 
+                "EB_Pagos.Factura"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Descargado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Descargado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPago", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Linea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Descargado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Descargado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As Factor100DS.WEB_PagosAuxDataTable, ByVal Descargado As Global.System.Nullable(Of Boolean), ByVal NumPago As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As Factor100DS.WEB_PagosAuxDataTable, ByVal NumPago As Global.System.Nullable(Of Integer), ByVal Descargado As Global.System.Nullable(Of Boolean)) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Descargado.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Descargado.Value,Boolean)
+            If (NumPago.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(NumPago.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (NumPago.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(NumPago.Value,Integer)
+            If (Descargado.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Descargado.Value,Boolean)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
@@ -19363,15 +19365,15 @@ Namespace Factor100DSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal Descargado As Global.System.Nullable(Of Boolean), ByVal NumPago As Global.System.Nullable(Of Integer)) As Factor100DS.WEB_PagosAuxDataTable
+        Public Overloads Overridable Function GetData(ByVal NumPago As Global.System.Nullable(Of Integer), ByVal Descargado As Global.System.Nullable(Of Boolean)) As Factor100DS.WEB_PagosAuxDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Descargado.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Descargado.Value,Boolean)
+            If (NumPago.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(NumPago.Value,Integer)
             Else
                 Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
-            If (NumPago.HasValue = true) Then
-                Me.Adapter.SelectCommand.Parameters(1).Value = CType(NumPago.Value,Integer)
+            If (Descargado.HasValue = true) Then
+                Me.Adapter.SelectCommand.Parameters(1).Value = CType(Descargado.Value,Boolean)
             Else
                 Me.Adapter.SelectCommand.Parameters(1).Value = Global.System.DBNull.Value
             End If
