@@ -71,7 +71,7 @@ Public Partial Class WebForm1
         'Dim tc As New Factor100DSTableAdapters.ClientesTableAdapter
         Dim L() As String
         Dim Lim As Integer = 5
-        'Dim RFC As String
+        Dim RFC As String = ""
         Dim NunLine As Integer = 0
         While Not F.EndOfStream
             L = F.ReadLine.Split(",")
@@ -115,6 +115,8 @@ Public Partial Class WebForm1
                     Lberror.Visible = True
                     Lberror.Text = Lberror.Text & "<BR> Cliente no configurado " & L(0) & " Linea: " & NunLine
                 End If
+            Else
+                RFC = tb.SacaRFC(L(0))
             End If
             'If tc.ExisteCliente(L(0)) <= 0 Then
             'Lberror.Visible = True
@@ -125,7 +127,7 @@ Public Partial Class WebForm1
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> Referencia de Factura no valida " & L(1) & " Linea: " & NunLine
             End If
-            If ta.ExisteFactura(L(1), L(0)) > 0 Then
+            If ta.ExisteFactura(L(1), RFC) > 0 Then
                 Lberror.Visible = True
                 Lberror.Text = Lberror.Text & "<BR> La factura ya fue cargada " & L(1) & " Linea: " & NunLine
             End If
@@ -149,7 +151,7 @@ Public Partial Class WebForm1
         If Lberror.Visible = False Then
             total = 0
             Dim LOT As New Factor100DSTableAdapters.WEB_LotesTableAdapter
-            Dim RFC As String = ""
+            RFC = ""
             Dim Banco As String = tb.SacaBanco(L(0))
             Dim FecVecn As Date = Date.Now
             If Session.Item("TipoCadena") = "FPR" Then
