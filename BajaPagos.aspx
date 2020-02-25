@@ -76,6 +76,7 @@
                     <asp:CheckBox ID="CheckBox1" runat="server" Checked='<%# Bind("Descargado") %>' AutoPostBack="True" OnCheckedChanged="CheckBox1_CheckedChanged" />
                 </ItemTemplate>
             </asp:TemplateField>
+            <asp:BoundField DataField="NoCliente" HeaderText="No. Cliente" ReadOnly="True" SortExpression="NoCliente" />
         </Columns>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />

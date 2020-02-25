@@ -20,7 +20,7 @@ Partial Public Class BajaPagos
                 For Each rr As GridViewRow In GridView1.Rows
                     Ck = GridView1.Rows(rr.RowIndex).FindControl("CheckBox1")
                     If Ck.Checked = True Then
-                        f.WriteLine("100061,FS " & rr.Cells(1).Text & "," & CDec(rr.Cells(3).Text) & ",CS")
+                        f.WriteLine(rr.Cells(7).Text & ",FS " & rr.Cells(1).Text & "," & CDec(rr.Cells(3).Text) & ",CS")
                         taL.Descargados(GridView1.DataKeys(rr.RowIndex).Value)
                     End If
                 Next

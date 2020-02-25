@@ -3179,6 +3179,8 @@ Partial Public Class Factor100DS
         
         Private columnNombre As Global.System.Data.DataColumn
         
+        Private columnNoCliente As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -3279,6 +3281,14 @@ Partial Public Class Factor100DS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NoClienteColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNoCliente
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -3315,9 +3325,9 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddWEB_PagosAuxRow(ByVal Factura As String, ByVal Fecha As Date, ByVal Importe As Decimal, ByVal Tipo As Integer, ByVal Linea As Integer, ByVal Descargado As Boolean, ByVal Nombre As String) As WEB_PagosAuxRow
+        Public Overloads Function AddWEB_PagosAuxRow(ByVal Factura As String, ByVal Fecha As Date, ByVal Importe As Decimal, ByVal Tipo As Integer, ByVal Linea As Integer, ByVal Descargado As Boolean, ByVal Nombre As String, ByVal NoCliente As String) As WEB_PagosAuxRow
             Dim rowWEB_PagosAuxRow As WEB_PagosAuxRow = CType(Me.NewRow,WEB_PagosAuxRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Factura, Fecha, Importe, Tipo, Linea, Descargado, Nombre}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Factura, Fecha, Importe, Tipo, Linea, Descargado, Nombre, NoCliente}
             rowWEB_PagosAuxRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowWEB_PagosAuxRow)
             Return rowWEB_PagosAuxRow
@@ -3354,6 +3364,7 @@ Partial Public Class Factor100DS
             Me.columnLinea = MyBase.Columns("Linea")
             Me.columnDescargado = MyBase.Columns("Descargado")
             Me.columnNombre = MyBase.Columns("Nombre")
+            Me.columnNoCliente = MyBase.Columns("NoCliente")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3375,6 +3386,8 @@ Partial Public Class Factor100DS
             MyBase.Columns.Add(Me.columnDescargado)
             Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNombre)
+            Me.columnNoCliente = New Global.System.Data.DataColumn("NoCliente", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNoCliente)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_Pago}, true))
             Me.columnId_Pago.AutoIncrement = true
             Me.columnId_Pago.AllowDBNull = false
@@ -3382,6 +3395,7 @@ Partial Public Class Factor100DS
             Me.columnId_Pago.Unique = true
             Me.columnFactura.MaxLength = 20
             Me.columnNombre.MaxLength = 150
+            Me.columnNoCliente.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11213,6 +11227,21 @@ Partial Public Class Factor100DS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property NoCliente() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableWEB_PagosAux.NoClienteColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NoCliente' de la tabla 'WEB_PagosAux' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableWEB_PagosAux.NoClienteColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsFacturaNull() As Boolean
             Return Me.IsNull(Me.tableWEB_PagosAux.FacturaColumn)
         End Function
@@ -11293,6 +11322,18 @@ Partial Public Class Factor100DS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetNombreNull()
             Me(Me.tableWEB_PagosAux.NombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNoClienteNull() As Boolean
+            Return Me.IsNull(Me.tableWEB_PagosAux.NoClienteColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNoClienteNull()
+            Me(Me.tableWEB_PagosAux.NoClienteColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -18381,8 +18422,8 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT     Id_Pago, Factura, Fecha, Importe, Tipo, Linea, Descargado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
-                "  WEB_Pagos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (Descargado = @Descargado) AND (Tipo = 10 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "           Tipo = 20)"
+                "  WEB_Pagos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (Descargado = @Descargado) AND (Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"          "& _ 
+                "            Tipo = 200)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Descargado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Descargado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
@@ -19307,6 +19348,7 @@ Namespace Factor100DSTableAdapters
             tableMapping.ColumnMappings.Add("Linea", "Linea")
             tableMapping.ColumnMappings.Add("Descargado", "Descargado")
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
+            tableMapping.ColumnMappings.Add("NoCliente", "NoCliente")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -19325,14 +19367,14 @@ Namespace Factor100DSTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Im"& _ 
                 "porte, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, MAX(WEB_Clientes.N"& _ 
-                "ombre) AS Nombre"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Clientes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
-                "    WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"      "& _ 
-                "                   WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE "& _ 
-                "       (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = 200) "& _ 
-                "AND (WEB_Pagos.Linea = @NumPago) AND (WEB_Pagos.Descargado = @Descargado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP"& _ 
-                " BY WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Importe, WE"& _ 
-                "B_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, W"& _ 
-                "EB_Pagos.Factura"
+                "ombre) AS Nombre, WEB_Clientes.NoCliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Clientes INNER JOI"& _ 
+                "N"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC "& _ 
+                "RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos ON WEB_Facturas.Factura = W"& _ 
+                "EB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                       "& _ 
+                "  WEB_Pagos.Tipo = 200) AND (WEB_Pagos.Linea = @NumPago) AND (WEB_Pagos.Descarga"& _ 
+                "do = @Descargado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fech"& _ 
+                "a, WEB_Pagos.Importe, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, WEB"& _ 
+                "_Clientes.NoCliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, WEB_Pagos.Factura"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPago", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Linea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Descargado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Descargado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
