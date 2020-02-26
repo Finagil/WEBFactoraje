@@ -20,7 +20,12 @@
             <asp:BoundField DataField="Fecha" DataFormatString="{0:d}" HeaderText="Fecha" HtmlEncode="False"
                 SortExpression="Fecha" />
             <asp:BoundField DataField="Importe" DataFormatString="{0:n2}" HeaderText="Importe"
-                HtmlEncode="False" ReadOnly="True" SortExpression="Importe" />
+                HtmlEncode="False" ReadOnly="True" SortExpression="Importe" >
+            <ItemStyle HorizontalAlign="Right" />
+            </asp:BoundField>
+            <asp:BoundField DataField="InteresBonificacion" DataFormatString="{0:n2}" HeaderText="Inte. / Bonif." HtmlEncode="False" SortExpression="InteresBonificacion">
+            <ItemStyle HorizontalAlign="Right" />
+            </asp:BoundField>
         </Columns>
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
