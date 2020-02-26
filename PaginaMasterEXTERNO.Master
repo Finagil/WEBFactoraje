@@ -5,6 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Menu Principal</title>
+    <style type="text/css">
+        .Menu_IE
+        {
+        z-index:50;	
+        }
+    </style>    
 </head>
 <body bgcolor="#ffffff" background="IMG/fondoconteblanco.png">
     <form id="form1" runat="server">
@@ -16,7 +22,7 @@
                         Text="Label" Width="100%"></asp:Label></td>
                     <td style="height: 100%; background-color: #ff6600; text-align: right; width:auto;">
                     
-                    <img src="IMG/LOGOpeque2.JPG" /></td>
+                    <img src="https://finagil.com.mx/Factoraje/IMG/LOGOpeque2.JPG" /></td>
             </tr>
             <tr>
             <td style="width: 100%; height: 100%" colspan="2">
@@ -37,6 +43,8 @@
                                 Text="Lotes Pendientes" Value="Inicio"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/BajaAntiProc.aspx" SeparatorImageUrl="~/IMG/sep.JPG"
                                 Text="Lotes Recibidos" Value="Lotes Recibidos"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Externos/SubirPagos.aspx" SeparatorImageUrl="~/IMG/sep.JPG" Text="Subir Pagos" Value="Subir Pagos"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Externos/ConsultaPagos.aspx" SeparatorImageUrl="~/IMG/sep.JPG" Text="Consulta de Pagos" Value="Consulta de Pagos"></asp:MenuItem>
                             <asp:MenuItem Text="Clientes" Value="Nuevo Prospecto" NavigateUrl="~/Clientes.aspx" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/LoginX.aspx" Text="Salir" Value="Salir" SeparatorImageUrl="~/IMG/sep.JPG"></asp:MenuItem>
                         </Items>

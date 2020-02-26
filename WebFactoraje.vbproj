@@ -93,6 +93,8 @@
     <Content Include="Default.aspx" />
     <Content Include="DetalleFactorPag.aspx" />
     <Content Include="DetalleFactor.aspx" />
+    <Content Include="Externos\DetallePago.aspx" />
+    <Content Include="Externos\ConsultaPagos.aspx" />
     <Content Include="LotesFactFinAll.aspx" />
     <Content Include="Proveedores\ConsultaLote.aspx" />
     <Content Include="Proveedores\DescontarLote.aspx" />
@@ -104,6 +106,7 @@
     <Content Include="SubirFactorajeFiraPagos.aspx" />
     <Content Include="SubirFactorajeFira.aspx" />
     <Content Include="SubirFactsXML.aspx" />
+    <Content Include="Externos\SubirPagos.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -166,6 +169,20 @@
     <Compile Include="DetalleFactor.aspx.vb">
       <DependentUpon>DetalleFactor.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Externos\DetallePago.aspx.designer.vb">
+      <DependentUpon>DetallePago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Externos\DetallePago.aspx.vb">
+      <DependentUpon>DetallePago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Externos\ConsultaPagos.aspx.designer.vb">
+      <DependentUpon>ConsultaPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Externos\ConsultaPagos.aspx.vb">
+      <DependentUpon>ConsultaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FactorVWDS1.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -465,6 +482,13 @@
     <Compile Include="Detalle.aspx.vb">
       <DependentUpon>Detalle.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Externos\SubirPagos.aspx.designer.vb">
+      <DependentUpon>SubirPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Externos\SubirPagos.aspx.vb">
+      <DependentUpon>SubirPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
