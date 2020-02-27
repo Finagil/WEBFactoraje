@@ -19673,13 +19673,15 @@ Namespace Factor100DSTableAdapters
                 "porte, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, MAX(WEB_Clientes.N"& _ 
                 "ombre) AS Nombre, WEB_Clientes.NoCliente, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s.InteresBonificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Clientes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "         WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
-                "                        WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
-                "HERE        (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = "& _ 
-                "200) AND (WEB_Pagos.Linea = @NumPago) AND (WEB_Pagos.Descargado = @Descargado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "GROUP BY WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Import"& _ 
-                "e, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, WEB_Clientes.NoCliente"& _ 
-                ", WEB_Facturas.InteresBonificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, WEB_Pagos.Factura"
+                "         WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
+                "                  WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote AND WEB_"& _ 
+                "Clientes.Usuario = WEB_Lotes.Usuario RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
+                "WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Pagos.T"& _ 
+                "ipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = 200) AND (WEB_Pagos.Line"& _ 
+                "a = @NumPago) AND (WEB_Pagos.Descargado = @Descargado)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Pagos.Id_Pa"& _ 
+                "go, WEB_Pagos.Factura, WEB_Pagos.Fecha, WEB_Pagos.Importe, WEB_Pagos.Tipo, WEB_P"& _ 
+                "agos.Linea, WEB_Pagos.Descargado, WEB_Clientes.NoCliente, WEB_Facturas.InteresBo"& _ 
+                "nificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, WEB_Pagos.Factura"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPago", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Linea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Descargado", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "Descargado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -19689,13 +19691,15 @@ Namespace Factor100DSTableAdapters
                 "porte, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, MAX(WEB_Clientes.N"& _ 
                 "ombre) AS Nombre, WEB_Clientes.NoCliente, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Factura"& _ 
                 "s.InteresBonificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            WEB_Clientes INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "         WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" "& _ 
-                "                        WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
-                "HERE        (WEB_Pagos.Tipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = "& _ 
-                "200) AND (WEB_Pagos.Linea = @NumPago)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Pagos.Id_Pago, WEB_Pagos.Fac"& _ 
-                "tura, WEB_Pagos.Fecha, WEB_Pagos.Importe, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_P"& _ 
-                "agos.Descargado, WEB_Clientes.NoCliente, WEB_Facturas.InteresBonificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER"& _ 
-                " BY WEB_Pagos.Fecha, WEB_Pagos.Factura"
+                "         WEB_Facturas ON WEB_Clientes.RFC = WEB_Facturas.RFC INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
+                "                  WEB_Lotes ON WEB_Facturas.Id_Lote = WEB_Lotes.Id_Lote AND WEB_"& _ 
+                "Clientes.Usuario = WEB_Lotes.Usuario RIGHT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
+                "WEB_Pagos ON WEB_Facturas.Factura = WEB_Pagos.Factura"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (WEB_Pagos.T"& _ 
+                "ipo = 100 OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         WEB_Pagos.Tipo = 200) AND (WEB_Pagos.Line"& _ 
+                "a = @NumPago)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY WEB_Pagos.Id_Pago, WEB_Pagos.Factura, WEB_Pagos.Fecha, W"& _ 
+                "EB_Pagos.Importe, WEB_Pagos.Tipo, WEB_Pagos.Linea, WEB_Pagos.Descargado, WEB_Cli"& _ 
+                "entes.NoCliente, WEB_Facturas.InteresBonificacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY WEB_Pagos.Fecha, WEB"& _ 
+                "_Pagos.Factura"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NumPago", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Linea", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
