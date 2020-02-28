@@ -114,6 +114,8 @@ Public Partial Class WebForm1
                 If tb.ExisteClienrteRFC(L(0), Session.Item("User")) <= 0 Then
                     Lberror.Visible = True
                     Lberror.Text = Lberror.Text & "<BR> Cliente no configurado " & L(0) & " Linea: " & NunLine
+                Else
+                    RFC = L(0)
                 End If
             Else
                 RFC = tb.SacaRFC(L(0))
@@ -190,8 +192,13 @@ Public Partial Class WebForm1
                     If L(0).Trim = "TIENDAS SORIANA SA DE CV" Then
                         L(0) = "TIENDAS SORIANA, SA DE CV"
                     End If
-                    CLI = L(0)
-                    RFC = tb.SacaRFC(L(0))
+
+                    If tb.ExisteClienteNOM(Session.Item("User"), L(0)) <= 0 Then
+                        RFC = L(0)
+                    Else
+                        RFC = tb.SacaRFC(L(0))
+                    End If
+
                     total += CDec(L(4))
                     FecVecn = CDate(L(3))
                     CalculaFecVecnt(FecVecn, RFC)
