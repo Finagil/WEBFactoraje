@@ -485,6 +485,12 @@ Partial Public Class SeguridadDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function FindBycve_empleado(ByVal cve_empleado As String) As USUARIOSRow
+            Return CType(Me.Rows.Find(New Object() {cve_empleado}),USUARIOSRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As USUARIOSDataTable = CType(MyBase.Clone,USUARIOSDataTable)
             cln.InitVars
@@ -541,6 +547,9 @@ Partial Public Class SeguridadDS
             MyBase.Columns.Add(Me.columnape_mat)
             Me.columncorreo = New Global.System.Data.DataColumn("correo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncorreo)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columncve_empleado}, true))
+            Me.columncve_empleado.AllowDBNull = false
+            Me.columncve_empleado.Unique = true
             Me.columncve_empleado.MaxLength = 6
             Me.columnNombre.ReadOnly = true
             Me.columnNombre.MaxLength = 152
@@ -699,11 +708,7 @@ Partial Public Class SeguridadDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property cve_empleado() As String
             Get
-                Try 
-                    Return CType(Me(Me.tableUSUARIOS.cve_empleadoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'cve_empleado' de la tabla 'USUARIOS' es DBNull.", e)
-                End Try
+                Return CType(Me(Me.tableUSUARIOS.cve_empleadoColumn),String)
             End Get
             Set
                 Me(Me.tableUSUARIOS.cve_empleadoColumn) = value
@@ -874,18 +879,6 @@ Partial Public Class SeguridadDS
                 Me(Me.tableUSUARIOS.correoColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function Iscve_empleadoNull() As Boolean
-            Return Me.IsNull(Me.tableUSUARIOS.cve_empleadoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub Setcve_empleadoNull()
-            Me(Me.tableUSUARIOS.cve_empleadoColumn) = Global.System.Convert.DBNull
-        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -1169,6 +1162,11 @@ Namespace SeguridadDSTableAdapters
             tableMapping.ColumnMappings.Add("ape_mat", "ape_mat")
             tableMapping.ColumnMappings.Add("correo", "correo")
             Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [USUARIO] WHERE (([cve_empleado] = @Original_cve_empleado))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cve_empleado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cve_empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [USUARIO] ([cve_empleado], [id_usuario], [password], [estado], [Bloqu"& _ 
@@ -1187,6 +1185,26 @@ Namespace SeguridadDSTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ape_pat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ape_pat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ape_mat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ape_mat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [USUARIO] SET [cve_empleado] = @cve_empleado, [id_usuario] = @id_usuario, "& _ 
+                "[password] = @password, [estado] = @estado, [Bloqueo] = @Bloqueo, [FechaCaducida"& _ 
+                "d] = @FechaCaducidad, [Autorizar] = @Autorizar, [id_depto] = @id_depto, [ape_pat"& _ 
+                "] = @ape_pat, [ape_mat] = @ape_mat, [correo] = @correo WHERE (([cve_empleado] = "& _ 
+                "@Original_cve_empleado))"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cve_empleado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cve_empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_usuario", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bloqueo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Bloqueo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FechaCaducidad", Global.System.Data.SqlDbType.SmallDateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FechaCaducidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Autorizar", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Autorizar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_depto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_depto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ape_pat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ape_pat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ape_mat", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ape_mat", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@correo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "correo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cve_empleado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "cve_empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1202,13 +1220,14 @@ Namespace SeguridadDSTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT     cve_empleado, nombre + ' ' + ape_pat + ' ' + ape_mat AS Nombre, id_usu"& _ 
-                "ario, password, estado, Bloqueo, FechaCaducidad, Autorizar, id_depto, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"        "& _ 
-                "              ape_pat, ape_mat, correo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM         USUARIO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE     (id_usua"& _ 
-                "rio = @_Usuario) AND (id_depto = 'FACT' OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                      id_depto = 'Ad"& _ 
-                "mon') AND (estado = 'Activo')"
+            Me._commandCollection(0).CommandText = "SELECT        cve_empleado, nombre + ' ' + ape_pat + ' ' + ape_mat AS Nombre, id_"& _ 
+                "usuario, password, estado, Bloqueo, FechaCaducidad, Autorizar, id_depto, ape_pat"& _ 
+                ", ape_mat, correo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            USUARIO"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (id_usuario = @_Usuario"& _ 
+                ") AND (id_depto = 'FACT' OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         id_depto = 'Admon') AND (e"& _ 
+                "stado = 'Activo') OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (id_usuario = @_Usuario) AND (est"& _ 
+                "ado = 'Activo') AND (cve_empleado = '27')"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@_Usuario", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "id_usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@_Usuario", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "id_usuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT Autorizar, Bloqueo, FechaCaducidad, nombre + ' ' + ape_pat + ' ' + ape_mat"& _ 
@@ -1307,10 +1326,35 @@ Namespace SeguridadDSTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_cve_empleado As String) As Integer
+            If (Original_cve_empleado Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_cve_empleado")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_cve_empleado,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert(ByVal cve_empleado As String, ByVal id_usuario As String, ByVal password As String, ByVal estado As String, ByVal Bloqueo As Global.System.Nullable(Of Boolean), ByVal FechaCaducidad As Global.System.Nullable(Of Date), ByVal Autorizar As Global.System.Nullable(Of Boolean), ByVal id_depto As String, ByVal ape_pat As String, ByVal ape_mat As String, ByVal correo As String) As Integer
             If (cve_empleado Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
+                Throw New Global.System.ArgumentNullException("cve_empleado")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(cve_empleado,String)
             End If
@@ -1377,6 +1421,94 @@ Namespace SeguridadDSTableAdapters
                     Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal cve_empleado As String, ByVal id_usuario As String, ByVal password As String, ByVal estado As String, ByVal Bloqueo As Global.System.Nullable(Of Boolean), ByVal FechaCaducidad As Global.System.Nullable(Of Date), ByVal Autorizar As Global.System.Nullable(Of Boolean), ByVal id_depto As String, ByVal ape_pat As String, ByVal ape_mat As String, ByVal correo As String, ByVal Original_cve_empleado As String) As Integer
+            If (cve_empleado Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("cve_empleado")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(cve_empleado,String)
+            End If
+            If (id_usuario Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(id_usuario,String)
+            End If
+            If (password Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(password,String)
+            End If
+            If (estado Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(estado,String)
+            End If
+            If (Bloqueo.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Bloqueo.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (FechaCaducidad.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(FechaCaducidad.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Autorizar.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Autorizar.Value,Boolean)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            If (id_depto Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(id_depto,String)
+            End If
+            If (ape_pat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(ape_pat,String)
+            End If
+            If (ape_mat Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(ape_mat,String)
+            End If
+            If (correo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(correo,String)
+            End If
+            If (Original_cve_empleado Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_cve_empleado")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_cve_empleado,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal id_usuario As String, ByVal password As String, ByVal estado As String, ByVal Bloqueo As Global.System.Nullable(Of Boolean), ByVal FechaCaducidad As Global.System.Nullable(Of Date), ByVal Autorizar As Global.System.Nullable(Of Boolean), ByVal id_depto As String, ByVal ape_pat As String, ByVal ape_mat As String, ByVal correo As String, ByVal Original_cve_empleado As String) As Integer
+            Return Me.Update(Original_cve_empleado, id_usuario, password, estado, Bloqueo, FechaCaducidad, Autorizar, id_depto, ape_pat, ape_mat, correo, Original_cve_empleado)
         End Function
     End Class
 End Namespace
