@@ -3,7 +3,7 @@ Partial Public Class _Default
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Select Case UCase(Session.Item("TipoCadena"))
-            Case "FACT"
+            Case "FACT", "PROMO"
                 Session("MasterPage") = "~/PaginaMasterFACT.Master"
                 Response.Redirect("~/LotesFactFin.aspx", True)
             Case "USR"
