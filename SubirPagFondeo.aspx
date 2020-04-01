@@ -8,7 +8,7 @@
 <td align=center>
     <asp:Panel ID="Panel1" runat="server" Height="100%" HorizontalAlign="Center" Width="100%">
         <br />
-<asp:Label id="Label1" runat="server" Text="Subir Pagos de Fondeo" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+<asp:Label id="Label1" runat="server" Text="Subir Pagos de Fondeo" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 
 runat="server" />&nbsp;
@@ -18,16 +18,16 @@ runat="server" />&nbsp;
     </asp:Panel>
     <asp:Panel ID="Panel2" runat="server" Height="100%" HorizontalAlign="Center" Width="100%">
         <br />
-        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
             Text="Importe Capital:"></asp:Label><br />
         <br />
-        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
             Text="Pago Neto:"></asp:Label><br />
         <br />
-        <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+        <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
             Text="Pago Neto:"></asp:Label><br />
         <br />
-        <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+        <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
             Text="Pago Neto:"></asp:Label><br />
         <br />
         <cc1:botonenviar id="BotonEnviar1" runat="server" text="Cancelar" textoenviando="Cancelando..."

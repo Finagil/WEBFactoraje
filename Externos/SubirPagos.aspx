@@ -5,9 +5,9 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Subir Pagos" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label>
+<asp:Label id="Label1" runat="server" Text="Subir Pagos" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label>
     <br />
-<asp:Label id="Label2" runat="server" Text="(Rfc, Factura, Docuemento, Fecha Cobro, Monto Financiado sin comas) (.csv)" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+<asp:Label id="Label2" runat="server" Text="(Rfc, Factura, Docuemento, Fecha Cobro, Monto Financiado sin comas) (.csv)" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 
 runat="server" />&nbsp;

@@ -5,7 +5,7 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Subir Lote de Facturas en formato XML" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+<asp:Label id="Label1" runat="server" Text="Subir Lote de Facturas en formato XML" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
     <br />
     <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" />
     <INPUT id="Submit1" type=submit value="Subir" runat="server" visible="True" />
@@ -33,7 +33,7 @@
                         <asp:BoundField DataField="Existe" HeaderText="Correcta" SortExpression="Existe" />
                     </Columns>
         <FooterStyle BackColor="#FF9933" />
-        <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
                     <RowStyle BackColor="#FFE0C0" />
         <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />

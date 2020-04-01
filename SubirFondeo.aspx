@@ -5,8 +5,8 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Subir Fondeo" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
-    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+<asp:Label id="Label1" runat="server" Text="Subir Fondeo" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
         Text="(Documento,Fecha de Solicitud,Fecha de  Vencimiento,Precio Operación,Tasa)"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 

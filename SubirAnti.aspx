@@ -5,7 +5,7 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Subir Anticipos" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
+<asp:Label id="Label1" runat="server" Text="Subir Anticipos" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 
 runat="server" />&nbsp;

@@ -8,10 +8,10 @@
         <tr>
             <td align="center">
                 <br />
-                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Auxiliar Fondeo"></asp:Label><br />
                 <br />
-                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="totalFAC"></asp:Label><br />
                 <br />
                 <div style ="height:400px; width:80%; overflow:auto;">
@@ -37,15 +37,15 @@
                         <asp:BoundField DataFormatString="{0:n2}" HeaderText="Base" HtmlEncode="False" />
                         <asp:BoundField DataFormatString="{0:n2}" HeaderText="Tasa" HtmlEncode="False" />
                     </Columns>
-                    <FooterStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+                    <FooterStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
                     <EmptyDataTemplate>
                         <br />
-                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                             Text="Sin Cuentas Bancarias"></asp:Label>
                     </EmptyDataTemplate>
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
                     <EditRowStyle BackColor="#2461BF" />
                     <AlternatingRowStyle BackColor="White" />
                 </asp:GridView>

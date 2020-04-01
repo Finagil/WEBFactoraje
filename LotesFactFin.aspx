@@ -5,16 +5,16 @@
 <tr>
 <td align=center> 
     <br />
-    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
         Text="Lotes Pendietes de Procesar"></asp:Label><br />
     <br />
-    <asp:Label ID="Label3" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#FF6600"
+    <asp:Label ID="Label3" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#f58220"
         Text="Num. Cesión:"></asp:Label>
     <asp:TextBox ID="TxtCesion" runat="server" Width="93px"></asp:TextBox>
     <asp:Label ID="LbError" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="Red"
         Text="Num. Cesión No valida." Visible="False"></asp:Label>
     <br />
-    <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#FF6600"
+    <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#f58220"
         Text="Fondeo:"></asp:Label>
     <asp:DropDownList ID="ComboFondeo" runat="server">
         <asp:ListItem>Propios</asp:ListItem>
@@ -22,7 +22,7 @@
         <asp:ListItem>Palm</asp:ListItem>
     </asp:DropDownList>
     <br />
-    <asp:Label ID="Label5" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#FF6600"
+    <asp:Label ID="Label5" runat="server" Font-Bold="False" Font-Names="Verdana" ForeColor="#f58220"
         Text="Tasa IF:"></asp:Label>
     <asp:TextBox ID="TxtTasaIF" runat="server" Width="93px"></asp:TextBox>
     <br />
@@ -49,11 +49,11 @@
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
             <EmptyDataTemplate>
                 <br />
-                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Sin Lotes"></asp:Label>
             </EmptyDataTemplate>
             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-            <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <AlternatingRowStyle BackColor="White" />
         </asp:GridView>

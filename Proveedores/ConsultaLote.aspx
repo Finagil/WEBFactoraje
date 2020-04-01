@@ -6,7 +6,7 @@
         <tr>
             <td align="center">
                 <br />
-    <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+    <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
         Text="Lotes Descontados"></asp:Label>
                 <br />
                 <br />
@@ -29,11 +29,11 @@
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
             <EmptyDataTemplate>
                 <br />
-                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Sin Lotes"></asp:Label>
             </EmptyDataTemplate>
             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-            <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <AlternatingRowStyle BackColor="White" />
         </asp:GridView>
@@ -64,7 +64,7 @@
         </UpdateParameters>
     </asp:ObjectDataSource>
                 <br />
-                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Facturas Descontadas"></asp:Label><br />
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
@@ -87,15 +87,15 @@
                         <asp:BoundField DataField="FechaVencimiento" DataFormatString="{0:d}" HeaderText="Fecha Vencimiento"
                             HtmlEncode="False" SortExpression="FechaVencimiento" />
                     </Columns>
-                    <FooterStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+                    <FooterStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
                     <EmptyDataTemplate>
                         <br />
-                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                        <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                             Text="Sin Datos"></asp:Label>
                     </EmptyDataTemplate>
                     <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
                     <EditRowStyle BackColor="#2461BF" />
                     <AlternatingRowStyle BackColor="White" />
                 </asp:GridView>

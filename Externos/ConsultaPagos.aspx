@@ -5,7 +5,7 @@
 <tr>
 <td align=center>
     <br />
-<asp:Label id="Label1" runat="server" Text="Pagos Procesados" ForeColor="#FF6600" Font-Names="Verdana" Font-Bold="True"></asp:Label>
+<asp:Label id="Label1" runat="server" Text="Pagos Procesados" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="True"></asp:Label>
     <br />
     <br />
     <asp:GridView ID="GridView1" runat="server"
@@ -27,11 +27,11 @@
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
             <EmptyDataTemplate>
                 <br />
-                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#FF6600"
+                <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Sin Pagos"></asp:Label>
             </EmptyDataTemplate>
             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-            <HeaderStyle BackColor="#FF6600" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#f58220" Font-Bold="True" ForeColor="White" />
             <EditRowStyle BackColor="#2461BF" />
             <AlternatingRowStyle BackColor="White" />
         </asp:GridView>
