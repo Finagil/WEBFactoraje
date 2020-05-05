@@ -1,4 +1,4 @@
-Public Partial Class WebForm1
+Partial Public Class WebForm1
     Inherits System.Web.UI.Page
     Dim Lote As Integer = 0
     Dim Bandera As Boolean
@@ -42,7 +42,7 @@ Public Partial Class WebForm1
                     Msg += "Cliente: " & Cli & "<br>"
                     Msg += "Importe Total de Facturas: " & Total.ToString("n2") & "<br>"
                     Asunto = "Alta de Lote " & Lote & " (Factoraje)"
-                    
+
                     If Bandera = False Then
                         EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin, Msg, Asunto)
                         EnviaCorreo(Session("Correo"), My.Settings.CorreoAdmin2, Msg, Asunto)
@@ -72,6 +72,7 @@ Public Partial Class WebForm1
         Dim L() As String
         Dim Lim As Integer = 5
         Dim RFC As String = ""
+        Dim RFCaux As String = ""
         Dim NunLine As Integer = 0
         While Not F.EndOfStream
             L = F.ReadLine.Split(",")
@@ -116,14 +117,24 @@ Public Partial Class WebForm1
                     Lberror.Text = Lberror.Text & "<BR> Cliente no configurado " & L(0) & " Linea: " & NunLine
                 Else
                     RFC = L(0)
+                    CLI = tb.SacaNombre(RFC)
                 End If
             Else
                 RFC = tb.SacaRFC(L(0))
+                CLI = tb.SacaNombre(RFC)
+            End If
+            If RFCaux = "" Then
+                RFCaux = RFC
             End If
             'If tc.ExisteCliente(L(0)) <= 0 Then
             'Lberror.Visible = True
             'Lberror.Text = Lberror.Text & "<BR> Cliente no Existe en Factor100 " & L(0) & " Linea: " & NunLine
             'End If
+
+            If RFC <> RFCaux Then
+                Lberror.Visible = True
+                Lberror.Text = Lberror.Text & "<BR> Archivo con mas de un Cliente " & L(1) & " Linea: " & NunLine
+            End If
 
             If InStr(L(1).Trim, " ") > 0 Then
                 Lberror.Visible = True
@@ -273,7 +284,7 @@ Public Partial Class WebForm1
     Sub GeneraCorreoPROV(lote As Decimal)
         Dim ta As New Factor100DSTableAdapters.LotesPorDescontarTableAdapter
         Dim t As New Factor100DS.LotesPorDescontarDataTable
-        ta.FillBylote(t, lote, "Por Descontar")
+        ta.FillByLote(t, lote, "Por Descontar")
         Dim Mensaje As String = ""
         For Each r As Factor100DS.LotesPorDescontarRow In t.Rows
             Mensaje = "<FONT FACE=""arial"">Estimado " & r.Nombre_Persona & "<br><br>Le informamos que la Compañía " & r.NombreCliente & " ha publicado " & r.Facturas
