@@ -1,7 +1,7 @@
 <%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/PaginaMasterDefault.Master" CodeBehind="LotesFactFinAll.aspx.vb" Inherits="WebProspectos.LotesFactFinAll" 
     title="Lotes de Facturas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<table width=100%>
+    <table width=100%>
 <tr>
 <td align=center> 
     <br />
@@ -24,6 +24,7 @@
                 <asp:BoundField DataField="Estatus" HeaderText="Estatus" SortExpression="Estatus" />
                 <asp:BoundField DataField="Nombre" HeaderText="Cliente" SortExpression="Nombre" />
                 <asp:BoundField DataField="Cesion" HeaderText="Cesión" SortExpression="Cesion" />
+                <asp:HyperLinkField DataNavigateUrlFields="Id_Lote" DataNavigateUrlFormatString="DetalleFACT.aspx?ID={0}&amp;Del={0}" DataTextField="Id_Lote" DataTextFormatString="Eliminar {0}" />
             </Columns>
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />

@@ -7,6 +7,7 @@
                 <br />
                 <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="Detalle del Lote"></asp:Label><br />
+                <asp:Button ID="BtDelete" runat="server" Text="Eliminar" Visible="False" />
                 <br />
                 <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Names="Verdana" ForeColor="#f58220"
                     Text="totalFAC"></asp:Label>

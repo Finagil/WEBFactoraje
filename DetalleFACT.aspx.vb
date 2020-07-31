@@ -8,7 +8,13 @@ Partial Public Class DetalleFACT
     End Sub
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Label1.Text = "Detalle del Lote: " & Request("ID") & " Cesión: " & Request("Cesion")
+        Label1.Text = "Detalle del Lote: " & Request("ID")
+        If Request("Cesion") > "" Then
+            Label1.Text += " Cesión: " & Request("Cesion")
+        End If
+        If Request("Del") = Request("ID") Then
+            BtDelete.Visible = True
+        End If
         total1 = 0
         total2 = 0
     End Sub
@@ -28,5 +34,9 @@ Partial Public Class DetalleFACT
         End If
     End Sub
 
-   
+    Protected Sub BtDelete_Click(sender As Object, e As EventArgs) Handles BtDelete.Click
+        Dim ta As New Factor100DSTableAdapters.WEB_LotesTableAdapter
+        ta.BorraLote(Request("ID"))
+        Response.Redirect("~/LotesFactFinAll.aspx", True)
+    End Sub
 End Class
