@@ -136,16 +136,6 @@ Namespace My
                 Return CType(Me("ComunInfo100CS"),String)
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("ajoshin@finagil.com.mx;maria.bautista@finagil.com.mx;ecacerest@finagil.com.mx;den"& _ 
-            "ise.gonzalez@finagil.com.mx")>  _
-        Public ReadOnly Property CorreosFira() As String
-            Get
-                Return CType(Me("CorreosFira"),String)
-            End Get
-        End Property
     End Class
 End Namespace
 

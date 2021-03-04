@@ -56,8 +56,5 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=server-raid2;Initial Catalog=ComunInfo100;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015</Value>
     </Setting>
-    <Setting Name="CorreosFira" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ajoshin@finagil.com.mx;maria.bautista@finagil.com.mx;ecacerest@finagil.com.mx;denise.gonzalez@finagil.com.mx</Value>
-    </Setting>
   </Settings>
 </SettingsFile>
