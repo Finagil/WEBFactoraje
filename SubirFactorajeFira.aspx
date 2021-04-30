@@ -9,7 +9,7 @@
     <br />
 <asp:Label id="Label2" runat="server" Text="(Archivo separado por Tabuladores, sin encabezados)" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="False"></asp:Label>
     <br />
-<asp:Label id="Label3" runat="server" Text="(Nombre Cliente, Factura, Fecha Vencimiento, Importe, Tasa)" ForeColor="#f58220" Font-Names="Verdana" Font-Bold="False"></asp:Label><br />
+<asp:Label id="Label3" runat="server" Text="(Nombre Cliente, Factura, Fecha Vencimiento, Importe, Tasa, Dias Adicionales)" ForeColor="#F58220" Font-Names="Verdana" Font-Bold="False"></asp:Label><br />
     <br />
     <INPUT style="WIDTH: 328px; HEIGHT: 23px" id="File1" type=file name="File1" 
 runat="server" />&nbsp;

@@ -78,10 +78,11 @@ Partial Public Class WebFormFactorFact
             Dim ta As New Factor100DSTableAdapters.Factor_FacturasTableAdapter
             Dim RFC As String = ""
             Dim L() As String
-            Dim Lim As Integer = 5
+            Dim Lim As Integer = 6
             Dim NunLine As Integer = 0
             Dim Aux As Object
             Dim t As Type
+            Dim DiasAd As Integer
             While Not F.EndOfStream
                 L = F.ReadLine.Split(vbTab)
                 If L(0) = "No. DE DOCUMENTO" Then 'se salta la linea de encabezado
@@ -119,6 +120,10 @@ Partial Public Class WebFormFactorFact
                     Lberror.Visible = True
                     Lberror.Text = Lberror.Text & "<BR> Fecha de vencimiento no valida " & L(2) & " Linea: " & NunLine
                 End If
+                If Not IsNumeric(L(5)) Then
+                    Lberror.Visible = True
+                    Lberror.Text = Lberror.Text & "<BR> Días adicionales no validos " & L(2) & " Linea: " & NunLine
+                End If
             End While
             F.Close()
             Try
@@ -151,9 +156,9 @@ Partial Public Class WebFormFactorFact
                     For x As Integer = 0 To L.Length - 1
                         L(x) = L(x).Replace("""", "")
                     Next
-
+                    DiasAd = CInt(L(5))
                     total += CDec(L(3))
-                    FecVecn = CDate(L(2)).AddDays(30)
+                    FecVecn = CDate(L(2)).AddDays(DiasAd)
                     If ta.ExisteFactura(L(1)) > 0 Then
                         ta.UpdateFacturaFira(L(4), Date.Now.Date, FecVecn, False, L(3), L(1), RFC, 0)
                     End If
