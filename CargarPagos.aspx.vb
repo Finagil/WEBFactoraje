@@ -22,8 +22,9 @@ Partial Public Class CargarPagos
     End Sub
 
     Protected Sub Submit1_ServerClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Submit1.ServerClick
+        Dim ta As New ProdDSTableAdapters.GEN_ComandosCMDTableAdapter
         Submit1.Disabled = True
-        Shell("C:\Jobs\CargaMINDS.exe FACTORAJE", AppWinStyle.NormalFocus, False)
+        ta.InsertaComando("C:\Jobs\", "CargaMINDS.exe", " FACTORAJE", UserX)
         Lberror.Visible = True
     End Sub
 
